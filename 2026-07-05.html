@@ -31,6 +31,9 @@
         .highlight-watch      { background:linear-gradient(135deg,#f7f5f1,#ece8e0); border-top:4px solid #6b6456; }
         .highlight-recap      { background:linear-gradient(135deg,#f4f1ec,#e6e0d3); border-top:4px solid #2b3a44; }
         .highlight-x          { background:linear-gradient(135deg,#eef2f5,#dde6ec); border-top:4px solid #3b5b6b; }
+        .xchip { display:inline-block; background:#e4edf2; color:#274451; font-weight:700; font-size:0.72rem; padding:0.02rem 0.4rem; border-radius:0.35rem; border:1px solid #cdd9e0; white-space:nowrap; }
+        .xlink { color:#3b5b6b; font-weight:600; text-decoration:none; border-bottom:1px dotted #3b5b6b; white-space:nowrap; }
+        .xlink:hover { color:#274451; border-bottom-color:#274451; }
 
         .bg-icon-watermark { position:absolute; top:-15px; right:-15px; font-size:8rem; opacity:0.06; z-index:0; transform:rotate(-15deg); pointer-events:none; overflow:hidden; }
         .badge-static { position:absolute; top:0; right:0; display:inline-block; padding:0.35rem 1rem; border-bottom-left-radius:1rem; border-top-right-radius:1rem; font-size:0.7rem; font-weight:700; color:white; text-transform:uppercase; letter-spacing:0.05em; box-shadow:-2px 2px 5px rgba(43,41,38,0.12); z-index:20; }
@@ -271,32 +274,92 @@
         <!-- ============ X HEAT LAYER (full width · ชั้นความร้อน) ============ -->
         <div class="glass-card highlight-x p-6 mb-6 relative">
             <div class="badge-static" style="background:#3b5b6b;"><i class="fa-brands fa-x-twitter mr-1"></i>ชั้น X · heat</div>
-            <i class="fa-solid fa-fire bg-icon-watermark" style="color:#9fb2bd;"></i>
-            <h4 class="relative z-10 mb-2 text-lg md:text-xl font-bold" style="color:#274451;"><i class="fa-brands fa-x-twitter mr-2"></i> กระแสบน X วันนี้ — รายใหญ่คุยเรื่องอะไร (ชั้น "ความร้อน")</h4>
-            <p class="relative z-10 text-xs mb-4 leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #cdd9e0;">
-                <b><i class="fa-solid fa-satellite-dish mr-1" style="color:#3b5b6b;"></i> อ่านการ์ดนี้ยังไง:</b> นี่คือ <b>ข่าว/กระแส</b> ที่เราคัดจากบัญชีนักลงทุนดัง เพื่อวัด "ตลาดกำลังร้อนเรื่องไหน" — <b>เป็นความเห็นบุคคลที่สาม ไม่ใช่บทวิเคราะห์ของเรา ไม่ใช่คำแนะนำ และไม่ใช่การรับรองหุ้นใด ๆ</b> · ชื่อหุ้นที่ปรากฏ = สิ่งที่ "คนพูดถึง" ไม่ใช่รายการให้ซื้อขาย
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
-                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #cdd9e0;">
-                    <h5 class="font-bold mb-2 flex items-center text-sm" style="color:#274451;"><i class="fa-solid fa-microchip mr-2"></i> ธีมหลัก: ชิป/หน่วยความจำ ยังเป็นศูนย์กลาง</h5>
-                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">แม้ SOX เพิ่งร่วงแรง กระแสบน X ยังวนอยู่ที่กลุ่มชิป — มีการถกเรื่อง<b>ราคาแพงไปไหม</b> (เทียบ valuation $AMD กับ $NVDA) และความคืบหน้าโรงงาน foundry ของ Intel (18A) · สะท้อนว่า "ความสนใจ" ยังไม่หนีกลุ่มนี้ แม้ราคาย่อ</p>
-                </div>
-                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #cdd9e0;">
-                    <h5 class="font-bold mb-2 flex items-center text-sm" style="color:#274451;"><i class="fa-solid fa-wave-square mr-2"></i> "ของถูกลง": Photonics ลง 30–40%</h5>
-                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">บางบัญชีชี้กลุ่ม <b>photonics ราคาลง 30–40% จากจุดสูง</b> แล้วมองเป็นจังหวะกลับไปทบทวน "ห่วงโซ่มูลค่า" ของอุตสาหกรรม — เป็นตัวอย่างมุมมองแบบ "ราคาลงแล้วน่าศึกษา" (ยังเป็นความเห็นเขา ไม่ใช่ของเรา)</p>
-                </div>
-                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #cdd9e0;">
-                    <h5 class="font-bold mb-2 flex items-center text-sm" style="color:#274451;"><i class="fa-solid fa-rocket mr-2"></i> ตะกร้าเก็งกำไรร้อน: อวกาศ/ควอนตัม/นิวเคลียร์/โดรน</h5>
-                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">กระแสพูดถึงตะกร้าหุ้น <b>high-beta</b> (เหวี่ยงแรง) กลุ่มอวกาศ ควอนตัม นิวเคลียร์ โดรน พร้อม "เส้น fib" ที่เทรดเดอร์ใช้อ้างอิง — โซนแบบนี้คือ <b>เก็งกำไรล้วน ความเสี่ยงสูง</b> เตือนใจด้วยเคส memecoin ในการ์ดคริปโต</p>
-                </div>
-                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #cdd9e0;">
-                    <h5 class="font-bold mb-2 flex items-center text-sm" style="color:#274451;"><i class="fa-solid fa-globe mr-2"></i> อื่น ๆ: ดัชนีโลก + ดีลโครงสร้าง AI</h5>
-                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">ฝั่งเทคนิคชี้ดัชนีโลก (<b>Nikkei ญี่ปุ่น · IBEX สเปน</b>) ยังเทรนด์ขึ้น · มีข่าวดีลขยาย <b>โครงสร้างพื้นฐาน AI ในยุโรป</b> (Nebius เช่าดาต้าเซ็นเตอร์สเปน) — ภาพ "เงินยังไหลเข้าโครงสร้าง AI" ต่อเนื่อง</p>
-                </div>
+            <i class="fa-brands fa-x-twitter bg-icon-watermark" style="color:#9fb2bd;"></i>
+            <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#274451;"><i class="fa-solid fa-fire-flame-curved mr-2" style="color:#b8463a;"></i> นักเก็งกำไรสหรัฐ "คุย/เชียร์" อะไรกันบน X (24 ชม.)</h4>
+
+            <div class="relative z-10 rounded-lg p-3 mb-4" style="background:#fdf6ec; border:1px solid #e6b8ae; border-left:4px solid #b8463a;">
+                <p class="text-xs leading-relaxed font-semibold" style="color:#8f2f26;"><i class="fa-solid fa-triangle-exclamation mr-1"></i> เรานำเสนอ "ข่าว" ว่านักเก็งกำไรพูดอะไรบน X — นี่คือ<b>ความเห็นบุคคลที่สาม</b> (โพสต์สาธารณะ) <b>ไม่ใช่มุมมองหรือคำแนะนำของเรา</b> · เราเป็นสื่อ จึง<b>ยกโพสต์ + แนบลิงก์ต้นทาง</b>ให้ท่านเปิดอ่าน/ตีความเอง · ชื่อหุ้นที่ปรากฏ = สิ่งที่ "คนพูดถึง" ไม่ใช่รายการซื้อขาย นักลงทุนควรศึกษาเองก่อนตัดสินใจเสมอ</p>
             </div>
-            <p class="relative z-10 text-[11px] mt-3 leading-relaxed bg-white/60 rounded-lg p-2.5" style="color:#4a453b; border:1px solid #cdd9e0;">
-                <b><i class="fa-solid fa-link mr-1" style="color:#3b5b6b;"></i> ที่มา:</b> สรุปโพสต์เด่น 24 ชม. จาก @StockSavvyShay, @TechCharts, @InvestingVisual, @Speculator_io (ธีมเด่น: AI/ชิป · งบ · พลังงาน) — เรียบเรียงเป็นภาพรวม ไม่ได้คัดลอกทั้งโพสต์ · ใช้เป็น "มาตรวัดความร้อน" ของตลาดเท่านั้น
+
+            <p class="relative z-10 text-xs mb-4 leading-relaxed" style="color:#4a453b;">ธีมเด่นวันนี้ = <b>ชิป/หน่วยความจำ</b> · ตะกร้าเก็งกำไร <b>อวกาศ/ควอนตัม/นิวเคลียร์/โดรน</b> · โฟโตนิกส์ "ของถูกลง" · ดัชนีโลก. ยกจาก <b>@StockSavvyShay</b> (7 โพสต์), <b>@TechCharts</b> (4), <b>@InvestingVisual</b>, <b>@Speculator_io</b> — ตามที่เขาโพสต์จริง:</p>
+
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @Speculator_io · 4 ก.ค. · แนวคิดกว้าง (ไม่มีชื่อหุ้น) — <a href="https://x.com/Speculator_io/status/2073160237087965463" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">"ทางรวยที่ง่ายที่สุดคือเก่งเรื่องจับ 'แพตเทิร์น' — สังเกตโลก ดูว่าอะไรได้ผล/ไม่ได้ผล... หลักการของความสำเร็จเป็นสากล (ซ้ำรอยเดิมได้)"</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2073393807316656153" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$NBIS</span> (Nebius) ขยายเข้า<b>สเปนครั้งแรก</b> — เซ็นสัญญาเช่า <b>18MW</b> กับ Merlin Properties ที่ Getafe campus เสริมโครงสร้างพื้นฐาน AI ในยุโรป</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2073417832717779286" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$AMD</span> เทรดที่ ~<b>3 เท่า</b>ของ forward multiple <span class="xchip">$NVDA</span> ทั้งที่ Nvidia ครองส่วนแบ่ง AI GPU ~90%, มาร์จิ้นขั้นต้น 75%, เส้นทางสู่รายได้ $1T จาก Blackwell/Rubin ถึงปี 2027 — เขามอง Nvidia "ดูถูก" เมื่อเทียบกัน</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. · <b>"UPDATED FIB LEVELS"</b> (ยกโพสต์ดิบ — "เส้น fib" ที่เทรดเดอร์อ้างอิง ไม่ใช่เป้าราคาของเรา) — <a href="https://x.com/StockSavvyShay/status/2073410306198618189" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">
+                        <b>Space:</b> <span class="xchip">$RKLB</span> $92 · <span class="xchip">$ASTS</span> $79 · <span class="xchip">$PL</span> $26 · <span class="xchip">$RDW</span> $8<br>
+                        <b>Quantum:</b> <span class="xchip">$IONQ</span> $44 · <span class="xchip">$RGTI</span> $16 · <span class="xchip">$QBTS</span> $20 · <span class="xchip">$INFQ</span> $10<br>
+                        <b>Drones:</b> <span class="xchip">$ONDS</span> $7 · <span class="xchip">$AVAV</span> $174 · <span class="xchip">$KTOS</span> $52 · <span class="xchip">$MRCY</span> $104<br>
+                        <b>Nuclear:</b> <span class="xchip">$OKLO</span> $50 · <span class="xchip">$UUUU</span> $12 · <span class="xchip">$GEV</span> $906 · <span class="xchip">$LEU</span> $132
+                    </p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2073405108847857821" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$INTC</span> แก้ปัญหา yield variability ของ <b>18A</b>, กำลัง ramp สู่ <b>30K wafers/เดือน</b>, 14A เป็นบวก — เส้นทางสู่ leading-edge foundry รายเดียวบนแผ่นดินสหรัฐ</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2073420132874113373" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">ตอบ @fiscal_ai: "นี่ไม่ใช่การตำหนิ <span class="xchip">$AMD</span> เท่ากับสะท้อนว่า <span class="xchip">$NVDA</span> ดูถูกแค่ไหนในสายตาผม ณ ราคานี้"</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. · <b>"TOP 15 PERFORMERS OF 2026"</b> (ยกโพสต์ดิบ — ผลตอบแทนสะสมปีนี้ ตามที่เขาโพสต์) — <a href="https://x.com/StockSavvyShay/status/2073425595950944617" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$SNDK</span> +635% · <span class="xchip">$AAOI</span> +247% · <span class="xchip">$AEHR</span> +247% · <span class="xchip">$AXTI</span> +246% · <span class="xchip">$MU</span> +242% · <span class="xchip">$INTC</span> +226% · <span class="xchip">$PENG</span> +214% · <span class="xchip">$DELL</span> +213% · <span class="xchip">$WDC</span> +213% · <span class="xchip">$TWST</span> +213% · <span class="xchip">$BE</span> +212% · <span class="xchip">$MRVL</span> +189% · <span class="xchip">$ARM</span> +188% · <span class="xchip">$DOCN</span> +171% · <span class="xchip">$NBIS</span> +158%</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 4 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2073412843031208425" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">โพสต์อธิบายวิธีใช้ระดับ <b>Fibonacci</b> (ต่อเนื่องจากโพสต์ "UPDATED FIB LEVELS" ด้านบน) — เปิดอ่านวิธีคิดของเขาที่ต้นทาง</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @InvestingVisual · 4 ก.ค. · <b>ห่วงโซ่มูลค่า Photonics 5 ชั้น</b> (ยกโพสต์ดิบครบ) — <a href="https://x.com/InvestingVisual/status/2073365380307861913" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed mb-2" style="color:#3a352c;">"หุ้นโฟโตนิกส์หลายตัวลง <b>30–40%</b> จากจุดสูง — จังหวะดีที่จะกลับไปทบทวนห่วงโซ่มูลค่าและธุรกิจที่วางตัวได้ดีสุด:"</p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">
+                        <b>ชั้น 1 — วัตถุดิบ/เวเฟอร์:</b> <span class="xchip">$GLW</span> <span class="xchip">$AXTI</span> <span class="xchip">$IQE</span> <span class="xchip">$AIXA</span> <span class="xchip">$AMS</span><br>
+                        <b>ชั้น 2 — อุปกรณ์โฟโตนิกหลัก:</b> <span class="xchip">$IPGP</span> <span class="xchip">$COHR</span> <span class="xchip">$LITE</span> <span class="xchip">$LASR</span> <span class="xchip">$SIVE</span><br>
+                        <b>ชั้น 3 — ชิ้นส่วน/โมดูล:</b> <span class="xchip">$AAOI</span> <span class="xchip">$MTSI</span> <span class="xchip">$FN</span> <span class="xchip">$VIAV</span> <span class="xchip">$LPTH</span><br>
+                        <b>ชั้น 4 — ระบบ/เครื่องจักร:</b> <span class="xchip">$ASML</span> <span class="xchip">$BESI</span> <span class="xchip">$ASM</span> <span class="xchip">$LPKF</span> <span class="xchip">$MKS</span><br>
+                        <b>ชั้น 5 — ทดสอบ/มาตรวิทยา/yield:</b> <span class="xchip">$CAMT</span> <span class="xchip">$FORM</span> <span class="xchip">$AEHR</span> <span class="xchip">$ONTO</span> <span class="xchip">$VIAV</span>
+                    </p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-2" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @TechCharts · 4 ก.ค. · เทคนิคดัชนี/ETF (ยกหัวข้อ + ลิงก์ต้นทางให้เปิดกราฟเอง)</p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">
+                        1. <b>#JAPAN #NIKKEI</b> "เทรนด์ขึ้นต่อเนื่อง — higher highs / higher lows ชัดเจน" — <a href="https://x.com/TechCharts/status/2073251751105265740" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                        2. <b>#SPAIN #IBEX</b> "กลับมาขึ้นต่อ" — <a href="https://x.com/TechCharts/status/2073251389426249751" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                        3. <span class="xchip">$EWU</span> (อังกฤษ) "อาจเป็น symmetrical triangle เหนือเส้นค่าเฉลี่ยระยะยาว — อาจเป็น bullish continuation" — <a href="https://x.com/TechCharts/status/2073255178338234428" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                        4. <b>#TECHCHARTSMEMBERS</b> ส่ง Global Equity Markets report แล้ว · จะอัปเดต Breakouts page + Chart Pattern Reliability Table สุดสัปดาห์นี้ — <a href="https://x.com/TechCharts/status/2073365368442126438" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="relative z-10 text-[11px] mt-3 leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #cdd9e0;">
+                <b><i class="fa-solid fa-list mr-1" style="color:#3b5b6b;"></i> รายชื่อหุ้นทั้งหมดที่ @StockSavvyShay พูดถึงวันนี้</b> (ยกมาครบเพื่อให้ท่านทำการบ้านต่อ — ไม่ได้กรอง):<br>
+                <span class="xchip">$AAOI</span> <span class="xchip">$AEHR</span> <span class="xchip">$AMD</span> <span class="xchip">$ARM</span> <span class="xchip">$ASTS</span> <span class="xchip">$AVAV</span> <span class="xchip">$AXTI</span> <span class="xchip">$BE</span> <span class="xchip">$DELL</span> <span class="xchip">$DOCN</span> <span class="xchip">$GEV</span> <span class="xchip">$INFQ</span> <span class="xchip">$INTC</span> <span class="xchip">$IONQ</span> <span class="xchip">$KTOS</span> <span class="xchip">$LEU</span> <span class="xchip">$META</span> <span class="xchip">$MRCY</span> <span class="xchip">$MRVL</span> <span class="xchip">$MU</span> <span class="xchip">$NBIS</span> <span class="xchip">$NVDA</span> <span class="xchip">$OKLO</span> <span class="xchip">$ONDS</span> <span class="xchip">$PENG</span> <span class="xchip">$PL</span> <span class="xchip">$QBTS</span> <span class="xchip">$RDW</span> <span class="xchip">$RGTI</span> <span class="xchip">$RKLB</span> <span class="xchip">$SNDK</span> <span class="xchip">$TWST</span> <span class="xchip">$UUUU</span> <span class="xchip">$WDC</span>
             </p>
+
+            <p class="relative z-10 text-xs font-semibold mt-3 bg-white/70 rounded-lg p-2" style="color:#274451; border:1px solid #d7dde4;"><i class="fa-solid fa-scale-balanced mr-1"></i> กรอบคิด: "กระแส" บอกว่าตลาด<b>สนใจ</b>อะไร ไม่ได้บอกว่าอะไร<b>ถูก</b> — ใช้เป็นจุดตั้งต้นไปหาข้อมูล ไม่ใช่เหตุผลซื้อขาย</p>
         </div>
 
         <!-- ============ CRYPTO (full width) ============ -->

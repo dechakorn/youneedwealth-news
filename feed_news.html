@@ -19,6 +19,7 @@
     --gold:#f6ecd7;     --gold-ink:#9a6a1e;
     --crypto:#fdecd8;   --crypto-ink:#b5651d;
     --analysis:#eceae1; --analysis-ink:#2b3a44;
+    --x:#e4edf2;        --x-ink:#274451;
   }
   *{font-family:'Kanit',sans-serif;}
   body{background:var(--bg); color:var(--text);}
@@ -28,6 +29,7 @@
   .badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;font-weight:600;padding:.15rem .55rem;border-radius:999px;}
   .b-stock{background:var(--stock);color:var(--stock-ink);} .b-gold{background:var(--gold);color:var(--gold-ink);}
   .b-crypto{background:var(--crypto);color:var(--crypto-ink);} .b-analysis{background:var(--analysis);color:var(--analysis-ink);}
+  .b-x{background:var(--x);color:var(--x-ink);}
   .tab{cursor:pointer;font-size:.85rem;font-weight:500;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);transition:.15s;}
   .tab.active{background:var(--brand);color:#fff;border-color:var(--brand);}
   .news-item{cursor:pointer;transition:.15s;}
@@ -57,6 +59,7 @@
     <span class="tab" data-filter="gold"><i class="fa-solid fa-coins"></i> ทอง</span>
     <span class="tab" data-filter="crypto"><i class="fa-brands fa-bitcoin"></i> คริปโต</span>
     <span class="tab" data-filter="analysis"><i class="fa-solid fa-comment-dots"></i> บทวิเคราะห์</span>
+    <span class="tab" data-filter="x"><i class="fa-brands fa-x-twitter"></i> ข่าวเก็งกำไร · X</span>
   </div>
 
   <div id="feed" class="space-y-2.5"></div>
@@ -95,6 +98,15 @@
     {cat:'crypto',t:'3 ก.ค.',pub:'Cointelegraph',th:'Bitcoin realized P&L ratio ต่ำสุดในรอบ 43 เดือน — CryptoQuant ชี้สัญญาณใกล้โซน capitulation',s:'ข้อมูล on-chain จาก CryptoQuant: อัตราส่วนกำไร/ขาดทุนที่ขายจริง (realized P&L ratio) ของ Bitcoin ลงมาต่ำสุดตั้งแต่ปี 2022 (43 เดือน) — ในอดีตโซนแบบนี้มักสัมพันธ์กับช่วง "ยอมแพ้ขาย" (capitulation) ใกล้จุดต่ำสุด · Matt Hougan (CIO ของ Bitwise) มองจุดต่ำสุด "ใกล้กว่าที่เคย" — เป็นการอ่านข้อมูลอดีต ไม่ใช่การพยากรณ์ · BTC ล่าสุดยืนเหนือ $61,000 เข้าสุดสัปดาห์.',u:'https://cointelegraph.com/news/bitcoin-realized-profit-loss-ratio-falls-to-lowest-level-since-2022-cryptoquant'},
     {cat:'crypto',t:'3 ก.ค.',pub:'24/7 Wall St.',th:'สตรีคเงินไหลออก ETF 10 วันจบแล้ว — ไหลกลับ +$221.7M · Polymarket ให้โอกาสแตะ $70K ใน ก.ค. แค่ 21%',s:'กอง Bitcoin Spot ETF พลิกเป็นเงินไหลเข้า +$221.7 ล้าน (3 ก.ค.) จบสตรีคไหลออก 10 วันติด รับตัวเลขจ้างงานที่ลดความกลัวดอกเบี้ยขึ้น — แต่ตลาดพนัน Polymarket ยังให้โอกาส BTC แตะ $70,000 ภายใน ก.ค. แค่ 21% = ความหวังกับความน่าจะเป็นยังห่างกัน · ข้อควรรู้ช่วงสุดสัปดาห์: สภาพคล่องบาง ราคาเหวี่ยงแรงได้สองทาง.',u:'https://247wallst.com/investing/cryptocurrency/2026/07/02/bitcoin-price-prediction-for-july-2026/'},
     {cat:'crypto',t:'4 ก.ค.',pub:'U.Today',th:'Alt เด้งแรงกว่า BTC: Cardano +13% รับ hard fork · Morpho ระดมทุน $175M · Securitize tokenize หุ้น $295M บน Solana',s:'ภาพรวมคริปโตเช้านี้: Cardano +13% ตอบรับ hard fork ใหม่ · PEPE +12% · ฝั่งโครงสร้างพื้นฐานยังได้เงินจริง — Morpho (DeFi lending) ระดมทุน $175 ล้านนำโดย Paradigm/a16z และ Securitize นำหุ้นมูลค่า $295 ล้านขึ้น tokenize บน Solana · เรื่องเชิงลบที่ค้าง: WSJ 10-Point รายงาน "Trump ทำเงิน $1B จากดีลคริปโต ขณะแฟนคลับขาดทุน" — เตือนใจเรื่องผลประโยชน์ทับซ้อนในสินทรัพย์นี้.',u:'https://u.today/xrp-enters-july-4-weekend-with-66-million-etf-boost-adam-back-warns-on-bitcoin-censorship-shiba-inu'},
+    // ── 𝕏 ข่าวเก็งกำไร (โพสต์สาธารณะจากบัญชีนักเก็งกำไร · ยกจากต้นทาง) ──
+    {cat:'x',t:'4 ก.ค.',pub:'@StockSavvyShay',th:'$NBIS (Nebius) ขยายเข้าสเปนครั้งแรก — เช่าดาต้าเซ็นเตอร์ 18MW กับ Merlin Properties',s:'@StockSavvyShay โพสต์ว่า Nebius ($NBIS) เซ็นสัญญาเช่าดาต้าเซ็นเตอร์ 18MW กับ Merlin Properties ที่ Getafe campus นับเป็นการเข้าสเปนครั้งแรก เสริมโครงสร้างพื้นฐาน AI ในยุโรป',u:'https://x.com/StockSavvyShay/status/2073393807316656153'},
+    {cat:'x',t:'4 ก.ค.',pub:'@StockSavvyShay',th:'"UPDATED FIB LEVELS" — ตะกร้าเก็งกำไร อวกาศ/ควอนตัม/นิวเคลียร์/โดรน (ยกโพสต์ดิบ)',s:'@StockSavvyShay อัปเดต "เส้น Fibonacci" ที่เทรดเดอร์ใช้อ้างอิงในตะกร้าหุ้นเหวี่ยงแรง (ยกมาดิบตามโพสต์):<br><b>Space:</b> $RKLB $92 · $ASTS $79 · $PL $26 · $RDW $8<br><b>Quantum:</b> $IONQ $44 · $RGTI $16 · $QBTS $20 · $INFQ $10<br><b>Drones:</b> $ONDS $7 · $AVAV $174 · $KTOS $52 · $MRCY $104<br><b>Nuclear:</b> $OKLO $50 · $UUUU $12 · $GEV $906 · $LEU $132',u:'https://x.com/StockSavvyShay/status/2073410306198618189'},
+    {cat:'x',t:'4 ก.ค.',pub:'@StockSavvyShay',th:'$AMD เทรดแพงกว่า forward multiple $NVDA ~3 เท่า — มอง Nvidia "ดูถูก"',s:'@StockSavvyShay ชี้ $AMD เทรดที่ราว 3 เท่าของ forward multiple $NVDA ทั้งที่ Nvidia ครองส่วนแบ่ง AI GPU ~90%, มาร์จิ้นขั้นต้น 75% และมีเส้นทางสู่รายได้ $1T จาก Blackwell/Rubin ถึงปี 2027 — เขามองว่า Nvidia "ดูถูก" เมื่อเทียบกัน',u:'https://x.com/StockSavvyShay/status/2073417832717779286'},
+    {cat:'x',t:'4 ก.ค.',pub:'@StockSavvyShay',th:'$INTC แก้ปัญหา yield 18A · ramp สู่ 30K wafers/เดือน — foundry ชั้นนำรายเดียวบนแผ่นดินสหรัฐ',s:'@StockSavvyShay ระบุ Intel ($INTC) แก้ปัญหา yield variability ของกระบวนการ 18A ได้ กำลัง ramp สู่ 30,000 wafers/เดือน และ 14A เป็นบวก — วางตัวเป็น leading-edge foundry รายเดียวที่ผลิตบนแผ่นดินสหรัฐ',u:'https://x.com/StockSavvyShay/status/2073405108847857821'},
+    {cat:'x',t:'4 ก.ค.',pub:'@StockSavvyShay',th:'"TOP 15 PERFORMERS OF 2026" — นำโดย $SNDK +635% (ยกโพสต์ดิบ)',s:'@StockSavvyShay ยกรายชื่อ 15 หุ้นผลตอบแทนสะสมดีสุดปีนี้ (ตามที่เขาโพสต์):<br>$SNDK +635% · $AAOI +247% · $AEHR +247% · $AXTI +246% · $MU +242% · $INTC +226% · $PENG +214% · $DELL +213% · $WDC +213% · $TWST +213% · $BE +212% · $MRVL +189% · $ARM +188% · $DOCN +171% · $NBIS +158%',u:'https://x.com/StockSavvyShay/status/2073425595950944617'},
+    {cat:'x',t:'4 ก.ค.',pub:'@InvestingVisual',th:'ห่วงโซ่มูลค่า Photonics 5 ชั้น — "หลายตัวลง 30–40% จากจุดสูง น่ากลับไปทบทวน" (ยกโพสต์ดิบ)',s:'@InvestingVisual โพสต์ว่าหุ้นโฟโตนิกส์หลายตัวลง 30–40% จากจุดสูง มองเป็นจังหวะกลับไปทบทวนห่วงโซ่มูลค่าและธุรกิจที่วางตัวดีสุด (ยกครบ 5 ชั้นตามโพสต์):<br><b>ชั้น 1 วัตถุดิบ/เวเฟอร์:</b> $GLW $AXTI $IQE $AIXA $AMS<br><b>ชั้น 2 อุปกรณ์โฟโตนิกหลัก:</b> $IPGP $COHR $LITE $LASR $SIVE<br><b>ชั้น 3 ชิ้นส่วน/โมดูล:</b> $AAOI $MTSI $FN $VIAV $LPTH<br><b>ชั้น 4 ระบบ/เครื่องจักร:</b> $ASML $BESI $ASM $LPKF $MKS<br><b>ชั้น 5 ทดสอบ/มาตรวิทยา/yield:</b> $CAMT $FORM $AEHR $ONTO $VIAV',u:'https://x.com/InvestingVisual/status/2073365380307861913'},
+    {cat:'x',t:'4 ก.ค.',pub:'@TechCharts',th:'เทคนิคดัชนีโลก: Nikkei/IBEX เทรนด์ขึ้น · $EWU อาจเป็น bullish triangle',s:'@TechCharts อัปเดตกราฟดัชนี/ETF (เปิดต้นทางดูกราฟเอง):<br>1. #JAPAN #NIKKEI เทรนด์ขึ้นต่อเนื่อง higher highs/lows — <a href="https://x.com/TechCharts/status/2073251751105265740" target="_blank" rel="noopener" class="src-link">ต้นทาง</a><br>2. #SPAIN #IBEX กลับมาขึ้นต่อ — <a href="https://x.com/TechCharts/status/2073251389426249751" target="_blank" rel="noopener" class="src-link">ต้นทาง</a><br>3. $EWU (อังกฤษ) อาจเป็น symmetrical triangle เหนือค่าเฉลี่ยระยะยาว = bullish continuation — <a href="https://x.com/TechCharts/status/2073255178338234428" target="_blank" rel="noopener" class="src-link">ต้นทาง</a><br>4. #TECHCHARTSMEMBERS ส่ง Global Equity Markets report + จะอัปเดต Breakouts page + Chart Pattern Reliability Table สุดสัปดาห์นี้ — <a href="https://x.com/TechCharts/status/2073365368442126438" target="_blank" rel="noopener" class="src-link">ต้นทาง</a>',u:'https://x.com/TechCharts/status/2073255178338234428'},
+    {cat:'x',t:'4 ก.ค.',pub:'@Speculator_io',th:'แนวคิด: "ทางรวยที่ง่ายสุดคือเก่งเรื่องจับแพตเทิร์น" (ไม่มีชื่อหุ้น)',s:'@Speculator_io โพสต์แนวคิดกว้าง (ไม่มีชื่อหุ้น): "ทางรวยที่ง่ายที่สุดคือเก่งเรื่องจับแพตเทิร์น — สังเกตโลก ดูว่าอะไรได้ผล/ไม่ได้ผล ศึกษาบริษัท ผู้ก่อตั้ง และนักลงทุนที่สำเร็จ เพราะหลักการของความสำเร็จเป็นสากลและซ้ำรอยเดิม"',u:'https://x.com/Speculator_io/status/2073160237087965463'},
   ];
 
   const feed=document.getElementById('feed');
@@ -102,7 +114,8 @@
     stock:{c:'b-stock',l:'หุ้น'},
     gold:{c:'b-gold',l:'ทอง'},
     crypto:{c:'b-crypto',l:'คริปโต'},
-    analysis:{c:'b-analysis',l:'บทวิเคราะห์'}
+    analysis:{c:'b-analysis',l:'บทวิเคราะห์'},
+    x:{c:'b-x',l:'เก็งกำไร · X'}
   };
   // แบนเนอร์อธิบาย: วันที่ไม่มีข่าวทองโดยตรง → ยกข่าวค่าเงินดอลลาร์มาแทน (correlation)
   const GOLD_NOTE=`<div class="card p-4 mb-1" style="background:var(--gold);border-color:#e9d6a8;">
@@ -146,7 +159,7 @@
       feed.appendChild(el);
     });
   }
-  const VALID=['all','stock','gold','crypto','analysis'];
+  const VALID=['all','stock','gold','crypto','analysis','x'];
   function setFilter(f){
     if(!VALID.includes(f)) f='all';
     document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.filter===f));
