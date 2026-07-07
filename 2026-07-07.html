@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิเคราะห์ราคาภาษาชาวบ้าน — 7 ก.ค. 2569 (ฉบับเช้าอังคาร · ตลาดสหรัฐทำจุดสูง)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family:'Kanit',sans-serif; background-color:#faf7f1; color:#3a352c; }
+        .main-wrapper { background-color:#fff; border-radius:1.5rem; box-shadow:0 25px 50px -12px rgba(43,41,38,0.3); overflow:hidden; }
+
+        .glass-card { background:#fff; border:1px solid #f1efe9; border-radius:1rem;
+            box-shadow:0 4px 6px -1px rgba(43,41,38,0.05),0 2px 4px -1px rgba(43,41,38,0.03);
+            transition:all .3s ease; position:relative; }
+        .glass-card:hover { transform:translateY(-5px);
+            box-shadow:0 20px 25px -5px rgba(43,41,38,0.1),0 10px 10px -5px rgba(43,41,38,0.04); }
+
+        /* หมวดสี = แนวเดียวกับการ์ดห้องเรียน (ทอง/โอลีฟ/terracotta/อิฐ/เขียวน้ำทะเล) */
+        .highlight-gold       { background:linear-gradient(135deg,#fdf8ec,#f8eecf); border-top:4px solid #d4a53a; }
+        .highlight-fed        { background:linear-gradient(135deg,#f8f5ef,#efe7d6); border-top:4px solid #8a7d4a; }
+        .highlight-economy    { background:linear-gradient(135deg,#fdf4ea,#f8e6d2); border-top:4px solid #c58a3d; }
+        .highlight-geopolitics{ background:linear-gradient(135deg,#fcf1ef,#f7ddd8); border-top:4px solid #b8463a; }
+        .highlight-forex      { background:linear-gradient(135deg,#eef5f4,#dcebe8); border-top:4px solid #5f8f86; }
+        .highlight-market     { background:linear-gradient(135deg,#f6f6ee,#eaead2); border-top:4px solid #9a9560; }
+        .highlight-ai         { background:linear-gradient(135deg,#eef6f4,#d7ede8); border-top:4px solid #4a9d8e; }
+        .highlight-crypto     { background:linear-gradient(135deg,#fdf3ec,#f8e2d2); border-top:4px solid #c0603a; }
+        .highlight-vocab      { background:linear-gradient(135deg,#fdf8ec,#f8eecf); border-top:4px solid #d4a53a; }
+        .highlight-levels     { background:linear-gradient(135deg,#eef6f4,#d7ede8); border-top:4px solid #4a9d8e; }
+        .highlight-watch      { background:linear-gradient(135deg,#f7f5f1,#ece8e0); border-top:4px solid #6b6456; }
+        .highlight-recap      { background:linear-gradient(135deg,#f4f1ec,#e6e0d3); border-top:4px solid #2b3a44; }
+        .highlight-x          { background:linear-gradient(135deg,#eef2f5,#dde6ec); border-top:4px solid #3b5b6b; }
+        .xchip { display:inline-block; background:#e4edf2; color:#274451; font-weight:700; font-size:0.72rem; padding:0.02rem 0.4rem; border-radius:0.35rem; border:1px solid #cdd9e0; white-space:nowrap; }
+        .xlink { color:#3b5b6b; font-weight:600; text-decoration:none; border-bottom:1px dotted #3b5b6b; white-space:nowrap; }
+        .xlink:hover { color:#274451; border-bottom-color:#274451; }
+
+        .bg-icon-watermark { position:absolute; top:-15px; right:-15px; font-size:8rem; opacity:0.06; z-index:0; transform:rotate(-15deg); pointer-events:none; overflow:hidden; }
+        .badge-static { position:absolute; top:0; right:0; display:inline-block; padding:0.35rem 1rem; border-bottom-left-radius:1rem; border-top-right-radius:1rem; font-size:0.7rem; font-weight:700; color:white; text-transform:uppercase; letter-spacing:0.05em; box-shadow:-2px 2px 5px rgba(43,41,38,0.12); z-index:20; }
+
+        /* หัว = charcoal อุ่น + accent ทอง (ธีมเดียวกับหน้า You Need Wealth) */
+        .header-bg { background:linear-gradient(135deg,#2b2926 0%,#3b3833 48%,#4c463d 100%); position:relative; overflow:hidden; }
+        .orb-1 { position:absolute; top:-50px; right:-50px; width:300px; height:300px; background:#c9a86a; border-radius:50%; filter:blur(80px); opacity:0.5; }
+        .orb-2 { position:absolute; bottom:-50px; left:-100px; width:250px; height:250px; background:#8a8560; border-radius:50%; filter:blur(80px); opacity:0.45; }
+        .lvl-row:nth-child(even){ background:rgba(255,255,255,0.55); }
+        .recap-row:nth-child(even){ background:rgba(255,255,255,0.5); }
+        .spark-up { color:#3d7a2e; font-weight:700; }
+        .spark-down { color:#b8463a; font-weight:700; }
+        .spark-flat { color:#8a8270; font-weight:700; }
+    </style>
+</head>
+
+<body class="p-3 md:p-8 min-h-screen flex justify-center items-start">
+<div class="main-wrapper max-w-6xl w-full">
+
+    <!-- ============ HEADER ============ -->
+    <div class="header-bg p-6 md:p-8" style="border-bottom:4px solid #c9a86a;">
+        <div class="orb-1"></div><div class="orb-2"></div>
+        <header class="relative z-10 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
+            <div>
+                <div class="inline-block font-semibold px-4 py-1.5 rounded-full text-xs mb-3 backdrop-blur-md" style="background:rgba(201,168,106,0.2); color:#e6cf9c; border:1px solid rgba(201,168,106,0.4);">
+                    <i class="fa-solid fa-mug-hot mr-1"></i> ฉบับเช้าอังคาร · ตลาดสหรัฐปิดคืนก่อนทำจุดสูง
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow-lg" style="color:#eacf94;">วิเคราะห์ราคาภาษาชาวบ้าน</h1>
+                <p class="mt-3 text-sm max-w-xl leading-relaxed" style="color:#d8cfbf;">
+                    <b class="text-white">ชิป/AI ลากตลาดสหรัฐทำจุดสูง</b> — Nasdaq +1.1% นำโดยหุ้นชิปที่เด้งกลับ · แต่<b class="text-white">เสียงเตือน "ฟองสบู่" ดังขึ้น</b> และ Morgan Stanley เริ่มหมุนธีมออกจากชิปไปหา hyperscaler · ทองทรงย่านบน · ยีลด์ทรงสูงรอ <b class="text-white">รายงานประชุม Fed (Minutes) ~8 ก.ค.</b> · BTC เด้งกลับหลัง Strategy เทขายครั้งใหญ่
+                </p>
+            </div>
+            <div class="flex flex-col items-end p-4 rounded-xl backdrop-blur-md shadow-xl shrink-0" style="background:rgba(0,0,0,0.35); border:1px solid rgba(201,168,106,0.25);">
+                <p class="text-sm font-bold" style="color:#e6cf9c;"><i class="fa-regular fa-calendar-days mr-2"></i>อัปเดต: 7 ก.ค. 2569</p>
+                <p class="mt-1 text-xs" style="color:#cdc4b5;">ผู้จัดทำ: เดชากร [กลต.043827]</p>
+                <p class="mt-1 text-[10px]" style="color:#cdc4b5;">อังคารเช้า · ราคา = ปิดจันทร์ 6 ก.ค. · BTC สด 24/7</p>
+            </div>
+        </header>
+    </div>
+
+    <div class="p-5 md:p-8 bg-white overflow-hidden">
+
+        <!-- ============ BIG PICTURE ============ -->
+        <div class="rounded-xl mb-6 p-6 shadow-sm relative overflow-hidden" style="background:linear-gradient(to right,#f7f5f1,#ece8e0); border-left:4px solid #6b6456;">
+            <i class="fa-solid fa-bullseye bg-icon-watermark" style="color:#cdc4b0;"></i>
+            <h3 class="relative z-10 mb-2 text-xl font-bold" style="color:#3a352c;"><i class="fa-solid fa-bullhorn mr-2" style="color:#6b6456;"></i> สรุปภาพใหญ่ (อ่านบรรทัดเดียวจบ)</h3>
+            <p class="relative z-10 text-sm mb-4 leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #e3ddd0;">
+                <b>ธีมวันนี้:</b> <b style="color:#4a9d8e;">ชิป/AI เด้งกลับลากตลาดทำจุดสูง</b> (Nasdaq +1.1% · S&amp;P +0.74%) — แต่พร้อมกันนั้น<b style="color:#b8463a;">เสียงเตือน "ฟองสบู่"</b> จากหลายสำนักดังขึ้น และ <b style="color:#9a9560;">Morgan Stanley เริ่มแนะหมุนออกจากชิปไปหา hyperscaler</b> (MSFT/AMZN/META) · ฝั่งทองทรงย่านบน ยีลด์ทรงสูงรอ Fed Minutes กลางสัปดาห์ ส่วน BTC เด้งกลับ ~$64K หลัง Strategy (MSTR) เทขาย BTC ครั้งใหญ่สุดในประวัติศาสตร์บริษัท
+            </p>
+            <ul class="relative z-10 grid grid-cols-1 gap-x-8 gap-y-4 text-sm md:grid-cols-2" style="color:#4a453b;">
+                <li class="flex items-start"><i class="fa-solid fa-microchip mr-3 mt-1" style="color:#4a9d8e;"></i> <span><b>ชิปเด้งนำตลาด:</b> Nasdaq ปิด <b>26,121</b> (+288, +1.1%) นำโดยชิป (Intel, Micron) · แต่ Wall Street เริ่มเรียก Mag 7 ว่า "Lag 7" และ MS มองเป็น "momentum unwind" ที่กำลังหมุนออกจากผู้นำ rally</span></li>
+                <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation mr-3 mt-1" style="color:#b8463a;"></i> <span><b>เสียงเตือน valuation ดังขึ้น:</b> Seeking Alpha ชุดใหญ่มอง "peak ~7,800 ก.ย. แล้วย่อ" · MarketWatch พูดถึง "double bubble" · เตือน AI capex อาจ overbuild — เส้น/เป้าเหล่านี้เป็นมุมมองสำนัก ไม่ใช่คำแนะนำ</span></li>
+                <li class="flex items-start"><i class="fa-solid fa-coins mr-3 mt-1" style="color:#d4a53a;"></i> <span><b>ทองทรงย่านบน:</b> ปิด <b>~$4,175</b> (+7.4) · WGC มองครึ่งปีหลัง rangebound ±5% รอบ ~$4,100 ถ้าเงื่อนไขไม่เปลี่ยน · เป้ารายสำนัก (รายงาน Kitco) กระจาย $4,700–$5,055</span></li>
+                <li class="flex items-start"><i class="fa-brands fa-bitcoin mr-3 mt-1" style="color:#c0603a;"></i> <span><b>BTC เด้งหลัง supply shock:</b> ราคาสด ~<b>$64,000</b> · <b>Strategy (MSTR) ขาย 3,588 BTC (~$216M)</b> ครั้งใหญ่สุดในประวัติบริษัทเพื่อจ่ายปันผล — ตลาดจับ $62K เป็นเส้นวัด "durable bottom"</span></li>
+            </ul>
+        </div>
+
+        <!-- ============ 3-DAY PRICE RECAP (ภาษาชาวบ้าน · ย้อนหลัง 3 วัน) ============ -->
+        <div class="glass-card highlight-recap p-6 mb-6 relative">
+            <div class="badge-static" style="background:#2b3a44;">ย้อนหลัง 3 วัน</div>
+            <i class="fa-solid fa-clock-rotate-left bg-icon-watermark" style="color:#9aa6ad;"></i>
+            <h4 class="relative z-10 mb-2 text-lg md:text-xl font-bold" style="color:#2b3a44;"><i class="fa-solid fa-timeline mr-2"></i> ราคาวิ่งยังไงใน 3 วันทำการล่าสุด (เล่าเป็นเส้นทาง ไม่ใช่แค่จุดเดียว)</h4>
+            <p class="relative z-10 text-xs mb-4 leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #d7d0c2;">
+                <b><i class="fa-solid fa-lightbulb mr-1" style="color:#2b3a44;"></i> ทำไมต้องดู 3 วัน:</b> ราคา "ปิดวันเดียว" บอกแค่จุดหยุด แต่ <b>ทิศทาง 3 วันติด</b> บอกว่าแรงซื้อ/ขายกำลังสะสมไปทางไหน — ตัวเลขคือราคาปิดจริง 3 เซสชันล่าสุด (1 ก.ค. → 2 ก.ค. → 6 ก.ค. · ศุกร์ 3 ก.ค. ปิดชดเชยวันชาติ + สุดสัปดาห์ · BTC สด 24/7)
+            </p>
+            <div class="relative z-10 overflow-x-auto rounded-xl" style="border:1px solid #d7d0c2;">
+                <table class="w-full text-xs md:text-sm whitespace-nowrap">
+                    <thead class="text-white" style="background:#2b3a44;"><tr>
+                        <th class="text-left p-2.5">สินทรัพย์</th>
+                        <th class="text-center p-2.5">1 ก.ค.</th>
+                        <th class="text-center p-2.5">2 ก.ค.</th>
+                        <th class="text-center p-2.5">ปิดล่าสุด 6 ก.ค.</th>
+                        <th class="text-left p-2.5">อ่านเป็นภาษาชาวบ้าน</th>
+                    </tr></thead>
+                    <tbody style="color:#4a453b;">
+                        <tr class="recap-row">
+                            <td class="p-2.5"><i class="fa-solid fa-coins mr-1" style="color:#d4a53a;"></i> ทองคำ</td>
+                            <td class="text-center p-2.5">4,082</td><td class="text-center p-2.5">4,126</td>
+                            <td class="text-center p-2.5"><span class="spark-up">~4,175</span></td>
+                            <td class="p-2.5 whitespace-normal"><b class="spark-up">ไต่ขึ้น 3 วันติด</b> — ทรงย่านบน แต่ยังต่ำกว่าจุดสูงต้นปี ~$5,500 มาก · WGC มองครึ่งปีหลังแกว่งรอบ ~$4,100</td>
+                        </tr>
+                        <tr class="recap-row">
+                            <td class="p-2.5"><i class="fa-solid fa-chart-line mr-1" style="color:#9a9560;"></i> S&amp;P 500</td>
+                            <td class="text-center p-2.5">7,483</td><td class="text-center p-2.5">7,483</td>
+                            <td class="text-center p-2.5"><span class="spark-up">7,538</span></td>
+                            <td class="p-2.5 whitespace-normal"><b class="spark-up">ทรง 2 วันแล้วทะยาน</b> — ดิป-บายเยอร์กลุ่มชิป/AI ลากขึ้น +0.74% ปิดใกล้จุดสูง · แต่เสียงเตือน valuation ดังขึ้น</td>
+                        </tr>
+                        <tr class="recap-row">
+                            <td class="p-2.5"><i class="fa-solid fa-microchip mr-1" style="color:#4a9d8e;"></i> Nasdaq</td>
+                            <td class="text-center p-2.5">26,040</td><td class="text-center p-2.5">25,833</td>
+                            <td class="text-center p-2.5"><span class="spark-up">26,121</span></td>
+                            <td class="p-2.5 whitespace-normal"><b class="spark-up">ย่อแล้วเด้งกลับแรง</b> (+1.1%) — ชิปเด้งนำ (Intel/Micron) · ฟื้นจุดที่ย่อเมื่อ 2 ก.ค.</td>
+                        </tr>
+                        <tr class="recap-row">
+                            <td class="p-2.5"><i class="fa-solid fa-landmark mr-1" style="color:#8a7d4a;"></i> ยีลด์ 10 ปี</td>
+                            <td class="text-center p-2.5">4.48%</td><td class="text-center p-2.5">4.49%</td>
+                            <td class="text-center p-2.5"><span class="spark-flat">4.478%</span></td>
+                            <td class="p-2.5 whitespace-normal"><b class="spark-flat">ทรงย่านสูง</b> — แทบไม่ขยับ รอ Fed Minutes (~8 ก.ค.) ชี้ทิศ · ยีลด์สูงค้างนาน = ลมต้านหุ้นเติบโต/ทอง</td>
+                        </tr>
+                        <tr class="recap-row">
+                            <td class="p-2.5"><i class="fa-brands fa-bitcoin mr-1" style="color:#c0603a;"></i> Bitcoin</td>
+                            <td class="text-center p-2.5">60,004</td><td class="text-center p-2.5">61,485</td>
+                            <td class="text-center p-2.5"><span class="spark-up">~64,000</span></td>
+                            <td class="p-2.5 whitespace-normal"><b class="spark-up">ไต่ขึ้นต่อเนื่อง</b> (สด) — เด้งกลับหลัง Strategy (MSTR) เทขาย ~$216M · จับ $62K เป็นเส้นวัด durable bottom</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="relative z-10 text-xs mt-3 leading-relaxed bg-white/60 rounded-lg p-3" style="color:#4a453b; border:1px solid #d7d0c2;">
+                <b><i class="fa-solid fa-scale-balanced mr-1" style="color:#2b3a44;"></i> ภาพรวม 3 วัน:</b> ภาพ "risk-on กลับมาพร้อมกัน" — <b>ทอง + หุ้น + Bitcoin ไต่ขึ้น</b> ขณะ <b>ยีลด์ทรงตัว</b> · ตัวลากคือชิป/AI ที่เด้งกลับ แต่มาพร้อมเสียงเตือน "ฟองสบู่" และการเริ่มหมุนธีมของ Morgan Stanley — สัปดาห์นี้มี Fed Minutes + CPI (14 ก.ค.) มาช่วยตัดสินทิศ
+            </p>
+        </div>
+
+        <!-- ============ ROW 1: GOLD | FED ============ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
+            <!-- GOLD -->
+            <div class="glass-card highlight-gold p-6">
+                <div class="badge-static" style="background:#d4a53a;">ทองคำ · ทรงย่านบน</div>
+                <i class="fa-solid fa-coins bg-icon-watermark" style="color:#e8cd88;"></i>
+                <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#8a6d1f;"><i class="fa-solid fa-coins mr-2"></i> ทองทรงย่านบน · WGC มองครึ่งปีหลังแกว่งรอบ ~$4,100</h4>
+                <p class="relative z-10 text-sm mb-3 leading-relaxed" style="color:#4a453b;">
+                    ทองปิดล่าสุด <b>~$4,175</b> (+7.4) ทรงตัวย่านบน ยังต่ำกว่าจุดสูงต้นปี ~$5,500 มาก · <b>Kitco/WGC (H2 Outlook)</b> มองครึ่งปีหลังทองน่าจะ <b>rangebound แกว่ง ±5% รอบ ~$4,100/oz</b> ถ้าเงื่อนไขไม่เปลี่ยน — แต่ยังเปิด upside ถ้าความเสี่ยง/นโยบายพลิก (ตัวเลขทั้งหมดเป็นมุมมองของแต่ละสำนัก ไม่ใช่ของเรา)
+                </p>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm mb-3" style="border:1px solid #efdfb4;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#8a6d1f;"><i class="fa-solid fa-square-poll-vertical mr-1"></i> เป้ารายสำนัก (รายงาน Kitco):</b> <b>Metals Focus</b> เฉลี่ยทั้งปี ~$4,920 · <b>JPMorgan</b> ~$5,055 (Q4) · <b>World Bank</b> ~$4,700 · แรงหนุนโครงสร้างจาก<b>ธนาคารกลาง + นักลงทุนระยะยาว</b> ช่วยจำกัด downside</p>
+                </div>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm" style="border:1px solid #efdfb4;">
+                    <p class="text-xs font-semibold" style="color:#8a6d1f;"><i class="fa-solid fa-eye mr-1"></i> เส้นที่ตลาดจับตา: ย่าน <b>$4,100</b> (โซนสมดุลตาม WGC) เป็นแกนที่ตลาดใช้อ้างอิง — หลุด/ยืนเหนือคือสัญญาณจิตวิทยา (เส้นอ้างอิง ไม่ใช่คำแนะนำ)</p>
+                </div>
+            </div>
+
+            <!-- FED -->
+            <div class="glass-card highlight-fed p-6">
+                <div class="badge-static" style="background:#8a7d4a;">FED &amp; พันธบัตร</div>
+                <i class="fa-solid fa-landmark bg-icon-watermark" style="color:#c7bb92;"></i>
+                <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#5c4f2e;"><i class="fa-solid fa-landmark mr-2"></i> ยีลด์ทรงย่านสูง · จับตา Fed Minutes ~8 ก.ค.</h4>
+                <p class="relative z-10 text-sm mb-3 leading-relaxed" style="color:#4a453b;">
+                    ยีลด์ 10 ปีปิด <b>4.478%</b> (−0.007) ทรงย่านสูง · เส้นโค้ง 2 ปี/10 ปี ชัน <b>+35 bps</b> (ไม่ inverted). Fed คงดอกเบี้ย <b>3.50–3.75%</b> รอบ มิ.ย. · dot plot median สิ้นปี 2026 = 3.8% (สื่อเป็นนัย "อาจขึ้นดอกเบี้ย 1 ครั้ง") · Fed ปรับคาดการณ์เงินเฟ้อ 2026 ขึ้นเป็น 3.6% (headline)/3.3% (core)
+                </p>
+                <div class="relative z-10 grid grid-cols-3 gap-2 text-center mb-3">
+                    <div class="bg-white/80 rounded-lg p-2" style="border:1px solid #e0d8bf;"><p class="text-[10px]" style="color:#8a8270;">2 ปี</p><p class="font-bold" style="color:#5c4f2e;">4.13%</p></div>
+                    <div class="bg-white/80 rounded-lg p-2" style="border:1px solid #e0d8bf;"><p class="text-[10px]" style="color:#8a8270;">10 ปี</p><p class="font-bold" style="color:#5c4f2e;">4.478%</p></div>
+                    <div class="bg-white/80 rounded-lg p-2" style="border:1px solid #e0d8bf;"><p class="text-[10px]" style="color:#8a8270;">ส่วนต่าง 2/10</p><p class="font-bold" style="color:#5c4f2e;">+35 bps</p></div>
+                </div>
+                <p class="relative z-10 text-xs leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #e0d8bf;">
+                    <b><i class="fa-solid fa-eye mr-1" style="color:#8a7d4a;"></i>เส้นที่ตลาดจับตา:</b> 10 ปีแถว <b>4.5%</b> เป็นเพดานจิตวิทยาที่สื่อพูดถึงบ่อย · <b>Fed Minutes (มิ.ย.) ~8 ก.ค.</b> เป็น catalyst หลักของยีลด์สัปดาห์นี้ — เป็นตัวจับ tone hawkish/dovish ของเฟด · ตลาดบางส่วนมองโอกาสขึ้นดอกเบี้ยเร็วสุด ต.ค.</p>
+            </div>
+        </div>
+
+        <!-- ============ ROW 2: ECONOMY | GEOPOLITICS ============ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
+            <!-- ECONOMY -->
+            <div class="glass-card highlight-economy p-6">
+                <div class="badge-static" style="background:#c58a3d;">เศรษฐกิจสหรัฐ</div>
+                <i class="fa-solid fa-chart-column bg-icon-watermark" style="color:#e2b783;"></i>
+                <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#9a5a1e;"><i class="fa-solid fa-calendar-week mr-2"></i> วันนี้ตัวเลขเล็ก — ดีเบต "soft landing vs hidden recession"</h4>
+                <p class="relative z-10 text-sm mb-3 leading-relaxed" style="color:#4a453b;">
+                    ตัวเลข US วันนี้ล้วน impact ต่ำ–กลาง: <b>ดุลการค้า พ.ค.</b> (คาด −78 vs ก่อนหน้า −55.9) · <b>Consumer Inflation Expectation มิ.ย.</b> (คาด 3.2 ↓ จาก 3.5) · <b>Economic Optimism Index ก.ค.</b> (คาด 45 ↑ จาก 42.5) — วันนี้ไม่มี market-mover ระดับ Tier 1/2
+                </p>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm mb-3" style="border:1px solid #eed6b8;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#9a5a1e;"><i class="fa-solid fa-scale-unbalanced mr-1"></i> ดีเบตในตลาด:</b> ค่าย bear ชี้ <b>NFP อ่อน (57k)</b> + participation ลด เป็นสัญญาณ "hidden recession" · แต่ ISM Services ยังทรง (54.0) และเงินเฟ้อคาดการณ์ผู้บริโภคย่อลง เป็นสัญญาณบวกฝั่ง "soft landing"</p>
+                </div>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm" style="border:1px solid #eed6b8;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#9a5a1e;"><i class="fa-solid fa-eye mr-1"></i> จับตา:</b> ตัวเลขใหญ่ถัดไป = <b>CPI 14 ก.ค.</b> (จะเป็นวันฉบับเย็น) — เป็นตัวชี้ว่าธีม "ดอกเบี้ยอาจไม่ลด/ขึ้น" จะมีน้ำหนักแค่ไหน</p>
+                </div>
+            </div>
+
+            <!-- GEOPOLITICS -->
+            <div class="glass-card highlight-geopolitics p-6">
+                <div class="badge-static" style="background:#b8463a;">ภูมิรัฐศาสตร์ · น้ำมัน</div>
+                <i class="fa-solid fa-oil-well bg-icon-watermark" style="color:#dd968c;"></i>
+                <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#8f2f26;"><i class="fa-solid fa-globe mr-2"></i> รอยร้าวยุโรป–สหรัฐ · Aramco หั่นราคาดึงเอเชีย</h4>
+                <p class="relative z-10 text-sm mb-3 leading-relaxed" style="color:#4a453b;">
+                    WSJ (The 10-Point) ชู <b>"รอยร้าวยุโรป–สหรัฐ"</b> เป็นประเด็นเด่น · ฝั่งพลังงาน: <b>Saudi Aramco หั่นราคาขายหลักเป็นส่วนลดหายาก</b>ดึงผู้ซื้อเอเชีย (บริบทหลังความตึงเครียดอิหร่าน — ต้องการราคาน้ำมันเสถียร) · ฝั่งนโยบาย: Trump เดินหน้า <b>deregulation ครั้งใหญ่ (702 กฎ)</b>
+                </p>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm mb-3" style="border:1px solid #f0cec8;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#8f2f26;"><i class="fa-solid fa-scale-unbalanced mr-1"></i> ความหมายเชิงมหภาค:</b> Aramco หั่นราคา = สัญญาณอุปทานน้ำมันยังเหลือเฟือ → แรงกดเงินเฟ้อฝั่งพลังงานลดลง · แต่รอยร้าวการค้ายุโรป–สหรัฐเป็นตัวแปรค่าเงิน + ความเสี่ยงหางที่ยังคุกรุ่น</p>
+                </div>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm" style="border:1px solid #f0cec8;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#8f2f26;"><i class="fa-solid fa-gas-pump mr-1"></i> จับตา:</b> ท่าทีการค้า/พันธมิตรยุโรป–สหรัฐ + ทิศน้ำมันหลัง Aramco ปรับราคา — ทั้งคู่คือปัจจัยที่อาจขยับค่าเงินและเงินเฟ้อสัปดาห์นี้</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ ROW 3: FOREX | S&P500 ============ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
+            <!-- FOREX -->
+            <div class="glass-card highlight-forex p-6">
+                <div class="badge-static" style="background:#5f8f86;">ค่าเงิน</div>
+                <i class="fa-solid fa-yen-sign bg-icon-watermark" style="color:#a3c4bd;"></i>
+                <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#2f5751;"><i class="fa-solid fa-money-bill-transfer mr-2"></i> ดอลลาร์ทรงที่ 100.9 · เยนอ่อนแตะ 162</h4>
+                <p class="relative z-10 text-sm mb-3 leading-relaxed" style="color:#4a453b;">
+                    ดัชนีดอลลาร์ (DXY) <b>100.855</b> แบนราบ — ยีลด์สหรัฐย่านสูงหนุน carry · เยนอ่อนแตะ <b>USD/JPY 162.043</b> (+0.706) สะท้อนส่วนต่างดอกเบี้ย US–ญี่ปุ่นที่ยังกว้าง · WSJ เตือนตลาดเกาหลี (KOSPI) ร้อนจัดแบบ "Squid Game" — เม็ดเงินต่างชาติเริ่มกระจายออกจากเกาหลี/ไต้หวัน
+                </p>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm" style="border:1px solid #cfe2de;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#2f5751;"><i class="fa-solid fa-eye mr-1"></i> เส้นที่ตลาดจับตา:</b> USD/JPY โซน <b>162</b> = ระดับที่ตลาดจับตาความเสี่ยงแทรกแซง (intervention) ของทางการญี่ปุ่น · carry trade (ยืมเยนดอกต่ำไปถือดอลลาร์ดอกสูง) ได้กำไรส่วนต่างเรื่อย ๆ แต่เสี่ยงกลับตัวเร็วเมื่อ risk-off แบบที่เคยเกิด ส.ค. 2024</p>
+                </div>
+            </div>
+
+            <!-- S&P 500 -->
+            <div class="glass-card highlight-market p-6">
+                <div class="badge-static" style="background:#9a9560;">S&amp;P 500</div>
+                <i class="fa-solid fa-chart-line bg-icon-watermark" style="color:#c8c69a;"></i>
+                <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#5f5a2e;"><i class="fa-solid fa-chart-line mr-2"></i> ดัชนีทำจุดสูงที่ 7,538 — แต่เสียงเตือน "bubble" ดังขึ้น</h4>
+                <p class="relative z-10 text-sm mb-3 leading-relaxed" style="color:#4a453b;">
+                    S&amp;P 500 ปิด <b>7,538</b> (+55.10, ~+0.74%) ย่านทำจุดสูง · ตลาดขึ้นจากดิป-บายเยอร์ในกลุ่มชิป/AI · แต่เสียงเตือน valuation ดังขึ้น — Seeking Alpha ชุดใหญ่มอง "peak ~7,800 ก.ย. แล้วย่อ", MarketWatch พูดถึง "double bubble", และเตือน AI capex supercycle อาจ overbuild
+                </p>
+                <div class="relative z-10 bg-white/70 rounded-lg p-3 shadow-sm" style="border:1px solid #dddcbb;">
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b style="color:#5f5a2e;"><i class="fa-solid fa-flag-checkered mr-1"></i> เส้นที่ตลาดจับตา:</b> โซน <b>7,800</b> เป็นตัวเลขที่ฝั่งเทคนิคัล/นักวิเคราะห์อ้างเป็นเป้าปลายรอบ (มุมมองสำนัก ไม่ใช่คำแนะนำ) · กรอบคิด: เวลาผู้เชี่ยวชาญเถียงกันเรื่อง "ตลาดแพงไป" คำตอบระดับบริษัท (กำไรตามทันราคาไหม ทีละตัว) สำคัญกว่าระดับดัชนี</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ AI / STOCK THEME (full width) ============ -->
+        <div class="glass-card highlight-ai p-6 mb-6 relative">
+            <div class="badge-static" style="background:#4a9d8e;">ธีม AI / หุ้นรายตัว</div>
+            <i class="fa-solid fa-microchip bg-icon-watermark" style="color:#9acfc4;"></i>
+            <h4 class="relative z-10 mb-4 text-lg md:text-xl font-bold" style="color:#2f6b60;"><i class="fa-solid fa-memory mr-2"></i> ชิปเด้งนำ — แต่ Morgan Stanley เริ่มหมุนไป hyperscaler</h4>
+            <p class="relative z-10 text-sm mb-4 leading-relaxed font-medium" style="color:#4a453b;">
+                Nasdaq +1.1% (26,121) นำโดยชิป (Intel, Micron) · แต่ <b>Morgan Stanley มอง AI trade กำลังหมุนออกจากผู้นำ rally</b> → ชอบ hyperscaler (MSFT/AMZN/META) มากกว่าชิป ("momentum unwind") จน Wall Street เรียก Mag 7 ว่า "Lag 7" · คำถามใหญ่: ชิปจะกลับไปนำได้ไหม หรือส่งไม้ต่อให้ hyperscaler? — <b>เราขอเสนอทั้ง 2 มุมให้ผู้อ่านชั่งเอง</b>
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #cbe6df;">
+                    <h5 class="font-bold mb-2 flex items-center" style="color:#2f6b60;"><i class="fa-solid fa-handshake mr-2"></i> ดีมานด์จริงยังจับต้องได้ (ดีลใหญ่)</h5>
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b>WULF–Anthropic</b> ดีล 20 ปี ~$20B ดาต้าเซ็นเตอร์ Kentucky (~401MW) · <b>MU–Ford</b> เซ็นสัญญาซัพพลายหน่วยความจำระยะยาว (Micron ขยาย DRAM ในสหรัฐ) · <b>NVDA</b> โต้ข่าวเลื่อน Kyber NVL144 ยืน "roadmap intact" · <b>Ondas</b> ซื้อ DZYNE $876M (โดรน/ป้องกันประเทศ) — ดีลจริงบอกอุปสงค์ AI ที่ต่างจากกระแสราคา</p>
+                </div>
+                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #cbe6df;">
+                    <h5 class="font-bold mb-2 flex items-center" style="color:#2f6b60;"><i class="fa-solid fa-circle-question mr-2"></i> มุม "ระวังปลายรอบ / หมุนกลุ่ม"</h5>
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;">MS เตือน "momentum unwind" กดดัชนีชื่อใหญ่ · ยีลด์ยาวย่านสูงกดหุ้นเติบโตที่ valuation ตึง · ฝั่งสวนกระแส Cramer แนะเก็บ<b>คุณภาพ</b>ช่วง rotation — JNJ, PEP, SBUX, STZ, TJX · ดีล Solstice–Element $14.5B ทำหุ้นร่วง 15% เตือนว่าไม่ใช่ทุกดีลตลาดจะเชียร์</p>
+                </div>
+            </div>
+            <p class="relative z-10 text-xs font-semibold mt-4 bg-white/60 rounded-lg p-2" style="color:#2f6b60; border:1px solid #cbe6df;"><i class="fa-solid fa-scale-balanced mr-1"></i> กรอบคิด: แยก "เรื่องเล่า/กระแส" ออกจาก "คำสั่งซื้อจริง" (ดีล มาร์จิ้น การใช้งานจริง) แล้วชั่งด้วยตัวเอง · ธุรกิจดีที่ราคาย่อเพราะทั้งกลุ่ม ≠ ธุรกิจแย่</p>
+        </div>
+
+        <!-- ============ X HEAT LAYER (full width · ชั้นความร้อน) ============ -->
+        <div class="glass-card highlight-x p-6 mb-6 relative">
+            <div class="badge-static" style="background:#3b5b6b;"><i class="fa-brands fa-x-twitter mr-1"></i>ชั้น X · heat</div>
+            <i class="fa-brands fa-x-twitter bg-icon-watermark" style="color:#9fb2bd;"></i>
+            <h4 class="relative z-10 mb-3 text-lg md:text-xl font-bold" style="color:#274451;"><i class="fa-solid fa-fire-flame-curved mr-2" style="color:#b8463a;"></i> นักเก็งกำไรสหรัฐ "คุย/เชียร์" อะไรกันบน X (24 ชม.)</h4>
+
+            <div class="relative z-10 rounded-lg p-3 mb-4" style="background:#fdf6ec; border:1px solid #e6b8ae; border-left:4px solid #b8463a;">
+                <p class="text-xs leading-relaxed font-semibold" style="color:#8f2f26;"><i class="fa-solid fa-triangle-exclamation mr-1"></i> เรานำเสนอ "ข่าว" ว่านักเก็งกำไรพูดอะไรบน X — นี่คือ<b>ความเห็นบุคคลที่สาม</b> (โพสต์สาธารณะ) <b>ไม่ใช่มุมมองหรือคำแนะนำของเรา</b> · เราเป็นสื่อ จึง<b>ยกโพสต์ + แนบลิงก์ต้นทาง</b>ให้ท่านเปิดอ่าน/ตีความเอง · ชื่อหุ้นที่ปรากฏ = สิ่งที่ "คนพูดถึง" ไม่ใช่รายการซื้อขาย นักลงทุนควรศึกษาเองก่อนตัดสินใจเสมอ</p>
+            </div>
+
+            <p class="relative z-10 text-xs mb-4 leading-relaxed" style="color:#4a453b;">ธีมเด่นวันนี้ = <b>AI/เทค</b> (ดีลดาต้าเซ็นเตอร์ · หน่วยความจำ/HBM) · การหมุนธีมของ Morgan Stanley · เทคนิคดัชนีโลก. ยกจาก <b>@StockSavvyShay</b> (29 โพสต์), <b>@TechCharts</b> (13), <b>@InvestingVisual</b> (3), <b>@Speculator_io</b> (ไม่มีโพสต์ใหม่) — ตามที่เขาโพสต์จริง:</p>
+
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 6 ก.ค. · <b>Morgan Stanley "AI trade rotation"</b> (ยกโพสต์ดิบ) — <a href="https://x.com/StockSavvyShay/status/2074101384325308624" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">MS มองเทรด AI กำลังหมุนออกจากหุ้นที่นำ rally — ดัชนีชื่อใหญ่อาจถูกกดจาก "momentum unwind" · ชอบ <span class="xchip">$MSFT</span> <span class="xchip">$AMZN</span> <span class="xchip">$META</span> มากกว่ากลุ่มชิป โดยมองว่า hyperscaler ยังน่าสนใจในธีม AI</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 6 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2074107747092910183" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$WULF</span> เซ็นดีล 20 ปี เกือบ <b>$20B</b> กับ Anthropic (ดาต้าเซ็นเตอร์ Kentucky ~401MW) · เริ่มมีกำลังผลิตครึ่งหลัง 2027</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 6 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2074112074406678769" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$MU</span> · <span class="xchip">$F</span> เซ็นสัญญาซัพพลายหน่วยความจำระยะยาวสำหรับรถรุ่นใหม่ของ Ford — Micron ขยายกำลังผลิต DRAM ในสหรัฐ (รวมโรงงาน Virginia)</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 6 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2074166476291133636" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$NVDA</span> โต้รายงาน SemiAnalysis ที่ว่า Kyber NVL144 ถูกเลื่อนไป 2028 — Nvidia ยืน "roadmap ยังคงเดิม" หลังมีข่าวว่าแร็ก NVL72x2 ถูกยกเลิก</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 6 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2074092808588398979" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$ONDS</span> ซื้อ DZYNE Technologies <b>$876M</b> เสริมความสามารถอากาศยานไร้คนขับ/โดรน/ต้านโดรน · ดัน target รายได้ 2026 เป็น $525M · <span class="xchip">$IREN</span> +11%</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @StockSavvyShay · 7 ก.ค. — <a href="https://x.com/StockSavvyShay/status/2074201785296912469" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;"><span class="xchip">$AMD</span> ประกาศร่วมสมทบ "Trump Accounts" (บัญชีลงทุนสำหรับเด็กอเมริกัน) · Lisa Su ร่วมงานที่ทำเนียบขาว · <span class="xchip">$MU</span> +7% overnight</p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-1" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @InvestingVisual · 6 ก.ค. · "physical AI" + งบ SanDisk (ยกโพสต์ดิบ)</p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">
+                        1. ตลาด <b>physical AI</b> คาดโต $6.6B (2025) → $82B (2035) · หุ้นตามชั้น stack: <span class="xchip">$ABB</span> <span class="xchip">$ISRG</span> <span class="xchip">$SYM</span> <span class="xchip">$TER</span> (ฮาร์ดแวร์) · <span class="xchip">$NVDA</span> <span class="xchip">$GOOGL</span> (ซอฟต์แวร์) — <a href="https://x.com/InvestingVisual/status/2074122279152152848" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                        2. <span class="xchip">$SNDK</span> เขามองกำไรสุทธิโตแรง Q4 2025 $0.8B → Q4 2026 (est.) $8.1B — <a href="https://x.com/InvestingVisual/status/2074175038849441832" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </p>
+                </div>
+
+                <div class="bg-white/85 rounded-lg p-3 md:col-span-2" style="border:1px solid #d7dde4;">
+                    <p class="text-[11px] mb-2" style="color:#8a8270;"><i class="fa-brands fa-x-twitter mr-1"></i> @TechCharts · 6–7 ก.ค. · เทคนิคดัชนีโลก (ยกหัวข้อ + ลิงก์ต้นทางให้เปิดกราฟเอง)</p>
+                    <p class="text-xs leading-relaxed" style="color:#3a352c;">
+                        1. <b>#SENSEX</b> "Higher low inside the rectangle" — <a href="https://x.com/TechCharts/status/2074004690816123335" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                        2. <span class="xchip">$CRWD</span> 3 touch points · จับตา breakout — <a href="https://x.com/TechCharts/status/2074061044083802546" target="_blank" rel="noopener" class="xlink">เปิดโพสต์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                        3. <span class="xchip">$ACWI</span> มอง H&amp;S failure เหนือ year-long average · <span class="xchip">$IXG</span> "resuming uptrend" · <b>#TOTAL3</b> จับตาแนวรับแนวนอน — <a href="https://x.com/TechCharts" target="_blank" rel="noopener" class="xlink">เปิดโปรไฟล์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="relative z-10 text-[11px] mt-3 leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #cdd9e0;">
+                <b><i class="fa-solid fa-list mr-1" style="color:#3b5b6b;"></i> รายชื่อหุ้นทั้งหมดที่ถูกพูดถึงบน X วันนี้</b> (ยกมาครบเพื่อให้ท่านทำการบ้านต่อ — ไม่ได้กรอง):<br>
+                <span class="xchip">$AAOI</span> <span class="xchip">$AAPL</span> <span class="xchip">$ABB</span> <span class="xchip">$ALAB</span> <span class="xchip">$AMD</span> <span class="xchip">$AMZN</span> <span class="xchip">$AVGO</span> <span class="xchip">$CRDO</span> <span class="xchip">$CRWD</span> <span class="xchip">$DELL</span> <span class="xchip">$F</span> <span class="xchip">$GOOGL</span> <span class="xchip">$INTC</span> <span class="xchip">$IREN</span> <span class="xchip">$ISRG</span> <span class="xchip">$META</span> <span class="xchip">$MRVL</span> <span class="xchip">$MSFT</span> <span class="xchip">$MU</span> <span class="xchip">$NVDA</span> <span class="xchip">$ONDS</span> <span class="xchip">$RIVN</span> <span class="xchip">$SKHY</span> <span class="xchip">$SNDK</span> <span class="xchip">$SPCX</span> <span class="xchip">$SYM</span> <span class="xchip">$TER</span> <span class="xchip">$TSLA</span> <span class="xchip">$WMT</span> <span class="xchip">$WULF</span> · ดัชนี: <span class="xchip">$ACWI</span> <span class="xchip">$EUFN</span> <span class="xchip">$IXG</span> <span class="xchip">$XMHQ</span>
+            </p>
+
+            <p class="relative z-10 text-xs font-semibold mt-3 bg-white/70 rounded-lg p-2" style="color:#274451; border:1px solid #d7dde4;"><i class="fa-solid fa-scale-balanced mr-1"></i> กรอบคิด: "กระแส" บอกว่าตลาด<b>สนใจ</b>อะไร ไม่ได้บอกว่าอะไร<b>ถูก</b> — ใช้เป็นจุดตั้งต้นไปหาข้อมูล ไม่ใช่เหตุผลซื้อขาย · ตัวเลข/เป้าที่ยกมา = สิ่งที่ผู้โพสต์อ้าง ควรตรวจสอบเอง</p>
+        </div>
+
+        <!-- ============ CRYPTO (full width) ============ -->
+        <div class="glass-card highlight-crypto p-6 mb-6 relative">
+            <div class="badge-static" style="background:#c0603a;"><i class="fa-brands fa-bitcoin mr-1"></i>CRYPTO · ~$64K</div>
+            <i class="fa-brands fa-bitcoin bg-icon-watermark" style="color:#e0a883;"></i>
+            <h4 class="relative z-10 mb-4 text-lg md:text-xl font-bold" style="color:#9a3f1e;"><i class="fa-brands fa-bitcoin mr-2"></i> BTC เด้งกลับ ~$64K หลัง Strategy เทขายครั้งประวัติศาสตร์</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #efd4bf;">
+                    <h5 class="font-bold mb-2 flex items-center" style="color:#9a3f1e;"><i class="fa-solid fa-arrow-trend-up mr-2"></i> ร่วงหลุด $62K แล้วเด้งกลับ</h5>
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;">BTC ราคาสด ~<b>$64,000</b> — ร่วงหลุด $62k แล้วเด้งกลับ · ตัวเร่ง: <b>Strategy (MSTR) ขาย 3,588 BTC (~$216M)</b> ครั้งใหญ่สุดในประวัติศาสตร์บริษัทเพื่อจ่ายปันผล · Grayscale/Bitwise มองช่วยฟื้นความเชื่อมั่นโครงสร้างการเงิน + หา "durable bottom" ("Saylor sold, Tom Lee bought")</p>
+                </div>
+                <div class="bg-white/80 p-4 rounded-xl shadow-sm" style="border:1px solid #efd4bf;">
+                    <h5 class="font-bold mb-2 flex items-center" style="color:#9a3f1e;"><i class="fa-solid fa-layer-group mr-2"></i> ETF ไหลออก · เหรียญอื่น · MiCA</h5>
+                    <p class="text-xs leading-relaxed" style="color:#4a453b;"><b>ETF ไหลออก 8 สัปดาห์ติด</b> (IBIT −$773M) แต่ altcoin (XRP/SOL) ทานได้ · <b>Ripple ได้ใบอนุญาต MiCA</b> ในยุโรป · Adam Back เตือนซ้ำรอยปัญหา custody แบบ FTX/Mt.Gox — เตือนความเสี่ยงเชิงโครงสร้างของ vehicle ไม่ใช่ของโปรโตคอล</p>
+                </div>
+            </div>
+            <p class="relative z-10 text-xs font-semibold mt-4 bg-white/60 rounded-lg p-2" style="color:#9a3f1e; border:1px solid #efd4bf;"><i class="fa-solid fa-eye mr-1"></i> เส้นที่ตลาดจับตา: BTC โซน <b>$62K</b> (จุดที่ absorb แรงขาย Strategy) เป็นแนวที่ตลาดใช้วัด durable bottom · ทิศ ETF flow สัปดาห์ที่ 9 เป็นตัวชี้ sentiment ที่ต้องดูประกอบราคา ไม่ใช่ดูราคาอย่างเดียว</p>
+        </div>
+
+        <!-- ============ VOCAB ============ -->
+        <div class="glass-card highlight-vocab p-6 mb-6 relative">
+            <div class="badge-static" style="background:#d4a53a;">แปลศัพท์</div>
+            <i class="fa-solid fa-book-open-reader bg-icon-watermark" style="color:#e8cd88;"></i>
+            <h4 class="relative z-10 mb-4 text-lg md:text-xl font-bold" style="color:#8a6d1f;"><i class="fa-solid fa-language mr-2"></i> แปลภาษาการเงิน เป็น "ภาษาชาวบ้าน"</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
+                <div class="bg-white rounded-xl p-4 shadow-sm" style="border:1px solid #efdfb4;">
+                    <h5 class="font-bold mb-1 text-sm" style="color:#8a6d1f;"><i class="fa-solid fa-arrows-rotate mr-1"></i> Momentum unwind (การหมุนคลายโมเมนตัม)</h5>
+                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">เมื่อเงินไหลออกจากหุ้นที่วิ่งแรงนำตลาด (โมเมนตัม) ไปหากลุ่มอื่น — ราคาผู้นำเดิมจึงอ่อนลงแม้พื้นฐานไม่เปลี่ยน เพราะคน "ย้ายฝั่ง" พร้อมกัน</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm" style="border:1px solid #efdfb4;">
+                    <h5 class="font-bold mb-1 text-sm" style="color:#8a6d1f;"><i class="fa-solid fa-server mr-1"></i> Hyperscaler (ยักษ์คลาวด์)</h5>
+                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">บริษัทที่ให้บริการคลาวด์ขนาดมหึมา (Microsoft, Amazon, Google) — เป็นผู้ซื้อชิป AI รายใหญ่ · เวลาธีมหมุน "จากผู้ผลิตชิปไปหาผู้ใช้ชิป" ก็มักหมายถึงกลุ่มนี้</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm" style="border:1px solid #efdfb4;">
+                    <h5 class="font-bold mb-1 text-sm" style="color:#8a6d1f;"><i class="fa-solid fa-file-lines mr-1"></i> FOMC Minutes (รายงานประชุม Fed)</h5>
+                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">บันทึกรายละเอียดการประชุม Fed ที่ออกทีหลัง ~3 สัปดาห์ — บอก "เหตุผลเบื้องหลัง" การตัดสินใจดอกเบี้ย · รอบ มิ.ย. ออก ~8 ก.ค. เป็นตัวจับ tone เข้ม/ผ่อน</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm" style="border:1px solid #efdfb4;">
+                    <h5 class="font-bold mb-1 text-sm" style="color:#8a6d1f;"><i class="fa-solid fa-robot mr-1"></i> Physical AI (AI ในโลกจริง)</h5>
+                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">AI ที่ลงมาอยู่ในหุ่นยนต์/เครื่องจักร/อุปกรณ์จริง (ต่างจาก AI บนจอ) — ครอบคลุมฮาร์ดแวร์หุ่นยนต์ ซอฟต์แวร์ตัดสินใจ และเซนเซอร์ · เป็นธีมลงทุนระยะยาวที่เริ่มถูกพูดถึง</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm" style="border:1px solid #efdfb4;">
+                    <h5 class="font-bold mb-1 text-sm" style="color:#8a6d1f;"><i class="fa-brands fa-bitcoin mr-1"></i> Treasury company / durable bottom</h5>
+                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">บริษัทที่ถือคริปโตเป็นสินทรัพย์หลักในงบ (เช่น Strategy/MSTR) · เวลาบริษัทพวกนี้เทขาย = แรงกดชั่วคราวจาก "vehicle" · "durable bottom" = ระดับราคาที่ตลาดดูดซับแรงขายไหว จนถือเป็นฐานที่มั่นคง</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm" style="border:1px solid #efdfb4;">
+                    <h5 class="font-bold mb-1 text-sm" style="color:#8a6d1f;"><i class="fa-solid fa-scale-balanced mr-1"></i> Rangebound (แกว่งในกรอบ)</h5>
+                    <p class="text-[11px] leading-relaxed" style="color:#4a453b;">ภาวะที่ราคาแกว่งขึ้นลงในกรอบแคบ ไม่มีเทรนด์ชัด — WGC มองทองครึ่งปีหลังน่าจะ rangebound ±5% รอบ ~$4,100 · เหมาะกับการมองเป็น "โซนสะสม" มากกว่าไล่ราคา</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TECHNICAL LEVELS ============ -->
+        <div class="glass-card highlight-levels p-6 mb-6 relative">
+            <div class="badge-static" style="background:#4a9d8e;">เส้นที่ตลาดจับตา</div>
+            <i class="fa-solid fa-ruler-combined bg-icon-watermark" style="color:#9acfc4;"></i>
+            <h4 class="relative z-10 mb-2 text-lg md:text-xl font-bold" style="color:#2f6b60;"><i class="fa-solid fa-chart-area mr-2"></i> แนวรับ–แนวต้าน: "เส้น" ที่ตลาดใช้อ้างอิง</h4>
+            <p class="relative z-10 text-xs mb-4 leading-relaxed bg-white/70 rounded-lg p-3" style="color:#4a453b; border:1px solid #cbe6df;">
+                <b><i class="fa-solid fa-graduation-cap mr-1" style="color:#4a9d8e;"></i>เพื่อความเข้าใจ:</b> <b>แนวรับ</b> = ราคาที่มักมีแรงซื้อเข้ามาพยุง · <b>แนวต้าน</b> = ราคาที่มักมีแรงขายกดไว้. ตัวเลขเหล่านี้เป็น<b>"จุดอ้างอิงที่ตลาดเฝ้าดู" ไม่ใช่จุดแนะนำให้ซื้อหรือขาย</b>
+            </p>
+            <div class="relative z-10 overflow-hidden rounded-xl" style="border:1px solid #cbe6df;">
+                <table class="w-full text-xs md:text-sm">
+                    <thead class="text-white" style="background:#4a9d8e;"><tr>
+                        <th class="text-left p-2.5">สินทรัพย์</th><th class="text-center p-2.5">ระดับปัจจุบัน</th><th class="text-center p-2.5">เส้นที่ตลาดจับตา</th>
+                    </tr></thead>
+                    <tbody style="color:#4a453b;">
+                        <tr class="lvl-row"><td class="p-2.5"><i class="fa-solid fa-coins mr-1" style="color:#d4a53a;"></i> ทองคำ</td><td class="text-center p-2.5">~$4,175</td><td class="text-center p-2.5">$4,100 = โซนสมดุลตาม WGC · เป้าสำนัก H2 กระจาย $4,700–$5,055 (มุมมองต้นทาง)</td></tr>
+                        <tr class="lvl-row"><td class="p-2.5"><i class="fa-brands fa-bitcoin mr-1" style="color:#c0603a;"></i> Bitcoin</td><td class="text-center p-2.5">~$64,000 (สด)</td><td class="text-center p-2.5">$62K = เส้นที่ตลาดใช้วัด durable bottom หลังแรงขาย Strategy</td></tr>
+                        <tr class="lvl-row"><td class="p-2.5"><i class="fa-solid fa-yen-sign mr-1" style="color:#5f8f86;"></i> USD/JPY</td><td class="text-center p-2.5">162.04</td><td class="text-center p-2.5">โซน 162 = ระดับที่ตลาดจับตาความเสี่ยงแทรกแซงของญี่ปุ่น</td></tr>
+                        <tr class="lvl-row"><td class="p-2.5"><i class="fa-solid fa-chart-line mr-1" style="color:#9a9560;"></i> S&amp;P 500</td><td class="text-center p-2.5">7,538</td><td class="text-center p-2.5">โซน 7,800 = เป้าปลายรอบที่นักวิเคราะห์อ้าง (เส้นอ้างอิง)</td></tr>
+                        <tr class="lvl-row"><td class="p-2.5"><i class="fa-solid fa-microchip mr-1" style="color:#4a9d8e;"></i> Nasdaq</td><td class="text-center p-2.5">26,121 (+288)</td><td class="text-center p-2.5">ความยั่งยืน chip rebound — ยืนได้ = ธีมชิปยังนำ, อ่อนอีกรอบ = พึ่ง hyperscaler</td></tr>
+                        <tr class="lvl-row"><td class="p-2.5"><i class="fa-solid fa-landmark mr-1" style="color:#8a7d4a;"></i> ยีลด์ 10 ปี</td><td class="text-center p-2.5">4.478%</td><td class="text-center p-2.5">4.50% = แนวจิตวิทยา — Fed Minutes ~8 ก.ค. เป็น catalyst ทิศยีลด์</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ============ WATCH LIST 24-72H ============ -->
+        <div class="glass-card highlight-watch p-6 mb-8 relative">
+            <div class="badge-static" style="background:#6b6456;">24–72 ชม.</div>
+            <i class="fa-solid fa-binoculars bg-icon-watermark" style="color:#c2bcae;"></i>
+            <h4 class="relative z-10 mb-4 text-lg md:text-xl font-bold" style="color:#3a352c;"><i class="fa-solid fa-binoculars mr-2"></i> สิ่งที่ควรจับตา (24–72 ชม. ข้างหน้า)</h4>
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs" style="color:#4a453b;">
+                <div class="bg-white/80 rounded-lg p-3" style="border:1px solid #e3ddd0;">
+                    <p class="font-bold mb-1" style="color:#8a7d4a;"><i class="fa-solid fa-file-lines mr-1"></i> ~8 ก.ค. — Fed Minutes (มิ.ย.)</p>
+                    <p class="leading-relaxed">รายงานประชุม Fed ออกกลางสัปดาห์ = ตัวจับ tone hawkish/dovish → ทิศยีลด์ + ดอลลาร์ · ตลาดบางส่วนมองโอกาสขึ้นดอกเบี้ยเร็วสุด ต.ค.</p>
+                </div>
+                <div class="bg-white/80 rounded-lg p-3" style="border:1px solid #e3ddd0;">
+                    <p class="font-bold mb-1" style="color:#4a9d8e;"><i class="fa-solid fa-microchip mr-1"></i> ความยั่งยืน chip rebound</p>
+                    <p class="leading-relaxed">ชิปจะกลับไปนำได้ไหม หรือส่งไม้ต่อให้ hyperscaler ตาม MS call — ถ้ากลุ่มชิปอ่อนอีกรอบ ตลาดต้องพึ่ง MSFT/AMZN/META รับช่วง</p>
+                </div>
+                <div class="bg-white/80 rounded-lg p-3" style="border:1px solid #e3ddd0;">
+                    <p class="font-bold mb-1" style="color:#c0603a;"><i class="fa-brands fa-bitcoin mr-1"></i> BTC ยืน $62K หลังแรงขาย Strategy?</p>
+                    <p class="leading-relaxed">BTC จะยืนเหนือ $62K หลัง supply shock จาก MSTR ได้ไหม + ทิศ ETF flow สัปดาห์ที่ 9 (ไหลออกมา 8 สัปดาห์ติด)</p>
+                </div>
+                <div class="bg-white/80 rounded-lg p-3" style="border:1px solid #e3ddd0;">
+                    <p class="font-bold mb-1" style="color:#c58a3d;"><i class="fa-solid fa-chart-column mr-1"></i> นับถอยหลัง CPI 14 ก.ค.</p>
+                    <p class="leading-relaxed">CPI สหรัฐเป็นตัวเลขใหญ่ถัดไป (จะเป็นวัน "ฉบับเย็น") · จับตา USD/JPY ที่ 162 — ความเสี่ยงแทรกแซงญี่ปุ่นควบคู่</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ DASHBOARD ============ -->
+        <h4 class="text-base font-bold mb-3" style="color:#3a352c;"><i class="fa-solid fa-gauge-high mr-2" style="color:#6b6456;"></i> ตัวเลขข้ามสินทรัพย์ (ปิดล่าสุด จันทร์ 6 ก.ค. · BTC สด)</h4>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-3">
+            <div class="glass-card p-3" style="border-left:4px solid #9a9560; background:linear-gradient(to right,#fff,#f6f6ee);">
+                <h5 class="font-bold text-xs mb-1" style="color:#3a352c;"><i class="fa-solid fa-chart-line mr-1" style="color:#9a9560;"></i> S&amp;P 500</h5>
+                <p class="font-bold text-sm" style="color:#3d7a2e;">7,538</p><p class="text-[10px] leading-tight" style="color:#8a8270;">+55 · ทำจุดสูง</p>
+            </div>
+            <div class="glass-card p-3" style="border-left:4px solid #4a9d8e; background:linear-gradient(to right,#fff,#eef6f4);">
+                <h5 class="font-bold text-xs mb-1" style="color:#3a352c;"><i class="fa-solid fa-microchip mr-1" style="color:#4a9d8e;"></i> Nasdaq</h5>
+                <p class="font-bold text-sm" style="color:#3d7a2e;">26,121</p><p class="text-[10px] leading-tight" style="color:#8a8270;">+288 · ชิปเด้งนำ</p>
+            </div>
+            <div class="glass-card p-3" style="border-left:4px solid #8a7d4a; background:linear-gradient(to right,#fff,#f8f5ef);">
+                <h5 class="font-bold text-xs mb-1" style="color:#3a352c;"><i class="fa-solid fa-landmark mr-1" style="color:#8a7d4a;"></i> ยีลด์ 10Y</h5>
+                <p class="font-bold text-sm" style="color:#8a8270;">4.478%</p><p class="text-[10px] leading-tight" style="color:#8a8270;">ทรงย่านสูง</p>
+            </div>
+            <div class="glass-card p-3" style="border-left:4px solid #5f8f86; background:linear-gradient(to right,#fff,#eef5f4);">
+                <h5 class="font-bold text-xs mb-1" style="color:#3a352c;"><i class="fa-solid fa-dollar-sign mr-1" style="color:#5f8f86;"></i> DXY</h5>
+                <p class="font-bold text-sm" style="color:#8a8270;">100.86</p><p class="text-[10px] leading-tight" style="color:#8a8270;">แบนราบ</p>
+            </div>
+            <div class="glass-card p-3" style="border-left:4px solid #d4a53a; background:linear-gradient(to right,#fff,#fdf8ec);">
+                <h5 class="font-bold text-xs mb-1" style="color:#3a352c;"><i class="fa-solid fa-coins mr-1" style="color:#d4a53a;"></i> ทองคำ</h5>
+                <p class="font-bold text-sm" style="color:#3d7a2e;">~4,175</p><p class="text-[10px] leading-tight" style="color:#8a8270;">+7.4 · ทรงย่านบน</p>
+            </div>
+            <div class="glass-card p-3" style="border-left:4px solid #c0603a; background:linear-gradient(to right,#fff,#fdf3ec);">
+                <h5 class="font-bold text-xs mb-1" style="color:#3a352c;"><i class="fa-brands fa-bitcoin mr-1" style="color:#c0603a;"></i> Bitcoin</h5>
+                <p class="font-bold text-sm" style="color:#3d7a2e;">~64,000</p><p class="text-[10px] leading-tight" style="color:#8a8270;">สด 24/7 · เด้งกลับ</p>
+            </div>
+        </div>
+        <p class="text-[11px] mb-8" style="color:#a49c8c;">*อังคาร 7 ก.ค. — ตัวเลขหุ้น/ยีลด์/ทอง/ค่าเงิน = ราคาปิดจันทร์ 6 ก.ค. (ตลาด US ปิดคืนก่อน) · Bitcoin = ราคาสด 24/7 · DXY 100.855 · USD/JPY 162.04 · S&amp;P +0.74% · Nasdaq +1.12%</p>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="mt-8 pt-5 text-center flex flex-col items-center justify-center gap-2" style="border-top:1px solid #e3ddd0;">
+            <div class="rounded-xl px-5 py-3 max-w-3xl" style="background:#fdf8ec; border:1px solid #efdfb4;">
+                <p class="text-xs font-semibold" style="color:#8a6d1f;"><i class="fa-solid fa-circle-info mr-1"></i> ข้อมูลประกอบการตัดสินใจ ไม่ใช่คำแนะนำการลงทุน</p>
+                <p class="text-[11px] mt-1" style="color:#a49c8c;">ตัวเลข เป้า และมุมมองในเนื้อหาเป็นของสำนักข่าว/นักวิเคราะห์ต้นทาง · แนวรับ/แนวต้าน = เส้นที่ตลาดจับตา · การลงทุนมีความเสี่ยง</p>
+            </div>
+            <p class="text-xs mb-4" style="color:#a49c8c;">© You Need Wealth · เรียบเรียงโดย เดชากร [กลต.043827] — ใบอนุญาต ก.ล.ต. + คปภ.</p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
