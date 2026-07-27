@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>วิเคราะห์ราคาภาษาชาวบ้าน · 27 ก.ค. 2569 (ฉบับเช้าจันทร์ · คืนอาทิตย์อิหร่านประกาศ "ระงับการโจมตี" · น้ำมันฟิวเจอร์สร่วง ~5% · ฟิวเจอร์สหุ้นเด้ง Dow +244 / Nasdaq-100 +1.2% · เข้าสัปดาห์ FOMC คืนพุธชนงบ MSFT/META · GDP Q2 + Core PCE คืนพฤหัส · BTC เขียว 2 วันติด $65,265 ชนเพดาน $65,000 · CXMT IPO ใหญ่สุดเอเชียปีนี้เปิดเทรดวันนี้)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body { font-family: 'Kanit', sans-serif; background: #f0ede6; color: #3a362f; }
+  .main-wrapper { max-width: 1200px; margin: 0 auto; }
+  .glass-card { background: rgba(255,255,255,.75); backdrop-filter: blur(8px); border: 1px solid rgba(176,166,138,.35); border-radius: 1rem; box-shadow: 0 4px 18px rgba(43,58,68,.06); }
+  .highlight-gold { background: linear-gradient(135deg, #fdf8ec 0%, #f7ecd0 100%); border-top: 4px solid #c9a227; }
+  .highlight-fed { background: linear-gradient(135deg, #eef2f6 0%, #dde6ee 100%); border-top: 4px solid #2b3a44; }
+  .highlight-economy { background: linear-gradient(135deg, #f0f4ee 0%, #e0e9dc 100%); border-top: 4px solid #5a7a4e; }
+  .highlight-geopolitics { background: linear-gradient(135deg, #f7efee 0%, #eedcd9 100%); border-top: 4px solid #631317; }
+  .highlight-forex { background: linear-gradient(135deg, #f2f0f6 0%, #e4e0ee 100%); border-top: 4px solid #5b5378; }
+  .highlight-market { background: linear-gradient(135deg, #eef4f4 0%, #dcebe9 100%); border-top: 4px solid #376562; }
+  .highlight-ai { background: linear-gradient(135deg, #f2f2f7 0%, #e2e2f0 100%); border-top: 4px solid #48487a; }
+  .highlight-crypto { background: linear-gradient(135deg, #f6f1ea 0%, #ece0d0 100%); border-top: 4px solid #a06b2a; }
+  .highlight-vocab { background: linear-gradient(135deg, #f4f6f4 0%, #e6ece6 100%); border-top: 4px solid #4a9d8e; }
+  .highlight-levels { background: linear-gradient(135deg, #f2f5f6 0%, #e1eaec 100%); border-top: 4px solid #4a9d8e; }
+  .highlight-watch { background: linear-gradient(135deg, #f7f3ec 0%, #efe4cf 100%); border-top: 4px solid #b0a68a; }
+  .highlight-recap { background: linear-gradient(135deg, #f4f2ee 0%, #e8e3d8 100%); border-top: 4px solid #2b3a44; }
+  .highlight-x { background: linear-gradient(135deg, #eef2f4 0%, #dfe8ec 100%); border-top: 4px solid #3b5b6b; }
+  .xchip { display:inline-block; background:#e4edf2; color:#274451; border:1px solid #cdd9e0; border-radius:.375rem; padding:0 .35rem; font-weight:600; font-size:.72rem; margin:0 .1rem; }
+  .xlink { color:#3b5b6b; text-decoration:underline dotted; }
+  .bg-icon-watermark { position: absolute; right: .75rem; bottom: .5rem; font-size: 4rem; opacity: .07; pointer-events: none; }
+  .badge-static { display: inline-block; padding: .15rem .65rem; border-radius: 9999px; font-size: .7rem; font-weight: 600; }
+  .header-bg { background: linear-gradient(120deg, #2b2926 0%, #3b3833 55%, #4c463d 100%); position: relative; overflow: hidden; }
+  .orb-1 { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(194,180,140,.25), transparent 70%); top: -80px; right: -60px; }
+  .orb-2 { position: absolute; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(99,19,23,.3), transparent 70%); bottom: -70px; left: -40px; }
+  .lvl-row td { padding: .5rem .75rem; border-bottom: 1px solid rgba(176,166,138,.25); }
+  .recap-row td { padding: .45rem .6rem; border-bottom: 1px solid rgba(176,166,138,.25); }
+  .spark-up { color: #3d7a2e; font-weight: 600; }
+  .spark-down { color: #b8463a; font-weight: 600; }
+  .spark-flat { color: #6b6456; font-weight: 600; }
+</style>
+</head>
+<body class="antialiased">
+<div class="main-wrapper px-4 py-6">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="header-bg rounded-2xl p-8 mb-6 text-white">
+    <div class="orb-1"></div><div class="orb-2"></div>
+    <div class="relative z-10">
+      <span class="badge-static bg-white/15 text-amber-100 mb-3"><i class="fa-solid fa-mug-hot mr-1"></i> ฉบับเช้าจันทร์ · คืนอาทิตย์อิหร่านประกาศ "ระงับการโจมตี" · น้ำมันฟิวเจอร์สร่วง ~5% · ฟิวเจอร์สหุ้นเด้ง Dow +244 / Nasdaq-100 +1.2% · คืนนี้ตลาดสหรัฐเปิดรับสัปดาห์ FOMC + งบ 4 ยักษ์คลาวด์ · BTC เขียว 2 วันติด $65,265</span>
+      <h1 class="text-2xl md:text-3xl font-bold mt-2 leading-snug">วิเคราะห์ราคาภาษาชาวบ้าน<br class="md:hidden"> · 27 ก.ค. 2569</h1>
+      <p class="text-sm text-stone-300 mt-3 max-w-3xl">เช้าวันจันทร์ ตลาดสหรัฐยังไม่เปิด (เปิดคืนนี้ราว 20:30 ไทย) · ราคาหุ้น/ทอง/ยีลด์/น้ำมันในหน้านี้คือ<b>ราคาปิดวันศุกร์ 24 ก.ค.</b> · Bitcoin เทรด 24/7 ตัวเลขคือ<b>ปิดวันอาทิตย์ $65,265 (+1.5%) เขียว 2 วันติด</b> · ข่าวใหญ่คืนอาทิตย์: <b>อิหร่านประกาศ "ระงับการโจมตี" ตราบใดที่สหรัฐหยุดด้วย</b> ทำ<b>น้ำมันฟิวเจอร์สร่วงราว 5%</b> (Brent ~$92 · WTI ~$85) และ<b>ฟิวเจอร์สหุ้นเด้งทั้งกระดาน</b> (Dow +244 จุด / +0.5% · S&amp;P +0.6% · Nasdaq-100 +1.2%) · สัปดาห์นี้คือ "สัปดาห์ที่ทุกอย่างชนกัน": <b>FOMC แถลงคืนพุธราวตี 1 ถึงตี 2 ไทย (ตลาดให้โอกาสขึ้นดอกเบี้ย ~38%) ชนงบ MSFT/META คืนเดียวกัน</b> · คืนพฤหัส 19:30 ไทย <b>GDP ไตรมาส 2 + Core PCE</b> พร้อมงบ <b>AMZN</b> (และ AAPL ตามข้อมูล FMP) + <b>BoE</b> · คืนพฤ.-ศ. <b>BoJ</b> · คำถามเดียวที่คร่อมทุกหมวด: <b>ข่าวสงบศึกชั่วคราวจะเปลี่ยนสมการเงินเฟ้อไปสู่ดอกเบี้ยได้จริงแค่ไหน</b></p>
+      <div class="mt-4 inline-block bg-white/10 rounded-lg px-4 py-2 text-xs text-stone-200">
+        <i class="fa-regular fa-calendar mr-1"></i> อัปเดต: 27 ก.ค. 2569 (เช้า) · ผู้จัดทำ: เดชากร [กลต.043827]<br>
+        <i class="fa-regular fa-clock mr-1"></i> จันทร์เช้าไทย · ตลาดสหรัฐเปิดคืนนี้ ~20:30 ไทย · ราคาหุ้น/ทอง/ยีลด์คือ<b>ราคาปิดวันศุกร์ 24 ก.ค.</b> (ไม่ใช่ราคาสด) · Bitcoin คือปิดวันอาทิตย์ 26 ก.ค. · ตัวเลขฟิวเจอร์สคืนอาทิตย์เป็นทิศทางก่อนเปิด ยังเปลี่ยนได้
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ BIG PICTURE ═══════════ -->
+  <section class="glass-card p-6 mb-6" style="border-left: 5px solid #6b6456;">
+    <h2 class="text-lg font-bold mb-2"><i class="fa-solid fa-earth-asia mr-2" style="color:#6b6456;"></i>ภาพใหญ่วันนี้ 1 บรรทัด</h2>
+    <p class="text-sm font-medium mb-3" style="color:#4c463d;">"คืนอาทิตย์อิหร่านประกาศระงับการโจมตีแบบมีเงื่อนไข · น้ำมันร่วง 5% ฟิวเจอร์สหุ้นเด้งรับทันที · แต่คำถามจริงของสัปดาห์คือ ข่าวสงบศึกชั่วคราวจะเปลี่ยนสมการเงินเฟ้อไปสู่ดอกเบี้ยได้แค่ไหน ในสัปดาห์ที่ FOMC คืนพุธชนงบ MSFT/META และ GDP + Core PCE รอคืนพฤหัส"</p>
+    <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-5">
+      <li><b>ข่าวที่เปลี่ยนภาพคืนอาทิตย์:</b> อิหร่านประกาศ<b>"ระงับการโจมตี" ตราบใดที่สหรัฐหยุดด้วย</b> · เป็น "ระงับ" (suspension) ไม่ใช่ "หยุดยิง" (ceasefire) · เบื้องหลังคือข้อเสนอหยุดยิง 10 วันที่<b>ปากีสถานผลักดันและจีนสนับสนุน</b> · ฝั่งสหรัฐ Rubio ระวังว่าอิหร่าน "ยังไม่พร้อมทำดีลที่ตัวเองจะรักษาได้" · <b>Netanyahu ถึง Washington พบ Trump วันนี้</b></li>
+      <li><b>ปฏิทินสัปดาห์ (เวลาไทย):</b> จ. <b>Durable Goods</b> (คาด +1.6% จาก −4.5%) + Dallas Fed · อ. <b>Consumer Confidence</b> + งบ V · <b>คืนพุธราวตี 1-2: แถลง FOMC ชนงบ MSFT/META</b> · <b>พฤ. 19:30: GDP Q2 (คาด 2.3%) + Core PCE</b> + claims + <b>BoE</b> + งบ AMZN (AAPL ตาม FMP) · <b>คืนพฤ.-ศ.: BoJ</b> · ศ. Chicago PMI + Consumer Sentiment + งบ XOM/CVX</li>
+      <li><b>ดอกเบี้ย:</b> FedWatch ให้โอกาสขึ้นรอบนี้ <b>37.9%</b> (คูณ 3 จาก 12.8% ในหนึ่งเดือน) และเดือน ก.ย. <b>~82%</b> · ฐานปัจจุบัน 3.50-3.75% · BofA ยืนยัน "Fed ควรขึ้น" (core PCE มุมมองเขา ~3.4%) · <b>แต่น้ำมันร่วง 5% เกิดก่อน FOMC แค่ 3 วัน</b> · เลข 38% จึงอาจแกว่งก่อนถึงคืนพุธ</li>
+      <li><b>ตัวเลขคาดที่ขัดกันเอง (จดทั้งคู่ ไม่เลือกเอง):</b> Core PCE คืนพฤหัส ปฏิทินเศรษฐกิจคาด <b>2.6% y/y (m/m 0.1%)</b> ขณะ BofA มอง <b>~3.4%</b> · สองตัวเลขนี้คือ "เรื่องเล่าคนละเรื่อง" และคืนพฤหัสตลาดจะรู้ว่าเรื่องเล่าไหนถูกฆ่าทิ้ง</li>
+      <li><b>ตลาดหุ้นเข้าสัปดาห์แบบบอบช้ำแต่ฟิวเจอร์สเด้ง:</b> Nasdaq ลบ 2 สัปดาห์ติดครั้งแรกตั้งแต่ มี.ค. (สัปดาห์ก่อน S&amp;P −0.6% · Nasdaq −2.1%) · CNBC ตั้งคำถามว่างบ 4 ยักษ์คลาวด์จะ "ปลอบ" หรือ "ซ้ำ" ความกลัว AI spending หลังเคส GOOGL · บทเรียนสัปดาห์ก่อน: <b>"beat แล้วขาย" เกิดแล้ว 2 เคส (GOOGL, INTC)</b> · วันนี้ <b>CXMT ผู้ผลิต DRAM จีน IPO ที่ STAR Market มูลค่าระดมทุน $8.6B ใหญ่สุดของเอเชียปีนี้</b> เปิดเทรดวันแรก</li>
+      <li><b>ราคาที่ถืออยู่ (ปิดศุกร์):</b> ทอง <b>4,070.80 (+0.51%)</b> เหนือ $4,000 สัปดาห์ที่ 5 · S&amp;P <b>7,411.98</b> · Nasdaq <b>24,975.82</b> · 10Y <b>4.69%</b> · USD/JPY อาทิตย์ <b>163.68</b> (เด้งจากยอด 40 ปี 163.98) · Bitcoin อาทิตย์ <b>65,265 (+1.5%)</b> ชนเพดานเดือน ก.ค. $65,000 · ภาษี 60 คู่ค้าที่มีผลศุกร์<b>ถูกฟ้องแล้วที่ศาลการค้า NY</b></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════ 3-DAY RECAP ═══════════ -->
+  <section class="glass-card highlight-recap p-6 mb-6 relative">
+    <i class="fa-solid fa-chart-line bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-backward-step mr-2" style="color:#2b3a44;"></i>สรุปราคาย้อนหลัง 3 วัน</h2>
+      <span class="badge-static text-white" style="background:#2b3a44;">ย้อนหลัง 3 วัน</span>
+    </div>
+    <div class="bg-white/70 rounded-lg p-3 mb-4 text-xs text-stone-600">
+      <i class="fa-solid fa-circle-info mr-1" style="color:#2b3a44;"></i><b>อ่านตารางอย่างไร?</b> สามช่องคือราคาปิดตลาดสหรัฐ 3 วันทำการล่าสุด (พ.-ศ. สัปดาห์ก่อน) · เช้าจันทร์ตลาดยังไม่เปิด ตัวเลขจึงเป็นชุดเดียวกับฉบับวานนี้ ใช้เทียบกับ<b>ฟิวเจอร์สคืนอาทิตย์ที่ชี้บวก</b>ได้ · Bitcoin ซื้อขาย 24 ชม. มีราคาปิดเสาร์-อาทิตย์เพิ่ม (ดูหมายเหตุท้ายตาราง) · ทุกช่องเป็นตัวเลข<b>ปิดจริง</b> ไม่ใช่ราคาสด
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs">
+        <thead><tr class="text-white" style="background:#2b3a44;">
+          <th class="p-2 text-left rounded-tl-lg">สินทรัพย์</th><th class="p-2 text-right">ปิด พ. 22 ก.ค.</th><th class="p-2 text-right">ปิด พฤ. 23 ก.ค.</th><th class="p-2 text-right">ปิด ศ. 24 ก.ค.</th><th class="p-2 text-left rounded-tr-lg">อ่านเป็นภาษาชาวบ้าน</th>
+        </tr></thead>
+        <tbody>
+          <tr class="recap-row"><td class="font-semibold">ทองคำ (USD/oz)</td><td class="text-right">4,151.9</td><td class="text-right">4,050.2</td><td class="text-right spark-up">4,070.8 ▲</td><td>ยืนเหนือ <b>$4,000 เป็นสัปดาห์ที่ 5</b> · คืนนี้เจอโจทย์ใหม่: ข่าวอิหร่านระงับโจมตี = แรงซื้อกลัวสงครามลด แต่แรงกดเงินเฟ้อจากน้ำมันก็ลดด้วย · สองแรงหักล้างกัน รอ FOMC ตัดสิน</td></tr>
+          <tr class="recap-row"><td class="font-semibold">S&amp;P 500</td><td class="text-right">7,498.96</td><td class="text-right">7,408.30</td><td class="text-right spark-flat">7,411.98 ▲</td><td>ปิดสัปดาห์แทบไม่ขยับ (+0.05%) เหนือโซน 7,400 · <b>ฟิวเจอร์สคืนอาทิตย์ +0.6%</b> รับข่าวอิหร่าน · คืนนี้วัดว่าตลาดจริงยืนยันหรือไม่</td></tr>
+          <tr class="recap-row"><td class="font-semibold">Nasdaq</td><td class="text-right">25,690.90</td><td class="text-right">25,137.69</td><td class="text-right spark-down">24,975.82 ▼</td><td>ปิดใต้เส้นกลม 25,000 · ลบ 2 สัปดาห์ติดครั้งแรกตั้งแต่ มี.ค. · <b>ฟิวเจอร์ส Nasdaq-100 คืนอาทิตย์ +1.2%</b> = เด้งแรงสุดในสามดัชนี · ทดสอบ 25,000 คืนนี้</td></tr>
+          <tr class="recap-row"><td class="font-semibold">ยีลด์ 10 ปี (%)</td><td class="text-right">4.67</td><td class="text-right">4.71</td><td class="text-right spark-down">4.69 ▼</td><td>ย่อจากยอด 4.71 แต่ทั้งสัปดาห์ยัง +9bp · น้ำมันร่วง 5% คืนอาทิตย์อาจผ่อนแรงกดเงินเฟ้อฝั่งต้นทุน · คำตอบจริงคือ FOMC คืนพุธ + Core PCE คืนพฤหัส</td></tr>
+          <tr class="recap-row"><td class="font-semibold">Bitcoin (USD)</td><td class="text-right">66,086.61</td><td class="text-right">65,051.23</td><td class="text-right spark-down">64,083.32 ▼</td><td>ระหว่างสัปดาห์ลงสามวันติด · แต่<b>สุดสัปดาห์เขียว 2 วันติด: เสาร์ 64,296 → อาทิตย์ 65,265 (+1.5%)</b> กลับขึ้นมาชนโซน $65,000 ที่ Cointelegraph เรียกว่า "เพดานเดือน ก.ค."</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-stone-600 mt-3"><b>ภาพรวม 3 วัน + สุดสัปดาห์:</b> สัปดาห์ก่อนจบแบบ "ดัชนีนิ่งแต่ข้างในหมุนแรง" · สุดสัปดาห์มีของใหม่ 2 ชิ้น: <b>Bitcoin เด้ง 2 วันติดกลับมาชน $65,000</b> และ<b>ข่าวอิหร่านคืนอาทิตย์ที่ทำให้น้ำมันร่วง 5% กับฟิวเจอร์สหุ้นเด้งทั้งกระดาน</b> · คืนนี้ตลาดจริงเปิด = ข้อสอบข้อแรกว่าแรงเด้งเป็นของจริงหรือแค่ปฏิกิริยาพาดหัว · หมายเหตุ BTC: ราคาปิดเสาร์ในชุดข้อมูลวันนี้คือ 64,296 (ฉบับวานนี้รายงาน 64,344 · ต่างเล็กน้อยตามรอบตัดข้อมูลของต้นทาง)</p>
+  </section>
+
+  <!-- ═══════════ ROW 1: GOLD + FED ═══════════ -->
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <section class="glass-card highlight-gold p-6 relative">
+      <i class="fa-solid fa-coins bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#c9a227;">GOLD · ทองคำ</span>
+      <h3 class="text-base font-bold mb-2">ทองยืนเหนือ $4,000 เป็นสัปดาห์ที่ 5 · คืนนี้เจอสองแรงหักล้าง: ข่าวอิหร่านลดแรงซื้อกลัวสงคราม แต่ก็ลดแรงกดเงินเฟ้อด้วย</h3>
+      <p class="text-xs text-stone-600 mb-2">GCUSD ปิดศุกร์ <b>$4,070.80 (+0.51%)</b> · Kitco spot อ้างอิง $4,051.51 · ยืนเหนือ $4,000 เป็น<b>สัปดาห์ที่ 5</b> · Kitco Weekly Survey แยกขั้วชัด: ฝั่งนักวิเคราะห์ Wall Street โน้มไป<b>ระวัง/เป็นกลาง</b>ก่อน FOMC ขณะรายย่อย Main Street ยัง <b>bullish</b> · ตัวแปรใหม่คืนอาทิตย์: <b>ข่าวอิหร่านระงับโจมตีทำน้ำมันร่วง 5%</b> ซึ่งตัดสองทางพร้อมกัน</p>
+      <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+        <li><b>สองแรงหักล้างที่ต้องเข้าใจ:</b> ทางหนึ่ง น้ำมันถูกลง = แรงกดเงินเฟ้อฝั่งต้นทุนลด = <b>เหตุผลที่ Fed ต้อง "ขึ้น" อ่อนลง</b> (บวกต่อทอง) · อีกทางหนึ่ง ความกลัวสงครามลด = <b>แรงซื้อ safe haven ลด</b> (ลบต่อทอง) · ทิศสุทธิยังไม่รู้จนตลาดจริงเทรดคืนนี้</li>
+        <li><b>ฝั่งดอกเบี้ยยังเป็นลมต้าน:</b> FedWatch ให้โอกาส Fed ขึ้นดอกเบี้ยรอบนี้ <b>37.9% คูณ 3 จาก 12.8%</b> ในหนึ่งเดือน · ดอกเบี้ยขึ้น = ต้นทุนค่าเสียโอกาสของการถือทองสูงขึ้น · แต่เลขนี้อาจแกว่งอีกหลังน้ำมันร่วง</li>
+        <li><b>เส้นที่ตลาดจับตา (ไม่ใช่คำแนะนำ):</b> เส้นแนวโน้มด้านบน <b>~$4,150</b> ที่หลุดมาเมื่อพฤหัส · โซนกลม <b>$4,000</b> ที่ยืนมา 5 สัปดาห์ · ตัวตัดสินคือ <b>FOMC คืนพุธ</b> + Core PCE คืนพฤหัส</li>
+      </ul>
+      <div class="bg-white/60 rounded-lg p-3 mt-3 text-xs text-stone-600" style="border-left:3px solid #c9a227;">
+        <b>กรอบคิด:</b> อ้างอิง Benjamin Graham (<i>The Intelligent Investor</i>, บทที่ 8 "Mr. Market"): คุณตลาดเปลี่ยนอารมณ์จาก "กลัวสงคราม" เป็น "โล่งใจ" ได้ภายในสุดสัปดาห์เดียว ทั้งที่<b>โครงสร้างของสงครามเดือนที่ 5 ยังอยู่ครบ</b> (แค่ "ระงับ" ไม่ใช่ "จบ") · Graham สอนว่าหน้าที่เราไม่ใช่ไล่ตามอารมณ์ของคุณตลาด แต่คือ<b>ใช้ประโยชน์จากมัน</b>: ถ้าถือทองเป็นประกันพอร์ต ข่าวคืนเดียวไม่ได้เปลี่ยนเหตุผลที่ถือ · ถ้าถือเพราะเก็งรอบ ต้องยอมรับว่ากำลังเทรดกับอารมณ์ของคุณตลาด ไม่ใช่กับโครงสร้าง</div>
+    </section>
+    <section class="glass-card highlight-fed p-6 relative">
+      <i class="fa-solid fa-landmark bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#2b3a44;">FED &amp; ดอกเบี้ย · ยีลด์</span>
+      <h3 class="text-base font-bold mb-2">FOMC แถลงคืนพุธราวตี 1-2 ไทย · โอกาสขึ้น ~38% (คูณ 3 ในหนึ่งเดือน) · น้ำมันร่วง 5% ก่อนประชุมแค่ 3 วัน = ตัวแปรที่โผล่มานาทีสุดท้าย</h3>
+      <p class="text-xs text-stone-600 mb-2">เส้นโค้งปิดศุกร์: 2Y <b>4.33</b> · 5Y <b>4.43</b> · 10Y <b>4.69%</b> · 30Y <b>5.16%</b> (พฤหัสเคยแตะ 10Y 4.71 / 2Y 4.37) · <b>FOMC ประชุม 28-29 ก.ค. แถลงผลคืนพุธราวตี 1 ถึงตี 2 เวลาไทย</b> · FedWatch: โอกาสขึ้นรอบนี้ <b>37.9%</b> · เดือน ก.ย. <b>~82%</b> · ฐานดอกเบี้ย 3.50-3.75%</p>
+      <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4 mb-3">
+        <li><b>เสียงฝั่ง "ควรขึ้น":</b> BofA ยืนยันมุมมอง "Fed ควรขึ้นดอกเบี้ย" ด้วยเหตุผล core PCE (มุมมองเขา) กำลังมุ่งสู่ <b>~3.4%</b> ห่างเป้า 2% เกินจะเพิกเฉย</li>
+        <li><b>ตัวแปรนาทีสุดท้าย:</b> <b>น้ำมันร่วง 5% คืนอาทิตย์ เกิดก่อน FOMC เพียง 3 วัน</b> · ถ้าราคาน้ำมันยืนระดับต่ำได้ แรงกดเงินเฟ้อฝั่งต้นทุนที่เป็นเหตุผลหลักของฝั่ง "ควรขึ้น" จะอ่อนลงพอดีตอนประชุม · เลข 38% จึงไม่ใช่เลขนิ่ง อาจแกว่งทุกวันจนถึงคืนพุธ</li>
+        <li><b>เส้นที่ตลาดจับตา:</b> 10Y เส้น <b>4.70%</b> (ปิดใต้เส้นนี้พอดี) · 30Y เส้น <b>5.20%</b> · ถ้าขึ้นจริง จุดสนใจย้ายไปที่ถ้อยแถลงว่า "ครั้งเดียวจบ หรือเริ่มชุด"</li>
+      </ul>
+      <div class="grid grid-cols-3 gap-2 text-center">
+        <div class="bg-white/70 rounded-lg p-2"><p class="text-[10px] text-stone-500">พันธบัตร 2 ปี</p><p class="text-sm font-bold">4.33%</p></div>
+        <div class="bg-white/70 rounded-lg p-2"><p class="text-[10px] text-stone-500">พันธบัตร 10 ปี</p><p class="text-sm font-bold" style="color:#631317;">4.69%</p></div>
+        <div class="bg-white/70 rounded-lg p-2"><p class="text-[10px] text-stone-500">พันธบัตร 30 ปี</p><p class="text-sm font-bold">5.16%</p></div>
+      </div>
+      <div class="bg-white/60 rounded-lg p-3 mt-3 text-xs text-stone-600" style="border-left:3px solid #2b3a44;">
+        <b>กรอบคิด:</b> อ้างอิง Ed Thorp (<i>A Man for All Markets</i>) กับสูตรของ John Kelly: เดิมพันได้ต่อเมื่อมี edge และ <b>edge ต้องวัดได้</b> · เหตุการณ์ที่ตลาดตั้งราคา 38% แล้วมีตัวแปรใหม่ (น้ำมันร่วง 5%) โผล่มา 3 วันก่อนประชุม คือเหตุการณ์ที่คนทั่วไป<b>ไม่มี edge เหลืออยู่เลย</b> · Kelly ตอบชัด: edge = 0 → ขนาดเดิมพันที่ถูกต้อง = 0 · งานที่มีค่ากว่าการเดามติที่ประชุม คือเช็คว่า<b>พอร์ตเรารอดได้ทั้งสองทางไหม</b> ถ้าคำตอบคือไม่ นั่นคือปัญหาขนาดสถานะ ไม่ใช่ปัญหาการทำนาย</div>
+    </section>
+  </div>
+
+  <!-- ═══════════ ROW 2: ECONOMY + GEOPOLITICS ═══════════ -->
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <section class="glass-card highlight-economy p-6 relative">
+      <i class="fa-solid fa-chart-simple bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#5a7a4e;">ECONOMY · เศรษฐกิจ</span>
+      <h3 class="text-base font-bold mb-2">สัปดาห์ข้อมูลแน่นสุดของเดือนเริ่มคืนนี้: จ. Durable Goods → พ. FOMC → พฤ. GDP + Core PCE (ตัวเลขคาดขัดกันเอง 2.6% vs 3.4%)</h3>
+      <p class="text-xs text-stone-600 mb-2">ฐานที่ตลาดยืนอยู่: <b>ผู้ขอสวัสดิการว่างงาน 187,000 ต่ำสุดตั้งแต่ปี 1969</b> · <b>PMI รวม 53.6 สูงสุด 8 เดือน</b> = เศรษฐกิจแข็งพอที่ Fed ไม่ต้องช่วย · คืนนี้เริ่มด้วย <b>Durable Goods (คาด +1.6% ฟื้นจาก −4.5%)</b> และ Dallas Fed (คาด −12.0 · Core Durable +0.9%)</p>
+      <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+        <li><b>ปฏิทินเต็มสัปดาห์ (เวลาไทย):</b> จ. Durable Goods + Dallas Fed · อ. Consumer Confidence · <b>คืนพุธราวตี 1-2: แถลง FOMC</b> · <b>พฤ. 19:30: GDP Q2 advance (คาด 2.3% จาก 2.1%) + Core PCE + claims + BoE</b> · คืนพฤ.-ศ. BoJ (คาดคงราว 1%) · ศ. Chicago PMI + Consumer Sentiment</li>
+        <li><b>⚠️ ตัวเลขคาด Core PCE ขัดกันเอง (จดทั้งคู่):</b> ปฏิทินเศรษฐกิจคาด <b>2.6% y/y (m/m 0.1%)</b> ขณะ BofA มองไปทาง <b>~3.4%</b> · ช่องว่างขนาดนี้ไม่ใช่รายละเอียดเล็ก มันคือเส้นแบ่งระหว่าง "Fed ไม่ต้องทำอะไร" กับ "Fed ต้องขึ้นต่อ" · เราจดทั้งสองตัวเลขโดยไม่เลือกข้างให้</li>
+        <li><b>หมายเหตุการรายงาน:</b> คืนพฤหัส GDP + Core PCE เข้าเกณฑ์ข้อมูลชั้นแรก จึง<b>มีฉบับเย็นวันพฤหัส</b> · วันนี้ Durable Goods ไม่เข้าเกณฑ์ = ไม่มีฉบับเย็น</li>
+      </ul>
+      <div class="bg-white/60 rounded-lg p-3 mt-3 text-xs text-stone-600" style="border-left:3px solid #5a7a4e;">
+        <b>กรอบคิด:</b> อ้างอิง Aswath Damodaran (<i>Narrative and Numbers</i>): ตัวเลขเดียวกันรองรับเรื่องเล่าได้หลายเรื่อง และ<b>เรื่องเล่าที่ต่างกันให้มูลค่าที่ต่างกันมาก</b> · Core PCE คาด 2.6% กับ 3.4% ไม่ใช่แค่ตัวเลขต่างกัน แต่คือ<b>เรื่องเล่าคนละเรื่อง</b>: เรื่องแรกบอก "เงินเฟ้อกลับเข้ากรอบ ดอกเบี้ยพอแล้ว" เรื่องหลังบอก "เงินเฟ้อหลุดกรอบ ต้องขึ้นต่อ" · คืนพฤหัสตลาดไม่ได้รอตัวเลข แต่รอว่า<b>เรื่องเล่าไหนจะถูกฆ่าทิ้ง</b> · นักลงทุนที่รู้ตัวว่าพอร์ตตัวเองอิงเรื่องเล่าไหน จะรู้ทันทีว่าคืนพฤหัสมีอะไรเป็นเดิมพัน</div>
+    </section>
+    <section class="glass-card highlight-geopolitics p-6 relative">
+      <i class="fa-solid fa-globe bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#631317;">GEOPOLITICS · ภูมิรัฐศาสตร์ + การค้า</span>
+      <h3 class="text-base font-bold mb-2">อิหร่านประกาศ "ระงับการโจมตี" แบบมีเงื่อนไข · น้ำมันร่วง 5% รับข่าว · Netanyahu พบ Trump วันนี้ · ภาษี 60 คู่ค้าถูกฟ้องแล้วที่ศาลการค้า NY</h3>
+      <p class="text-xs text-stone-600 mb-2"><b>ฝั่งสงคราม:</b> คืนอาทิตย์อิหร่านประกาศ<b>"ระงับการโจมตี" ตราบใดที่สหรัฐหยุดด้วย</b> · น้ำมันฟิวเจอร์สร่วงราว 5% ทันที (Brent ~$92 · WTI ~$85) · เบื้องหลังคือ<b>ข้อเสนอหยุดยิง 10 วัน ที่ปากีสถานผลักดันและจีนสนับสนุน</b> · Rubio เตือนว่าอิหร่าน "ยังไม่พร้อมทำดีลที่ตัวเองจะรักษาได้" · <b>Netanyahu ถึง Washington พบ Trump วันนี้</b> · ก่อนหน้านี้สหรัฐเพิ่งโจมตีรอบที่ 12 และ Houthi ยังปิดล้อมชายฝั่งซาอุฯ (WSJ ชี้ซาอุฯ ต้องพึ่งคลองสุเอซมากขึ้น)<br><b>ฝั่งการค้า:</b> ภาษี forced-labor <b>10%/12.5% กับ 60 คู่ค้า (ครอบคลุม 99.4% ของมูลค่านำเข้า)</b> ที่มีผลศุกร์ <b>ถูกฟ้องแล้วที่ศาลการค้าระหว่างประเทศ NY</b> ประเด็น country-specific findings</p>
+      <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+        <li><b>"ระงับ" ไม่เท่ากับ "จบ":</b> การระงับแบบมีเงื่อนไข (ตราบใดที่อีกฝ่ายหยุด) เปราะกว่าหยุดยิงที่มีข้อตกลง · สงครามเข้าเดือนที่ 5 ในโหมดบั่นทอนกำลัง โครงสร้างความเสี่ยงยังอยู่ครบ แค่พาดหัวเปลี่ยน</li>
+        <li><b>จุดทดสอบถัดไป:</b> ผลพบ Netanyahu-Trump วันนี้ · ท่าทีสหรัฐต่อข้อเสนอหยุดยิง 10 วัน · และราคาน้ำมันคืนนี้ว่า<b>ยืนระดับ −5% ได้จริงหรือเด้งกลับ</b></li>
+        <li><b>เส้นที่ตลาดจับตา:</b> Brent โซน <b>$92</b> (จากฟิวเจอร์ส) กับเส้นกลม $100 ด้านบน · WTI <b>$85-89</b> · คดีภาษีที่ NY = ต้นทุนนำเข้าที่ธุรกิจยังวางแผนไม่ได้</li>
+      </ul>
+      <div class="bg-white/60 rounded-lg p-3 mt-3 text-xs text-stone-600" style="border-left:3px solid #631317;">
+        <b>กรอบคิด:</b> อ้างอิง Howard Marks (<i>The Most Important Thing</i>, บท "Second-Level Thinking"): ความคิดชั้นแรกคือ "สงครามพัก น้ำมันลง หุ้นขึ้น" ซึ่ง<b>ตลาดเทรดไปแล้ว</b>ภายในไม่กี่ชั่วโมงคืนอาทิตย์ · ความคิดชั้นสองต้องถามต่อ: การระงับแบบมีเงื่อนไขเปราะแค่ไหน · ถ้าพังกลางสัปดาห์ FOMC ราคาจะกลับทางเร็วแค่ไหน · และราคาปัจจุบัน discount ความเปราะนี้หรือยัง · กำไรไม่ได้อยู่ที่รู้ข่าว แต่อยู่ที่<b>รู้ว่าตลาดตีความข่าวผิดตรงไหน</b></div>
+    </section>
+  </div>
+
+  <!-- ═══════════ ROW 3: FOREX + MARKET ═══════════ -->
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <section class="glass-card highlight-forex p-6 relative">
+      <i class="fa-solid fa-money-bill-transfer bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#5b5378;">FOREX · ค่าเงิน</span>
+      <h3 class="text-base font-bold mb-2">เยนเด้งเล็กน้อยจากยอด 40 ปี (163.98 → อาทิตย์ 163.68) · ข่าวอิหร่านตัดขา risk-off ของดอลลาร์ · สัปดาห์นี้ 3 ธนาคารกลางชนกัน</h3>
+      <p class="text-xs text-stone-600 mb-2">DXY ปิดศุกร์ <b>~101.5 (−0.10%)</b> ยังใกล้จุดสูงสุดรอบ 3 สัปดาห์ · <b>USD/JPY ศุกร์ 163.82 → อาทิตย์ 163.68</b> เด้งกลับเล็กน้อยหลังแตะ <b>163.98 จุดอ่อนสุดรอบราว 40 ปี</b> เมื่อพฤหัส · สัปดาห์นี้ <b>Fed (คืนพุธ) · BoE (พฤหัส) · BoJ (คืนพฤ.-ศ. คาดคงราว 1%)</b> ประกาศติดกันใน 48 ชั่วโมง</p>
+      <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+        <li><b>ข่าวอิหร่านกระทบดอลลาร์อย่างไร:</b> ดอลลาร์แข็งรอบนี้มีส่วนผสมของ risk-off (เงินหนีเข้าที่ปลอดภัย) · ถ้าการระงับโจมตียืนได้ ขาสงครามของดอลลาร์จะอ่อนลง เหลือขายีลด์กับขา tariff · แต่ถ้าพังกลางสัปดาห์ ขานั้นกลับมาทันที</li>
+        <li><b>เยนโดนบีบสองทางในโซน 163-165:</b> ทางหนึ่งคือส่วนต่างดอกเบี้ยสหรัฐ-ญี่ปุ่นที่ยังกว้าง อีกทางคือ<b>ย่านเฝ้าระวังการแทรกแซง</b>ของทางการญี่ปุ่น · BoJ คืนพฤ.-ศ. คือจุดที่ carry trade ทั้งกระดานต้องตัดสินใจ</li>
+        <li><b>เส้นที่ตลาดจับตา:</b> USD/JPY <b>163-165</b> ย่านเฝ้าระวังการแทรกแซง · DXY เส้นกลม <b>102</b> ด้านบน · ผลรวม 3 ธนาคารกลางกำหนดทิศคู่เงินหลักของเดือน ส.ค.</li>
+      </ul>
+      <div class="bg-white/60 rounded-lg p-3 mt-3 text-xs text-stone-600" style="border-left:3px solid #5b5378;">
+        <b>กรอบคิด:</b> อ้างอิง Charlie Munger (<i>Poor Charlie's Almanack</i>, แนวคิด "Lollapalooza effect"): ผลลัพธ์ใหญ่มักเกิดเมื่อหลายแรงเสริมกันทางเดียว · ดอลลาร์แข็งรอบนี้คือ Lollapalooza ของ 3 แรง: <b>ยีลด์สูง + สงคราม + tariff</b> · สัปดาห์นี้พิเศษตรงที่ทั้งสามแรงถูกทดสอบพร้อมกัน (FOMC · การระงับโจมตี · คดีภาษีที่ NY) · Munger เตือนว่าเมื่อแรงเสริมเริ่มคลายทีละตัว <b>ผลรวมมักคลายเร็วกว่าที่คนคาด</b> เพราะมันเสริมกันตอนขึ้นอย่างไร ก็ถอนแรงกันตอนลงอย่างนั้น</div>
+    </section>
+    <section class="glass-card highlight-market p-6 relative">
+      <i class="fa-solid fa-arrow-trend-up bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#376562;">S&amp;P 500 · ภาพตลาด</span>
+      <h3 class="text-base font-bold mb-2">ฟิวเจอร์สคืนอาทิตย์เด้งทั้งกระดาน (Dow +244 · Nasdaq-100 +1.2%) รับข่าวอิหร่าน · คืนนี้ข้อสอบข้อแรก: ตลาดจริงยืนยันไหม</h3>
+      <p class="text-xs text-stone-600 mb-2">ปิดศุกร์: <b>S&amp;P 500 7,411.98 (+0.05%)</b> · <b>Nasdaq 24,975.82 (−0.64%)</b> ใต้เส้นกลม 25,000 · สรุปสัปดาห์ก่อน: S&amp;P −0.6% · Nasdaq −2.1% = <b>ลบ 2 สัปดาห์ติดครั้งแรกตั้งแต่ มี.ค.</b> · คืนอาทิตย์ฟิวเจอร์สเด้งรับข่าวอิหร่าน: <b>Dow +244 จุด (+0.5%) · S&amp;P +0.6% · Nasdaq-100 +1.2%</b> = ดัชนีเทคที่โดนทุบหนักสุด เด้งแรงสุด</p>
+      <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+        <li><b>CNBC "3 big things" ของสัปดาห์:</b> คำถามใหญ่คือ<b>งบ 4 ยักษ์คลาวด์ (MSFT/META คืนพุธ · AMZN คืนพฤหัส · AAPL ตาม FMP คืนพฤหัส/CNBC ว่าศุกร์) จะ "ปลอบ" หรือ "ซ้ำ" ความกลัวเรื่อง AI spending</b> ที่จุดขึ้นหลังงบ GOOGL สัปดาห์ก่อน</li>
+        <li><b>บทเรียนสดจากสัปดาห์ก่อน: "beat แล้วขาย" เกิดแล้ว 2 เคส (GOOGL, INTC)</b> · งบดีไม่พอ ตลาดฟังสิ่งที่ทำให้ประมาณการข้างหน้าเปลี่ยน · สัปดาห์นี้จุดฟังคือ<b>แผน CapEx ใน call</b> ไม่ใช่บรรทัด EPS</li>
+        <li><b>เส้นที่ตลาดจับตา:</b> S&amp;P โซน <b>7,400</b> (ยืนมาสองวัน) กับ <b>7,500</b> ด้านบน · Nasdaq <b>เส้นกลม 25,000</b> ที่ฟิวเจอร์สกำลังชี้กลับไปทดสอบคืนนี้</li>
+      </ul>
+      <div class="bg-white/60 rounded-lg p-3 mt-3 text-xs text-stone-600" style="border-left:3px solid #376562;">
+        <b>กรอบคิด:</b> อ้างอิง Peter Lynch (<i>One Up On Wall Street</i>): "เงินที่นักลงทุนสูญเสียไปกับการ<b>เตรียมรับ</b> correction มากกว่าเงินที่สูญเสียใน correction เองเสียอีก" · สัปดาห์นี้ตลาดจะแกว่งตามข่าวรายคืน (อิหร่าน · FOMC · งบ) และคนจำนวนมากจะพยายามเต้นตามทุกจังหวะ · Lynch แยกให้ชัด: <b>งบ MSFT/META/AMZN คือข้อมูลธุรกิจ</b> (ควรฟัง) ส่วน <b>FOMC กับฟิวเจอร์สรายคืนคือข้อมูลราคา</b> (ส่วนใหญ่เป็นเสียงรบกวน) · ถือหุ้นเพราะธุรกิจ ให้ฟังฝั่งธุรกิจเป็นหลัก</div>
+    </section>
+  </div>
+
+  <!-- ═══════════ STOCK / THEME (full width) ═══════════ -->
+  <section class="glass-card highlight-ai p-6 mb-6 relative">
+    <i class="fa-solid fa-microchip bg-icon-watermark"></i>
+    <span class="badge-static text-white mb-2" style="background:#48487a;">หุ้น · ธีม · งบไตรมาส</span>
+    <h3 class="text-base font-bold mb-3">ตารางงบสัปดาห์นี้ยืนยันจากปฏิทิน FMP แล้ว: MSFT/META คืนพุธ · AMZN/AAPL คืนพฤหัส (⚠️ AAPL สองแหล่งไม่ตรงกัน) · วันนี้ CXMT IPO ใหญ่สุดเอเชียปีนี้เปิดเทรดที่ STAR Market</h3>
+    <div class="grid md:grid-cols-2 gap-4 mb-3">
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-xs font-bold mb-2" style="color:#3d7a2e;"><i class="fa-solid fa-circle-check mr-1"></i>ข้อเท็จจริง / สิ่งที่ยืนยันแล้ว</p>
+        <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+          <li><b>ตารางงบสัปดาห์นี้ (ยืนยันจากปฏิทิน FMP · ตัวเลขคาดในวงเล็บคือ EPS คาดของนักวิเคราะห์ ยังไม่เกิดจริง):</b><br>
+            • <b>อังคาร:</b> V (คาด 3.22) · BA · F · KO · PYPL · CARR<br>
+            • <b>พุธ:</b> <b>MSFT (คาด 4.21 / รายได้ ~$87.6B)</b> · <b>META (คาด 7.13 / ~$60.2B)</b> · SBUX · SOFI · HOOD · MGM (คืนเดียวกับแถลง FOMC)<br>
+            • <b>พฤหัส:</b> <b>AMZN (คาด 1.81 / ~$196.7B)</b> · <b>AAPL (คาด 1.88 / ~$108.8B)</b> · COIN · ROKU · RBLX · RIVN · RIOT · SIRI<br>
+            • <b>ศุกร์:</b> XOM (คาด 3.60) · CVX (คาด 5.55) · ABBV · MRNA</li>
+          <li><b>⚠️ AAPL วันงบไม่ตรงกันสองแหล่ง:</b> ปฏิทิน FMP ว่า<b>พฤหัส</b> · บทความ CNBC ว่า<b>ศุกร์</b> · เราจดทั้งสองไว้ ไม่ตัดสินแทน · ควรเช็คปฏิทิน IR ของ Apple อีกครั้งก่อนคืนนั้น · ส่วน MA ไม่พบใน FMP top 25 ของสัปดาห์ = ยังไม่ยืนยัน</li>
+          <li><b>CXMT เปิดเทรดวันนี้:</b> ผู้ผลิต DRAM รายใหญ่ของจีน IPO ที่ <b>STAR Market เซี่ยงไฮ้ ระดมทุน $8.6B = IPO ใหญ่สุดของเอเชียปีนี้</b> · ราคาเปิดวันแรกคือเทอร์โมมิเตอร์วัดความร้อนของธีมชิปหน่วยความจำฝั่งจีน</li>
+          <li><b>WSJ Mackintosh ชี้ "froth":</b> หุ้น SK Hynix ที่จดทะเบียนใหม่ในนิวยอร์ก เทรดแพงกว่าหุ้นเดียวกันที่โซล <b>~51%</b> · หุ้นเดียวกัน สองราคา ต่างกันครึ่งตัว = สัญญาณความเห่อของตลาดสหรัฐต่อธีมหน่วยความจำ</li>
+          <li><b>WSJ Weil:</b> ค้านข้อเสนอทำให้รายงานงบรายไตรมาสเป็นทางเลือก (quarterly optional) ด้วยเหตุผลความโปร่งใสต่อนักลงทุนรายย่อย</li>
+        </ul>
+      </div>
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-xs font-bold mb-2" style="color:#b8463a;"><i class="fa-solid fa-triangle-exclamation mr-1"></i>มุมระวัง / สิ่งที่ยังไม่รู้</p>
+        <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+          <li><b>คำถามที่คร่อมทั้งสัปดาห์:</b> หลังเคส GOOGL ("beat แล้วขาย" เพราะตลาดกลัว AI spending) งบ 4 ยักษ์คลาวด์สัปดาห์นี้จะ<b>ปลอบความกลัว หรือยืนยันความกลัว</b> · จุดชี้ขาดคือแผน CapEx ใน call ไม่ใช่ตัวเลขไตรมาส</li>
+          <li><b>ชั้นกระแส X ร้อนเรื่อง "AI ramp":</b> มีการยกตัวเลขคาดการณ์รายได้ก้าวกระโดดของหลายบริษัท (MU · AVGO · AMD · CRWV · NBIS ฯลฯ) · <b>ทั้งหมดเป็นตัวเลขของต้นทางบน X ยังไม่ verify กับแหล่งทางการ ห้ามใช้เป็นข้อเท็จจริง</b> · ดูการ์ดชั้นกระแส X ด้านล่างแบบยกดิบครบ</li>
+          <li><b>ธีมหน่วยความจำร้อนจัดพอดีวันที่ CXMT เข้าตลาด:</b> premium 51% ของ SK Hynix ที่ NY + IPO $8.6B เปิดเทรดวันเดียวกัน · ความร้อนแรง ≠ ความถูกต้องของราคา · เทอร์โมมิเตอร์สองตัวนี้ควรดูคู่กัน</li>
+          <li><b>คืนพุธคือจุดผันผวนสูงสุดของสัปดาห์:</b> FOMC (โอกาสขึ้น ~38%) แถลงคืนเดียวกับงบ MSFT/META · ข่าวสองชิ้นใหญ่ชนกันในช่วงตี 1-ตี 5 ไทย = ราคาเช้าพฤหัสอาจสวิงแรงทั้งสองทาง</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-white/60 rounded-lg p-3 text-xs text-stone-600" style="border-left:3px solid #48487a;">
+      <b>กรอบคิด:</b> อ้างอิง Philip Fisher (<i>Common Stocks and Uncommon Profits</i>, บท "Scuttlebutt"): ข่าวลือและตัวเลข ramp บน X คือ<b>คำกล่าวอ้าง</b> · แต่ scuttlebutt ที่ Fisher สอนคือการหา<b>คำให้การ</b>จากคนที่อยู่ในห่วงโซ่จริง · สัปดาห์นี้มีคำให้การชั้นดีฟรี: <b>earnings call ของ MSFT/META/AMZN คือคำให้การจากลูกค้ารายใหญ่ที่สุดของธีม AI ทั้งระบบ</b> · ถ้า CapEx ยังเร่ง = ดีมานด์ชิป/ไฟฟ้า/ดาต้าเซ็นเตอร์มีหลักฐาน · ถ้า CapEx แผ่ว = ตัวเลข ramp บน X ทั้งหมดต้องถูกลดน้ำหนักลงทันที · ฟังคำให้การ ก่อนเชื่อคำกล่าวอ้าง</div>
+  </section>
+
+  <!-- ═══════════ X HEAT (full width) ═══════════ -->
+  <section class="glass-card highlight-x p-6 mb-6 relative">
+    <i class="fa-brands fa-x-twitter bg-icon-watermark"></i>
+    <span class="badge-static text-white mb-2" style="background:#3b5b6b;">ชั้นกระแส X · ข่าวเก็งกำไร (4-ID)</span>
+    <h3 class="text-base font-bold mb-2">กระแสบน X 24 ชม.: ธีม "AI ramp" ตัวเลขรายได้ก้าวกระโดด (⚠️ ยังไม่ verify) · Jensen Huang มองชิปโต 10 เท่าใน 10 ปี · META ยกเครื่อง AI storage · ฝั่งชาร์ต @TechCharts โฟกัส ETH · @InvestingVisual เตรียมอัปเดต one-pager หลังงบ Q2</h3>
+    <div class="rounded-lg p-3 mb-3 text-xs text-stone-600" style="background:#fdf6ec; border:1px solid #e6b8ae; border-left:4px solid #b8463a;">
+      <b>กรอบการอ่านการ์ดนี้:</b> เนื้อหาด้านล่างคือ "กระแส/มุมมองบุคคลที่สาม" บน X · เรานำเสนอจากต้นทางครบทุกบัญชีโดยไม่กรอง เพื่อให้ผู้อ่านทำการบ้านต่อเอง <b>ไม่ใช่คำแนะนำให้ซื้อ/ขายหุ้นตัวใด</b> · ตัวเลขคาดการณ์/ระดับบนชาร์ตเป็นการมองของต้นทาง ยังไม่เกิดจริงและยังไม่ได้ตรวจกับแหล่งทางการ · <b>รอบนี้บันทึกที่ระดับฟีด (ไม่มีลิงก์รายโพสต์)</b> จึงให้ลิงก์ไปที่ฟีดต้นทางของแต่ละบัญชีแทน ผู้อ่านเปิดดูโพสต์จริงและสรุปเองได้
+    </div>
+    <p class="text-xs text-stone-600 mb-3"><b>ปริมาณโพสต์ 24 ชม.:</b> @StockSavvyShay (<b>12 โพสต์</b> · ธีม AI/เทคเป็นหลัก) · @InvestingVisual (<b>4 โพสต์</b>) · @TechCharts (<b>3 โพสต์</b> · รอบนี้เป็นคริปโตทั้งหมด) · @Speculator_io (<b>0 โพสต์ในรอบนี้</b>) · <b>รวม 19 โพสต์</b></p>
+    <div class="grid md:grid-cols-2 gap-3 mb-3">
+      <div class="bg-white/85 rounded-lg p-3 md:col-span-2">
+        <p class="text-[11px] text-stone-500 mb-1">@StockSavvyShay · 26-27 ก.ค. · 12 โพสต์ (ยกดิบครบ · <a class="xlink" href="https://x.com/StockSavvyShay" target="_blank">ดูฟีดต้นทาง</a>)</p>
+        <ol class="text-xs text-stone-600 space-y-1.5 list-decimal pl-4">
+          <li><b><span class="xchip">$GOOGL</span> (มุมมองโพสต์):</b> "อาจออกจากปี 2028 ด้วยรายได้เกือบ $2B ต่อวัน" · เป็นการประเมินไปข้างหน้าของต้นทาง ยังไม่เกิดจริง</li>
+          <li><b>ธีม "AI ramp" ตัวเลขรายได้ก้าวกระโดด (⚠️ ตัวเลขของต้นทางทั้งหมด ยังไม่ verify · ห้ามใช้เป็นข้อเท็จจริง):</b> <span class="xchip">$MU</span> ~$90B → $260B · <span class="xchip">$AVGO</span> ~$75B → $230B · <span class="xchip">$AMD</span> ~$40B → $110B · <span class="xchip">$CRWV</span> ~$6B → $40B · <span class="xchip">$NBIS</span> ~$0.9B → $22B · พ่วง <span class="xchip">$BE</span> <span class="xchip">$LITE</span> <span class="xchip">$IREN</span> ในลิสต์เดียวกัน · ไม่ระบุกรอบเวลาชัดในโพสต์</li>
+          <li><b><span class="xchip">$NBIS</span>:</b> ลงนามข้อริเริ่ม "Open Weights and American AI Leadership" ร่วมกับ <span class="xchip">$NVDA</span></li>
+          <li><b>Jensen Huang (<span class="xchip">$NVDA</span>):</b> มองยอดขายชิปโต <b>10 เท่าใน 10 ปี</b> จาก AI agents และหุ่นยนต์ · พร้อมชี้ว่า HBM ยังตึง (อ้างถึง <span class="xchip">$SKHY</span> <span class="xchip">$MU</span> และ Samsung)</li>
+          <li><b>META ยกเครื่อง AI storage:</b> โพสต์ชี้ผลบวกต่อผู้ผลิตหน่วยความจำ/สตอเรจ: <span class="xchip">$MU</span> <span class="xchip">$SKHY</span> Samsung <span class="xchip">$SNDK</span></li>
+          <li><b>ลิสต์ "10 หุ้น data center buildout":</b> อิงคาดการณ์กำลังไฟดาต้าเซ็นเตอร์ 194 GW ภายใน 2035 · ต้นทางยกตัวอย่าง <span class="xchip">$TSM</span> และอื่นๆ (โพสต์ไม่ระบุรายชื่อครบในรอบเก็บข้อมูล)</li>
+        </ol>
+        <p class="text-[11px] text-stone-500 mt-2"><b>$TICKER ที่พูดถึง (ครบจากฟีด):</b> <span class="xchip">$AMD</span> <span class="xchip">$AVGO</span> <span class="xchip">$BE</span> <span class="xchip">$CRWV</span> <span class="xchip">$GOOGL</span> <span class="xchip">$IREN</span> <span class="xchip">$LITE</span> <span class="xchip">$MU</span> <span class="xchip">$NBIS</span> <span class="xchip">$NVDA</span> <span class="xchip">$SKHY</span> <span class="xchip">$SNDK</span> <span class="xchip">$TSM</span></p>
+      </div>
+      <div class="bg-white/85 rounded-lg p-3">
+        <p class="text-[11px] text-stone-500 mb-1">@TechCharts · 26-27 ก.ค. · 3 โพสต์ (รอบนี้คริปโตทั้งหมด) · <a class="xlink" href="https://x.com/TechCharts" target="_blank">ดูฟีดต้นทาง</a></p>
+        <ol class="text-xs text-stone-600 space-y-1.5 list-decimal pl-4">
+          <li><b><span class="xchip">$ETHBTC</span>:</b> consolidation เหนือ neckline · ต้นทางมองเป็น bullish continuation <b>ถ้ายืนได้</b> (ระดับบนชาร์ตเป็นมุมมองต้นทาง)</li>
+          <li><b><span class="xchip">$ETHUSD</span>:</b> "ตลาดไม่รีบหลัง breakout" · neckline เดิมยังทำหน้าที่เป็น support ในมุมมองต้นทาง</li>
+          <li><b>ประกาศ:</b> รายงานพิเศษคริปโตวันจันทร์ 27 ก.ค. (สำหรับสมาชิกของเขา · เราบันทึกไว้เป็นข่าวความเคลื่อนไหวของบัญชี)</li>
+        </ol>
+        <p class="text-[11px] text-stone-500 mt-2"><b>$TICKER:</b> <span class="xchip">$ETHBTC</span> <span class="xchip">$ETHUSD</span> <span class="text-stone-400">(คู่ราคาคริปโต ไม่ใช่หุ้น)</span></p>
+      </div>
+      <div class="bg-white/85 rounded-lg p-3">
+        <p class="text-[11px] text-stone-500 mb-1">@InvestingVisual · 26-27 ก.ค. · 4 โพสต์ · <a class="xlink" href="https://x.com/InvestingVisual" target="_blank">ดูฟีดต้นทาง</a></p>
+        <ol class="text-xs text-stone-600 space-y-1.5 list-decimal pl-4">
+          <li><b>วิชวล <span class="xchip">$GOOGL</span> one-pager:</b> "great business at a glance" สรุปธุรกิจในหน้าเดียว</li>
+          <li><b>มุมมองจังหวะซื้อ (ของต้นทาง ไม่ใช่คำแนะนำ):</b> "ไม่จำเป็นต้อง time the bottom ให้สมบูรณ์แบบ ทยอยซื้อเป็น tranches ได้"</li>
+          <li><b>คิวอัปเดต one-pager หลังงบ Q2:</b> <span class="xchip">$NFLX</span> <span class="xchip">$NOW</span> <span class="xchip">$GOOGL</span> <span class="xchip">$TSM</span> <span class="xchip">$ASML</span> <span class="xchip">$RBRK</span> <span class="xchip">$COHR</span> <span class="xchip">$MRVL</span> <span class="xchip">$MU</span> <span class="xchip">$AVGO</span> <span class="xchip">$SKHY</span> <span class="xchip">$PLTR</span></li>
+        </ol>
+        <p class="text-[11px] text-stone-500 mt-2"><b>$TICKER:</b> <span class="xchip">$ASML</span> <span class="xchip">$AVGO</span> <span class="xchip">$COHR</span> <span class="xchip">$GOOGL</span> <span class="xchip">$MRVL</span> <span class="xchip">$MU</span> <span class="xchip">$NFLX</span> <span class="xchip">$NOW</span> <span class="xchip">$PLTR</span> <span class="xchip">$RBRK</span> <span class="xchip">$SKHY</span> <span class="xchip">$TSM</span></p>
+      </div>
+      <div class="bg-white/85 rounded-lg p-3 md:col-span-2">
+        <p class="text-[11px] text-stone-500 mb-1">@Speculator_io · 26-27 ก.ค. · <a class="xlink" href="https://x.com/Speculator_io" target="_blank">ดูฟีดต้นทาง</a></p>
+        <p class="text-xs text-stone-600"><b>ไม่มีโพสต์ใหม่ในรอบ 24 ชม. นี้</b> · บันทึกไว้เพื่อความครบถ้วนของชั้น 4-ID</p>
+      </div>
+    </div>
+    <div class="bg-white/70 rounded-lg p-3 mb-3 text-[11px] text-stone-600">
+      <b>กวาด ticker ที่ถูกพูดถึง 24 ชม. (ครบ ไม่กรอง · เรียงตามตัวอักษร · 22 รายการ):</b> $AMD $ASML $AVGO $BE $COHR $CRWV $ETHBTC $ETHUSD $GOOGL $IREN $LITE $MRVL $MU $NBIS $NFLX $NOW $NVDA $PLTR $RBRK $SKHY $SNDK $TSM <span class="text-stone-400">· ($ETHBTC $ETHUSD = คู่ราคาคริปโต ไม่ใช่หุ้น · Samsung กับ CXMT ที่ถูกพูดถึงในธีมหน่วยความจำไม่มี ticker สหรัฐ · SK Hynix อ้างอิงผ่าน $SKHY ที่จดทะเบียน NY)</span>
+    </div>
+    <div class="bg-white/60 rounded-lg p-3 text-xs text-stone-600" style="border-left:3px solid #3b5b6b;">
+      <b>กรอบคิด:</b> กระแสบน X บอกว่า "ตลาดกำลังสนใจอะไร" ไม่ได้บอกว่า "อะไรถูก" · รอบนี้ชั้นเก็งกำไรเทน้ำหนักไปที่ธีม AI ramp ด้วย<b>ตัวเลขคาดการณ์ที่ยังไม่มีการยืนยัน</b> พอดีกับสัปดาห์ที่คำให้การจริง (earnings call ของ MSFT/META/AMZN) กำลังจะออก · อ้างอิง Peter Lynch (<i>One Up On Wall Street</i>): <b>เรื่องเล่าที่ดี ≠ หุ้นที่ดีในราคานี้</b> เริ่มจาก "เราเข้าใจธุรกิจนี้ไหม" ก่อนสนใจว่าใครพูดถึง · เสริม Ed Thorp / John Kelly: ธีมที่ตัวเลขยังไม่ยืนยัน <b>ขนาดสถานะต้องเล็กลงตามความไม่แน่นอน ไม่ใช่ใหญ่ขึ้นตามความตื่นเต้น</b></div>
+  </section>
+
+  <!-- ═══════════ CRYPTO (full width) ═══════════ -->
+  <section class="glass-card highlight-crypto p-6 mb-6 relative">
+    <i class="fa-brands fa-bitcoin bg-icon-watermark"></i>
+    <span class="badge-static text-white mb-2" style="background:#a06b2a;">CRYPTO · คริปโต</span>
+    <h3 class="text-base font-bold mb-3">BTC เขียว 2 วันติด ปิดอาทิตย์ $65,265 (+1.5%) กลับมาชนโซน $65,000 ที่เป็น "เพดานเดือน ก.ค." · CryptoQuant ชี้วาฬดันเด้งจาก $64k</h3>
+    <div class="grid md:grid-cols-2 gap-4 mb-3">
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-xs font-bold mb-2" style="color:#3d7a2e;"><i class="fa-solid fa-arrow-trend-up mr-1"></i>ฝั่งโครงสร้าง / มุมมองต้นทาง</p>
+        <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+          <li><b>ราคา:</b> เสาร์ 64,296 → อาทิตย์ <b>65,265 (+1.5%) เขียว 2 วันติด</b> หลังไหลลงจาก $66,516 ต้นสัปดาห์ก่อน · กลับมาชนโซน <b>$65,000 ที่ Cointelegraph เรียกว่า "เพดานเดือน ก.ค."</b> (ทะลุไม่ผ่านมาทั้งเดือน)</li>
+          <li><b>ข้อมูล on-chain (CryptoQuant):</b> แรงเด้งจากย่าน $64,000 มี<b>วาฬเป็นผู้ดัน</b> และ <b>Coinbase premium ทะลุระดับสำคัญ</b> = สัญญาณแรงซื้อฝั่งสถาบัน/นักลงทุนสหรัฐกลับมา (มุมมองต้นทาง)</li>
+          <li><b>มุมมองสถาบัน:</b> Bitwise CIO ยังยืนภาพปีนี้เป็น "up year" แบบ steady boom (มุมมองต้นทาง ไม่ใช่คำแนะนำ)</li>
+          <li><b>ฝั่งกฎหมาย:</b> อุตสาหกรรมเร่งดัน <b>CLARITY Act</b> ให้ทันก่อนสภาปิดสมัยเดือน ส.ค.</li>
+        </ul>
+      </div>
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-xs font-bold mb-2" style="color:#b8463a;"><i class="fa-solid fa-triangle-exclamation mr-1"></i>ฝั่งเห็นต่าง / มุมระวัง</p>
+        <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-4">
+          <li><b>เขียว 2 วันยังไม่ลบภาพเดือน:</b> ทั้งเดือน ก.ค. ราคายังชนเพดาน $65,000 ไม่ผ่าน · จนกว่าจะยืนเหนือโซนนี้ได้ โครงสร้างยังเป็นการเด้งในกรอบ ไม่ใช่การกลับตัว</li>
+          <li><b>ข่าวโครงสร้างอุตสาหกรรมสัปดาห์นี้หนักฝั่งลบ:</b> <b>BitMEX ประกาศปิดบริการ 23 ก.ย.</b> · <b>Poolin ยื่น Chapter 11</b> (ขายเหมือง West Texas ~$52M) · ฝั่งขยายตัวมี <b>Sberbank รัสเซียเตรียมเปิดเทรดคริปโตภายใน 1 ธ.ค.</b></li>
+          <li><b>ยังผูกกับสินทรัพย์เสี่ยง:</b> BTC รอบนี้เคลื่อนตามยีลด์และ Nasdaq · คืนพุธ (FOMC) กับคืนพฤหัส (Core PCE) จึงเป็นคืนของ BTC ด้วย แม้ไม่มีข่าวคริปโตเลย · ฟิวเจอร์สหุ้นเด้งคืนอาทิตย์ช่วยอธิบายส่วนหนึ่งของแรงเด้ง BTC ด้วยเช่นกัน</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-white/60 rounded-lg p-3 text-xs text-stone-600" style="border-left:3px solid #a06b2a;">
+      <b>กรอบคิด:</b> อ้างอิง Daniel Kahneman (<i>Thinking, Fast and Slow</i>, บท "The Law of Small Numbers"): สมองมนุษย์พร้อมสรุปแนวโน้มจากตัวอย่างเล็กเกินไปเสมอ · เขียว 2 วันหลังแดง 5 วัน แล้วสมองรีบเล่าเรื่อง "ก้นผ่านแล้ว" คือตัวอย่างตรงตำรา · สองแท่งเทียนไม่ใช่หลักฐาน มันคือตัวอย่างขนาด n=2 · เรื่องเล่า "กลับตัว" ต้องรอหลักฐานระดับสัปดาห์ (ยืนเหนือเพดาน $65,000 ได้จริงไหม · ETF flow กลับเข้าไหม) ไม่ใช่ระดับ 2 แท่ง · การรู้ทันกลไกนี้ของสมองตัวเอง มีค่ากว่าการรู้ราคาเป้าใดๆ</div>
+  </section>
+
+  <!-- ═ VOCAB ═ -->
+  <section class="glass-card p-6 mb-6 highlight-vocab">
+    <div class="section-title" style="color:#4a9d8e;"><i class="fa-solid fa-book-open"></i> ศัพท์วันนี้ · แปลภาษาชาวบ้าน</div>
+    <div class="grid md:grid-cols-3 gap-3">
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1">ระงับการโจมตี (Suspension)</p>
+        <p class="text-[11px] text-stone-600">ไม่เหมือน "หยุดยิง" (ceasefire) ที่สองฝ่ายตกลงกัน · ระงับ=ฝ่ายเดียวประกาศพักชั่วคราว ยกเลิกเมื่อไรก็ได้ · <b>วันนี้:</b> อิหร่านใช้คำ "ระงับ" แบบมีเงื่อนไข ตลาดจึงดีใจ (น้ำมัน −5%) แต่ยังไม่วางใจเต็มร้อย</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1">STAR Market</p>
+        <p class="text-[11px] text-stone-600">กระดานหุ้นเทคของตลาดเซี่ยงไฮ้ เทียบได้กับ "Nasdaq ของจีน" · <b>วันนี้:</b> CXMT ผู้ผลิตชิปหน่วยความจำจีน IPO ~$8.6B เตรียมเปิดเทรดบนกระดานนี้</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1">Dual-listing premium</p>
+        <p class="text-[11px] text-stone-600">หุ้นบริษัทเดียวกันจดทะเบียนสองตลาดแต่ราคาต่างกัน · <b>วันนี้:</b> SK Hynix ฝั่งนิวยอร์กแพงกว่าฝั่งโซล ~51% · ส่วนต่างนี้คือ "ค่าความเห่อ" ที่นักลงทุนสหรัฐยอมจ่าย</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1">Coinbase premium</p>
+        <p class="text-[11px] text-stone-600">ราคา BTC บน Coinbase สูงกว่าตลาดอื่น = สัญญาณแรงซื้อฝั่งสหรัฐ/สถาบัน · <b>วันนี้:</b> CryptoQuant ใช้ตัวนี้ประกอบการอ่านแรงเด้งจากโซน $64k</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1">Chapter 11</p>
+        <p class="text-[11px] text-stone-600">กระบวนการฟื้นฟูกิจการตามกฎหมายสหรัฐ ไม่ใช่ปิดบริษัททันที บริษัทยังดำเนินงานระหว่างปรับโครงสร้างหนี้ · <b>วันนี้:</b> Poolin ยื่น Ch11 พร้อมแผนขายเหมือง West Texas ~$52M</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1">GDP advance estimate</p>
+        <p class="text-[11px] text-stone-600">ตัวเลข GDP "ประมาณการรอบแรก" ยังแก้ไขได้อีกสองรอบ (second → final) · <b>วันนี้:</b> ตัวเลขคืนพฤหัสคือ advance อย่าเพิ่งถือเป็นข้อสรุปสุดท้าย</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═ LEVELS ═ -->
+  <section class="glass-card p-6 mb-6">
+    <div class="section-title" style="color:#2B3A44;"><i class="fa-solid fa-table-list"></i> ระดับที่ตลาดจับตา · "เส้นที่ตลาดจับตา" ไม่ใช่จุดซื้อขาย</div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs">
+        <thead>
+          <tr style="background:#4a9d8e; color:#fff;">
+            <th class="p-2 text-left rounded-tl-lg">สินทรัพย์</th>
+            <th class="p-2 text-right">ราคาปิดศุกร์ 24 ก.ค.*</th>
+            <th class="p-2 text-left rounded-tr-lg">เส้นที่ตลาดจับตา (จากข่าว ไม่ใช่คำแนะนำ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="lvl-row"><td class="p-2 font-bold">ทองคำ</td><td class="p-2 text-right">4,070.80</td><td class="p-2">โซน 4,000 = หลักจิตวิทยาที่ Kitco ระบุว่า "ยังยืนได้" · ฝั่งบนตลาดดูโซน 4,100 ก่อนประชุม FOMC</td></tr>
+          <tr class="lvl-row"><td class="p-2 font-bold">Bitcoin</td><td class="p-2 text-right">65,265*</td><td class="p-2">*ปิดอาทิตย์ 26 ก.ค. · CryptoQuant ชี้วาฬรับโซน $64k · Cointelegraph เรียก $65k ว่า "กำแพง" ฝั่งขาย</td></tr>
+          <tr class="lvl-row"><td class="p-2 font-bold">S&amp;P 500</td><td class="p-2 text-right">7,411.98</td><td class="p-2">ฟิวเจอร์สเช้านี้ +0.6% · ทิศสัปดาห์ขึ้นกับ FOMC คืนพุธ + งบ 4 ยักษ์</td></tr>
+          <tr class="lvl-row"><td class="p-2 font-bold">Nasdaq</td><td class="p-2 text-right">24,975.82</td><td class="p-2">ศุกร์ปิดใต้ 25,000 · ฟิวเจอร์ส NQ เช้านี้ +1.2% รับข่าวอิหร่าน · งบ MSFT/META คืนพุธคือตัวชี้</td></tr>
+          <tr class="lvl-row"><td class="p-2 font-bold">พันธบัตร 10 ปี</td><td class="p-2 text-right">4.69%</td><td class="p-2">ตลาดถกว่า Fed จะ "ขึ้น" ดอกเบี้ยหรือคง (FedWatch สะท้อนโอกาสขึ้น 37.9%) · ยีลด์ค้างเหนือ 4.7% เป็นแรงกดหุ้นเติบโต</td></tr>
+          <tr class="lvl-row"><td class="p-2 font-bold">น้ำมัน WTI</td><td class="p-2 text-right">89.31</td><td class="p-2">ฟิวเจอร์สเช้านี้ −5% สู่โซน ~$85 (Brent ~$92) รับข่าวอิหร่านระงับโจมตี · ตลาดดูว่ายืนได้ถึงคืนนี้ไหม</td></tr>
+          <tr class="lvl-row"><td class="p-2 font-bold">USD/JPY</td><td class="p-2 text-right">163.82</td><td class="p-2">อาทิตย์ขยับลงเล็กน้อยที่ 163.68 · กรอบ 163–165 ที่ตลาดจับตาระหว่างรอ BoJ ศุกร์นี้ · DXY แถว 102</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═ WATCH ═ -->
+  <section class="glass-card p-6 mb-6">
+    <div class="section-title" style="color:#631317;"><i class="fa-solid fa-binoculars"></i> จับตาสัปดาห์นี้</div>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1" style="color:#631317;"><i class="fa-solid fa-moon mr-1"></i>คืนนี้ (จันทร์)</p>
+        <p class="text-[11px] text-stone-600">ตลาดสหรัฐเปิด ~20:30 ไทย · ดูว่าน้ำมันยืนโซน −5% ได้ตลอดวันไหม · Netanyahu พบ Trump ที่วอชิงตัน · CXMT เตรียมเปิดเทรดที่เซี่ยงไฮ้ · ตัวเลข Durable Goods สหรัฐ</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1" style="color:#631317;"><i class="fa-solid fa-gavel mr-1"></i>คืนพุธ = จุดผันผวนสูงสุดของสัปดาห์</p>
+        <p class="text-[11px] text-stone-600">FOMC แถลงผล (ราวตี 1 คืนพุธเวลาไทย) + งบ MSFT และ META หลังปิดตลาด · สามเหตุการณ์ใหญ่ซ้อนคืนเดียว ความผันผวนสูงเป็นเรื่องปกติ ไม่ใช่สัญญาณว่าต้องรีบทำอะไร</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1" style="color:#631317;"><i class="fa-solid fa-bolt mr-1"></i>คืนพฤหัส</p>
+        <p class="text-[11px] text-stone-600">งบ AMZN + AAPL (ตามปฏิทิน FMP) · GDP advance + Core PCE · BoE ประชุม · BoJ เริ่มประชุมสองวัน · ข้อมูลแน่นสุดของสัปดาห์ · <b>มีฉบับเย็นวันพฤหัส</b></p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-xs font-bold mb-1" style="color:#631317;"><i class="fa-solid fa-thumbtack mr-1"></i>ปักหมุดติดตาม</p>
+        <p class="text-[11px] text-stone-600">ร่าง CLARITY Act (โครงสร้างกำกับคริปโต) ในสภา · ปฏิทินงบ AAPL สองแหล่งขัดกัน (FMP=พฤหัส vs CNBC=ศุกร์) · ตัวเลขคาด Core PCE ขัดกัน 2.6% vs 3.4% (จดทั้งคู่ รอตัวจริงคืนพฤหัส) · คดีภาษีศาล NY (มาตรา 301 vs IEEPA)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═ DASHBOARD ═ -->
+  <section class="glass-card p-6 mb-6">
+    <div class="section-title" style="color:#2B3A44;"><i class="fa-solid fa-gauge-high"></i> แดชบอร์ดเช้านี้</div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">ทองคำ (ปิดศุกร์)</p><p class="text-base font-bold" style="color:#B0A68A;">4,070.80</p><p class="text-[10px]" style="color:#4a9d8e;">▲ ยืนเหนือ 4,000</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">Bitcoin (ปิดอาทิตย์)</p><p class="text-base font-bold" style="color:#f7931a;">65,265</p><p class="text-[10px]" style="color:#4a9d8e;">▲ +1.5% เขียว 2 วัน</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">S&amp;P 500 (ปิดศุกร์)</p><p class="text-base font-bold" style="color:#2B3A44;">7,411.98</p><p class="text-[10px]" style="color:#4a9d8e;">ฟิวเจอร์ส +0.6%</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">Nasdaq (ปิดศุกร์)</p><p class="text-base font-bold" style="color:#2B3A44;">24,975.82</p><p class="text-[10px]" style="color:#4a9d8e;">ฟิวเจอร์ส NQ +1.2%</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">พันธบัตร 10 ปี</p><p class="text-base font-bold" style="color:#631317;">4.69%</p><p class="text-[10px] text-stone-500">2Y 4.33 · 30Y 5.16</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">น้ำมัน WTI (ปิดศุกร์)</p><p class="text-base font-bold" style="color:#2B3A44;">89.31</p><p class="text-[10px]" style="color:#631317;">ฟิวเจอร์ส −5% ~$85</p></div>
+    </div>
+    <p class="text-[10px] text-stone-500 mt-3">ตัวเลข ณ เช้าจันทร์เวลาไทย · ราคาหุ้น/ทอง/น้ำมัน = ปิดศุกร์ 24 ก.ค. · BTC = ปิดอาทิตย์ 26 ก.ค. · ฟิวเจอร์สเช้านี้: Dow +244 จุด · S&amp;P +0.6% · Nasdaq +1.2% · Brent ~$92 · WTI ~$85 · DXY ~101.5</p>
+  </section>
+
+  <!-- ═ FOOTER ═ -->
+  <footer class="glass-card p-5 text-center" style="background:#fdf8ec; border:1px solid #efdfb4;">
+    <p class="text-xs text-stone-600 mb-1"><i class="fa-solid fa-circle-info mr-1"></i>ข้อมูลประกอบการตัดสินใจ ไม่ใช่คำแนะนำการลงทุน — แนวรับ/แนวต้าน/เส้นต่าง ๆ ในหน้านี้คือ "เส้นที่ตลาดจับตา" ไม่ใช่จุดซื้อขาย · มุมมองบุคคลที่สาม (Kitco, WSJ, CNBC, Cointelegraph, CryptoQuant, บัญชี X ฯลฯ) เป็นความเห็นของต้นทาง ไม่ใช่ของเรา · ตัวเลขคาดการณ์/estimate/เป้าราคา/ระดับบนชาร์ตที่ปรากฏเป็นการมองไปข้างหน้า ยังไม่เกิดจริง · ผลตอบแทนในอดีตไม่ได้รับประกันผลตอบแทนในอนาคต ผู้ลงทุนควรศึกษาข้อมูลและประเมินความเสี่ยงด้วยตนเองก่อนตัดสินใจ</p>
+    <p class="text-[11px] text-stone-500">© You Need Wealth · เรียบเรียงโดย เดชากร [กลต.043827] — ใบอนุญาต ก.ล.ต. + คปภ.</p>
+  </footer>
+
+</div>
+</body>
+</html>
