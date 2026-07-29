@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>วิเคราะห์ราคาภาษาชาวบ้าน · 29 ก.ค. 2569 (ฉบับเช้าพุธ · ชิปถล่มวันที่ 4 ลาก Kospi ชน circuit breaker -10% แต่ Dow กลับ +1.03% เพราะเงินหมุนออกจากชิปเข้าอุตสาหกรรม/การเงิน · ทองปิด 4,038.70 หลุดลงจาก 4,077 · 10Y ลงมา 4.61% · BTC 63,554 เดินคู่กับหุ้นเทค · คืนนี้ FOMC + Warsh แถลง ชนงบ MSFT/META)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body { font-family: 'Kanit', sans-serif; background: #f0ede6; color: #3a362f; }
+  .main-wrapper { max-width: 1200px; margin: 0 auto; }
+  .section-title { font-size: 1.05rem; font-weight: 700; margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+  .glass-card { background: rgba(255,255,255,.75); backdrop-filter: blur(8px); border: 1px solid rgba(176,166,138,.35); border-radius: 1rem; box-shadow: 0 4px 18px rgba(43,58,68,.06); }
+  .highlight-gold { background: linear-gradient(135deg, #fdf8ec 0%, #f7ecd0 100%); border-top: 4px solid #c9a227; }
+  .highlight-fed { background: linear-gradient(135deg, #eef2f6 0%, #dde6ee 100%); border-top: 4px solid #2b3a44; }
+  .highlight-economy { background: linear-gradient(135deg, #f0f4ee 0%, #e0e9dc 100%); border-top: 4px solid #5a7a4e; }
+  .highlight-geopolitics { background: linear-gradient(135deg, #f7efee 0%, #eedcd9 100%); border-top: 4px solid #631317; }
+  .highlight-forex { background: linear-gradient(135deg, #f2f0f6 0%, #e4e0ee 100%); border-top: 4px solid #5b5378; }
+  .highlight-market { background: linear-gradient(135deg, #eef4f4 0%, #dcebe9 100%); border-top: 4px solid #376562; }
+  .highlight-ai { background: linear-gradient(135deg, #f2f2f7 0%, #e2e2f0 100%); border-top: 4px solid #48487a; }
+  .highlight-crypto { background: linear-gradient(135deg, #f6f1ea 0%, #ece0d0 100%); border-top: 4px solid #a06b2a; }
+  .highlight-vocab { background: linear-gradient(135deg, #f4f6f4 0%, #e6ece6 100%); border-top: 4px solid #4a9d8e; }
+  .highlight-levels { background: linear-gradient(135deg, #f2f5f6 0%, #e1eaec 100%); border-top: 4px solid #4a9d8e; }
+  .highlight-watch { background: linear-gradient(135deg, #f7f3ec 0%, #efe4cf 100%); border-top: 4px solid #b0a68a; }
+  .highlight-recap { background: linear-gradient(135deg, #f4f2ee 0%, #e8e3d8 100%); border-top: 4px solid #2b3a44; }
+  .highlight-x { background: linear-gradient(135deg, #eef2f4 0%, #dfe8ec 100%); border-top: 4px solid #3b5b6b; }
+  .xchip { display:inline-block; background:#e4edf2; color:#274451; border:1px solid #cdd9e0; border-radius:.375rem; padding:0 .35rem; font-weight:600; font-size:.72rem; margin:0 .1rem; }
+  .xlink { color:#3b5b6b; text-decoration:underline dotted; }
+  .bg-icon-watermark { position: absolute; right: .75rem; bottom: .5rem; font-size: 4rem; opacity: .07; pointer-events: none; }
+  .badge-static { display: inline-block; padding: .15rem .65rem; border-radius: 9999px; font-size: .7rem; font-weight: 600; }
+  .header-bg { background: linear-gradient(120deg, #2b2926 0%, #3b3833 55%, #4c463d 100%); position: relative; overflow: hidden; }
+  .orb-1 { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(194,180,140,.25), transparent 70%); top: -80px; right: -60px; }
+  .orb-2 { position: absolute; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(99,19,23,.3), transparent 70%); bottom: -70px; left: -40px; }
+  .lvl-row td { padding: .5rem .75rem; border-bottom: 1px solid rgba(176,166,138,.25); }
+  .recap-row td { padding: .45rem .6rem; border-bottom: 1px solid rgba(176,166,138,.25); }
+  .spark-up { color: #3d7a2e; font-weight: 600; }
+  .spark-down { color: #b8463a; font-weight: 600; }
+  .spark-flat { color: #6b6456; font-weight: 600; }
+</style>
+</head>
+<body class="antialiased">
+<div class="main-wrapper px-4 py-6">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="header-bg rounded-2xl p-8 mb-6 text-white">
+    <div class="orb-1"></div><div class="orb-2"></div>
+    <div class="relative z-10">
+      <span class="badge-static bg-white/15 text-amber-100 mb-3"><i class="fa-solid fa-mug-hot mr-1"></i> ฉบับเช้าพุธ · ชิปถล่มวันที่ 4 ติดต่อกัน ลาก Kospi ชน circuit breaker ที่ -10% · แต่ Dow ปิด +1.03% เพราะเงินหมุนออกจากชิปเข้ากลุ่มอุตสาหกรรม/การเงิน · คืนนี้ FOMC ประธานใหม่ Kevin Warsh แถลงครั้งแรก ชนงบ MSFT/META</span>
+      <h1 class="text-2xl md:text-3xl font-bold mt-2 leading-snug">วิเคราะห์ราคาภาษาชาวบ้าน<br class="md:hidden"> · 29 ก.ค. 2569</h1>
+      <p class="text-sm text-stone-300 mt-3 max-w-3xl">เช้าวันพุธ ตลาดสหรัฐปิดไปแล้วเมื่อคืน · ราคาหุ้น/ทอง/ยีลด์ในหน้านี้คือ<b>ราคาปิดวันอังคาร 28 ก.ค.</b> · Bitcoin เทรด 24/7 ตัวเลขคือ<b>ล่าสุด $63,554.50</b> · จุดที่ต้องอ่านให้ขาดของวันนี้คือ <b>ดัชนีสามตัวเดินคนละทางในวันเดียวกัน</b>: Dow <b>+1.03%</b> (บวก 537 จุด) · S&amp;P 500 <b>+0.21%</b> · Nasdaq <b>-0.22%</b> · เพราะแรงขายกระจุกอยู่ที่กลุ่มชิป/หน่วยความจำเป็นวันที่ 4 ติดต่อกัน (SMH ลงเกิน 3% อีกวัน) ขณะที่เงินไหลไปเข้ากลุ่มอุตสาหกรรม (+1.85) และการเงิน (+1.81) แทน · ปลายทางของแรงขายชิปคือ<b>เกาหลีใต้ ที่ Kospi ร่วงถึง -10% จนต้องหยุดซื้อขาย</b> และตอนนี้ห่างจากจุดสูงสุดเดือน มิ.ย. ราว 45% · ทุกอย่างกำลังจะไปชนกันที่<b>คืนนี้ราวตี 1 ไทย: FOMC พร้อมแถลงข่าวครั้งแรกของประธานใหม่ Kevin Warsh</b> ชนกับงบ MSFT/META คืนเดียวกัน</p>
+      <div class="mt-4 inline-block bg-white/10 rounded-lg px-4 py-2 text-xs text-stone-200">
+        <i class="fa-regular fa-calendar mr-1"></i> อัปเดต: 29 ก.ค. 2569 (เช้า) · ผู้จัดทำ: เดชากร [กลต.043827]<br>
+        <i class="fa-regular fa-clock mr-1"></i> พุธเช้าไทย · ราคาหุ้น/ทอง/ยีลด์คือ<b>ราคาปิดวันอังคาร 28 ก.ค.</b> (ไม่ใช่ราคาสด) · Bitcoin เทรด 24/7 เป็นตัวเลขล่าสุด · ตัวเลขตลาดเอเชียเป็นราคาระหว่างวัน ยังเปลี่ยนได้ตลอด
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ BIG PICTURE ═══════════ -->
+  <section class="glass-card p-6 mb-6" style="border-left: 5px solid #6b6456;">
+    <div class="section-title" style="color:#2B3A44;"><i class="fa-solid fa-earth-asia"></i> ภาพใหญ่ของวัน · อ่านให้จบใน 1 นาที</div>
+    <p class="text-sm text-stone-700 leading-relaxed mb-3">ถ้าเมื่อวานคำถามคือ "ตลาดจะพังไหม" วันนี้คำตอบชัดขึ้นว่า <b>ไม่ใช่ทั้งตลาดที่ถูกขาย แต่เป็นการย้ายที่นั่ง</b> · แรงขายกลุ่มชิปเดินหน้าเป็นวันที่ 4 จนลากตลาดเกาหลีใต้ชนเบรกอัตโนมัติ ขณะเดียวกันเงินก้อนเดียวกันนั้นไหลเข้ากลุ่มอุตสาหกรรมและการเงิน จน <b>Dow ปิดบวก 537 จุด สวนทาง Nasdaq ที่ปิดลบ</b> · สามดัชนีเดินคนละทางในวันเดียวกันแบบนี้ไม่ได้เกิดบ่อย และเป็นข้อมูลที่บอกเรื่อง<b>โครงสร้างของแรงขาย</b>มากกว่าบอกทิศทางตลาด</p>
+    <ul class="text-xs space-y-1.5 text-stone-600 list-disc pl-5">
+      <li><b>ชิปถล่มวันที่ 4</b> · SMH ลงเกิน 3% อีกวัน · Micron และ AMD ลงเกิน 8% · Intel -6% · กลุ่มหน่วยความจำหนักสุด Sandisk -14% · Seagate ลงเกิน 8% · Western Digital -7%</li>
+      <li><b>เกาหลีใต้คือปลายทาง</b> · SK Hynix -14.65% · Samsung ลงเกิน 13% · <b>Kospi -10% จนต้องหยุดซื้อขาย</b> และห่างจากจุดสูงสุดเดือน มิ.ย. ราว 45% · แรงลามไปถึง Nikkei</li>
+      <li><b>แต่ Dow ปิด +1.03% (บวก 537.24 จุด ที่ 52,747.32)</b> · CNBC ระบุเหตุผลว่ามาจากงบที่ออกมาดี ราคาน้ำมันที่อ่อนลง และเงินที่หมุนออกจากชิป · ผู้นำวันนี้คือ <b>Sherwin-Williams +8%</b> และ <b>Coca-Cola +5%</b></li>
+      <li><b>หมวดยืนยันภาพเดียวกัน</b> · อุตสาหกรรม +1.85 · การเงิน +1.81 · สื่อสาร +0.92 · สุขภาพ +0.72 · ส่วนที่ติดลบคือ เทคโนโลยี -0.33 · สาธารณูปโภค -1.45 · <b>พลังงาน -2.99 แย่ที่สุด</b></li>
+      <li><b>ทองย่อ</b> · ปิด 4,038.70 จาก 4,077.00 (-0.94%) · ยังอยู่ในกรอบ 4,000 ถึง 4,100 เป็นวันที่ 6 · <b>ยีลด์ 10 ปีลงมา 4.61%</b> จากยอด 4.71% เมื่อ 23 ก.ค. · <b>BTC 63,554.50</b> ลง 4 วันติดพร้อมกับหุ้นเทค</li>
+      <li><b>น้ำมันสองหน้าในวันเดียว</b> · ช่วงกลางวัน Brent -3.9% ที่ $84.91 และ WTI -3.3% ที่ $79.87 จากข่าวการเจรจาเปิดช่องแคบฮอร์มุซ · แล้วช่วงท้ายวันมีการยิงขีปนาวุธใส่ฐานสหรัฐ (สกัดได้ทั้งหมด) ทำให้ <b>WTI เด้งกลับ +4.4% ไปที่ $82.73</b> ภายในไม่กี่ชั่วโมง (ตัวเลขน้ำมันทั้งหมดอ้างอิงรายงานของ CNBC)</li>
+      <li><b>คืนนี้คือคืนที่ทุกอย่างชนกัน</b> · FOMC 14:00 ET = ราวตี 1 ไทยเช้าพฤหัส พร้อมแถลงข่าวครั้งแรกของประธานใหม่ Kevin Warsh + งบ MSFT/META คืนเดียวกัน · <b>คืนพฤหัส 19:30 ไทย GDP ไตรมาส 2 ประมาณการครั้งแรก + Core PCE + ผู้ขอรับสวัสดิการว่างงาน + ECI ออกพร้อมกันหมด</b></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════ 3-DAY RECAP ═══════════ -->
+  <section class="glass-card highlight-recap p-6 mb-6 relative">
+    <i class="fa-solid fa-chart-line bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-backward-step mr-2" style="color:#2b3a44;"></i>สรุปราคาย้อนหลัง 3 วัน</h2>
+      <span class="badge-static text-white" style="background:#2b3a44;">ย้อนหลัง 3 วัน</span>
+    </div>
+    <div class="bg-white/70 rounded-lg p-3 mb-4 text-xs text-stone-600">
+      <i class="fa-solid fa-circle-info mr-1" style="color:#2b3a44;"></i><b>อ่านตารางอย่างไร?</b> สามช่องคือราคาปิดตลาดสหรัฐ 3 วันทำการล่าสุด (ศ. 24 · จ. 27 · อ. 28 ก.ค.) · เสาร์-อาทิตย์ตลาดหุ้นปิด จึงข้ามไป · Bitcoin ซื้อขาย 24 ชม. ตัวเลขวันเสาร์-อาทิตย์อยู่ในหมายเหตุท้ายตาราง · ทุกช่องเป็นตัวเลข<b>ปิดจริง</b> ไม่ใช่ราคาสด · ลูกศรเทียบกับช่องก่อนหน้า
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs">
+        <thead><tr class="text-white" style="background:#2b3a44;">
+          <th class="p-2 text-left rounded-tl-lg">สินทรัพย์</th><th class="p-2 text-right">ปิด ศ. 24 ก.ค.</th><th class="p-2 text-right">ปิด จ. 27 ก.ค.</th><th class="p-2 text-right">ปิด อ. 28 ก.ค.</th><th class="p-2 text-left rounded-tr-lg">อ่านเป็นภาษาชาวบ้าน</th>
+        </tr></thead>
+        <tbody>
+          <tr class="recap-row"><td class="font-semibold">ทองคำ (USD/oz)</td><td class="text-right">4,070.8</td><td class="text-right">4,077.0</td><td class="text-right spark-down">4,038.7 ▼</td><td>คืบขึ้นสองวันแล้วถอยกลับ · ยังติดอยู่ใน<b>กรอบ 4,000 ถึง 4,100</b> เป็นวันที่ 6 · ไม่หลุดพื้น ไม่ผ่านเพดาน</td></tr>
+          <tr class="recap-row"><td class="font-semibold">S&amp;P 500</td><td class="text-right">7,411.98</td><td class="text-right">7,413.18</td><td class="text-right spark-up">7,428.78 ▲</td><td>ขยับขึ้นทีละนิด<b>สามวันติด</b> · ค่าเฉลี่ยดูสงบมาก แต่ข้างในหมุนแรง (ชิปลง อุตสาหกรรม/การเงินขึ้น)</td></tr>
+          <tr class="recap-row"><td class="font-semibold">Nasdaq</td><td class="text-right">24,975.82</td><td class="text-right">24,932.08</td><td class="text-right spark-down">24,876.91 ▼</td><td>ไหลลงทุกวันและปิด<b>ใต้ 25,000 สามวันติด</b> · แรงกดมาจากกลุ่มชิปล้วน ๆ ไม่ใช่ทั้งตลาด</td></tr>
+          <tr class="recap-row"><td class="font-semibold">ยีลด์ 10 ปี (%)</td><td class="text-right">4.69</td><td class="text-right">4.65</td><td class="text-right spark-down">4.61 ▼</td><td>ย่อลงรวม <b>10 bps จากยอด 4.71%</b> เมื่อ 23 ก.ค. (สูงสุดตั้งแต่ ม.ค. 2568) ก่อนเข้าห้องประชุมเฟดคืนนี้</td></tr>
+          <tr class="recap-row"><td class="font-semibold">Bitcoin (USD)</td><td class="text-right">64,083</td><td class="text-right">63,694</td><td class="text-right spark-down">63,555 ▼</td><td>ลงต่อเนื่อง · <b>เดินคู่กับหุ้นเทคเกือบพอดี</b> ไม่ได้แยกทางอย่างที่หลายคนคาดหวัง</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-stone-600 mt-3"><b>ภาพรวม 3 วัน:</b> ตัวเลขที่ควรจับคู่กันอ่านคือ <b>S&amp;P ขึ้นสามวันติด แต่ Nasdaq ลงสามวันติด</b> · สองดัชนีนี้ถือหุ้นชุดเดียวกันเป็นส่วนใหญ่ ต่างกันที่น้ำหนักกลุ่มเทค · ระยะห่างที่กว้างขึ้นทุกวันจึงเป็นหลักฐานว่าแรงขายยัง<b>กระจุกอยู่ที่ชิป</b> ไม่ได้ลามเป็นวงกว้าง · หมายเหตุ Bitcoin: ปิดเสาร์ 25 ก.ค. 64,295.61 · ปิดอาทิตย์ 26 ก.ค. 65,341.07 · จากยอด 66,086.61 เมื่อ 22 ก.ค. ถึงตอนนี้คือ -3.8% ใน 4 รอบซื้อขาย ขณะที่ Nasdaq ลง -3.4% จากยอดวันเดียวกัน</p>
+  </section>
+
+  <!-- ═══════════ ROW 1: GOLD + FED ═══════════ -->
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <section class="glass-card highlight-gold p-6 relative">
+      <i class="fa-solid fa-coins bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#c9a227;">GOLD · ทองคำ</span>
+      <h2 class="text-lg font-bold mb-2 mt-1">ทองย่อลงมา 4,038.70 · ติดกรอบ 4,000 ถึง 4,100 เป็นวันที่ 6</h2>
+      <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+        <li><b>ราคาปิด 4,038.70</b> ลดจาก 4,077.00 คิดเป็น -38.30 หรือ -0.94% · ปริมาณซื้อขาย 165,324 สัญญา</li>
+        <li>ราคาสปอตที่ Kitco รายงานช่วงบ่าย <b>$4,027.40 (-1.18%)</b> · โลหะเงิน <b>$57.02 (-2.19%)</b> ลงแรงกว่าทอง · ช่วงราคาระหว่างวัน $4,016.20 ถึง $4,082.90</li>
+        <li>พาดหัวของ Kitco ช่วงเช้าอธิบายว่า <b>ความเสี่ยงเรื่องการขึ้นดอกเบี้ยเป็นตัวจำกัดแรงซื้อสินทรัพย์ปลอดภัย</b> · เป็นเหตุผลเดียวกับที่ทองไม่ไปไหนแม้ตลาดหุ้นจะผันผวน</li>
+        <li><b>เป้าหมายของบ้านวิเคราะห์ห่างกันมาก</b> · Commerzbank ลดเป้าสิ้นปีลงมาที่ราว <b>$4,500</b> จาก $4,800 ที่เคยให้ไว้เมื่อเดือน มิ.ย. · StoneX มองราว <b>$4,000</b> · World Gold Council มองแกว่ง <b>บวกลบ 5% รอบ $4,100</b> · ระยะห่างระหว่างเป้าสูงสุดกับต่ำสุดกว้างราว $950</li>
+      </ul>
+      <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+        <b>เส้นที่ตลาดจับตา (ไม่ใช่คำแนะนำ):</b> พื้นที่ <b>$4,000</b> ที่ยังไม่เคยหลุดในรอบนี้ และเพดาน <b>$4,100</b> ที่ปิดไม่ผ่านมา 6 รอบซื้อขาย · เส้นทั้งสองเป็นเพียงจุดที่ตลาดพูดถึงกันมาก ไม่ใช่จุดซื้อขายและไม่ใช่เป้าราคา
+      </div>
+      <div class="bg-white/70 rounded-lg p-3 mt-2 text-xs text-stone-600">
+        <i class="fa-solid fa-book mr-1" style="color:#c9a227;"></i><b>กรอบคิด · Aswath Damodaran, <i>Narrative and Numbers</i>, บท "The Feedback Loop":</b> เมื่อบ้านวิเคราะห์ให้ตัวเลขห่างกันเกือบพันดอลลาร์บนสินทรัพย์ตัวเดียวกัน สิ่งที่ต่างกันไม่ใช่ข้อมูล แต่เป็น<b>เรื่องเล่า</b>ที่แต่ละบ้านเลือกเชื่อ แล้วจึงหาตัวเลขมารองรับ · Damodaran เตือนว่าให้แยกให้ออกว่าเรากำลังซื้อ "ตัวเลข" หรือกำลังซื้อ "เรื่องเล่าของคนอื่น"
+      </div>
+    </section>
+
+    <section class="glass-card highlight-fed p-6 relative">
+      <i class="fa-solid fa-landmark bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#2b3a44;">FED · ดอกเบี้ยและยีลด์</span>
+      <h2 class="text-lg font-bold mb-2 mt-1">คืนนี้ FOMC · แถลงข่าวครั้งแรกของประธานใหม่</h2>
+      <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+        <li><b>เส้นยีลด์ปิด 28 ก.ค.</b> · 3 เดือน 3.90 · 2 ปี 4.26 · 5 ปี 4.35 · <b>10 ปี 4.61</b> · 30 ปี 5.09 · ระยะห่าง 10 ปีลบ 2 ปี = <b>+0.35</b></li>
+        <li>ยีลด์ 10 ปีลงมา <b>10 bps จากยอด 4.71%</b> เมื่อ 23 ก.ค. ซึ่งเป็นระดับสูงสุดตั้งแต่ ม.ค. 2568 · เป็นการย่อก่อนเข้าห้องประชุม ไม่ใช่การกลับทิศ</li>
+        <li><b>FOMC วันพุธ 14:00 ตามเวลาสหรัฐ = ราวตี 1 ไทยของเช้าพฤหัส</b> · เป็นการแถลงข่าวครั้งแรกของประธานคนใหม่ Kevin Warsh · น้ำหนักของงานนี้อยู่ที่<b>ถ้อยคำ</b>มากกว่าตัวเลขดอกเบี้ย</li>
+        <li>ตลาดสัญญาล่วงหน้าให้โอกาส<b>ขึ้น</b>ดอกเบี้ยรอบนี้ราว 38% และราว 82% ภายในเดือน ก.ย. · <b>ข้อควรระวัง: ตัวเลขชุดนี้เป็นของวันที่ 23 ก.ค.</b> ซึ่งเป็นวันที่ราคาน้ำมันพุ่ง · หลังจากนั้นน้ำมันย่อลงมาแล้ว ตัวเลขจริงวันนี้อาจไม่เท่าเดิม</li>
+        <li>ค่ากลางที่คณะกรรมการมองอัตราดอกเบี้ยนโยบายสิ้นปี 2569 อยู่ที่ <b>3.8%</b> ขยับขึ้นจาก 3.4% ที่เคยให้ไว้เมื่อเดือน มี.ค.</li>
+      </ul>
+      <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+        <b>เส้นที่ตลาดจับตา (ไม่ใช่คำแนะนำ):</b> ยีลด์ 10 ปีที่ <b>4.61%</b> เทียบกับยอด <b>4.71%</b> · และเส้นกลม <b>5.00%</b> ของยีลด์ 30 ปีที่ยืนเหนือมาต่อเนื่อง
+      </div>
+      <div class="bg-white/70 rounded-lg p-3 mt-2 text-xs text-stone-600">
+        <i class="fa-solid fa-book mr-1" style="color:#2b3a44;"></i><b>กรอบคิด · Ed Thorp, <i>A Man for All Markets</i>, เรื่องเกณฑ์ Kelly:</b> Thorp ยืนยันว่าการเดิมพันที่ถูกต้องต้องรู้สองอย่างพร้อมกัน คือ<b>ความน่าจะเป็น</b>และ<b>ผลตอบแทนต่อความเสี่ยง</b> · ตัวเลข 38% ที่ตลาดให้ไว้จึงมีค่าก็ต่อเมื่อเรารู้ว่ามันถูกคำนวณ<b>เมื่อไร</b> และสมมติฐานเบื้องหลังยังจริงอยู่หรือเปล่า
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════ ROW 2: ECONOMY + GEOPOLITICS ═══════════ -->
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <section class="glass-card highlight-economy p-6 relative">
+      <i class="fa-solid fa-chart-simple bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#5a7a4e;">ECONOMY · เศรษฐกิจ</span>
+      <h2 class="text-lg font-bold mb-2 mt-1">ความเชื่อมั่นผู้บริโภคลงมา 90.8 · ตลาดงานเริ่มตึงตัว</h2>
+      <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+        <li><b>ดัชนีความเชื่อมั่นผู้บริโภคของ Conference Board เดือน ก.ค. อยู่ที่ 90.8</b> ลดจาก 92.2 ของเดือน มิ.ย. (ตัวเลขปรับปรุงแล้ว) และต่ำกว่าที่ตลาดคาดไว้ที่ 92.0</li>
+        <li>ตัวเลขที่น่าสนใจกว่าตัวหัวคือ<b>ส่วนย่อยเรื่องงาน</b> · คนที่ตอบว่า "หางานง่าย" ลดจาก 25.5% เหลือ <b>24.6%</b> · คนที่ตอบว่า "หางานยาก" ขึ้นไปที่ <b>21.5%</b> · ช่องว่างระหว่างสองตัวนี้แคบลง ซึ่งเป็นสัญญาณที่นักเศรษฐศาสตร์ใช้ดูตลาดแรงงานก่อนตัวเลขจ้างงานจริงจะออก</li>
+        <li>ฉากหลัง: เงินเฟ้อ CPI เดือน มิ.ย. -0.4% เทียบเดือนก่อน และ +3.5% เทียบปีก่อน · ดัชนีความเชื่อมั่น U.Mich เดือน ก.ค. 54.4</li>
+        <li><b>ปฏิทินที่ใหญ่กว่าคืนนี้คือคืนพฤหัส 19:30 ไทย</b> · GDP ไตรมาส 2 ประมาณการครั้งแรก + รายได้และรายจ่ายส่วนบุคคลที่มี Core PCE อยู่ข้างใน + ผู้ขอรับสวัสดิการว่างงาน + ดัชนีต้นทุนการจ้างงาน (ECI) <b>ออกพร้อมกันหมดในนาทีเดียว</b> · ตลาดคาด Core PCE +0.1% เทียบเดือนก่อน จาก +0.3% ครั้งที่แล้ว</li>
+        <li>ตัวเลขจ้างงานนอกภาคเกษตรรอบถัดไปคือ <b>7 ส.ค.</b></li>
+      </ul>
+      <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+        <i class="fa-solid fa-book mr-1" style="color:#5a7a4e;"></i><b>กรอบคิด · Philip Fisher, <i>Common Stocks and Uncommon Profits</i>, บทที่ 2 เรื่อง scuttlebutt:</b> Fisher สอนให้เก็บข้อมูลจากคนหน้างานแทนที่จะรอตัวเลขสรุป · คำตอบของผู้บริโภคว่า "หางานง่ายหรือยาก" คือ scuttlebutt ระดับประเทศที่มาถึงเราก่อนตัวเลขจ้างงานจริงราวสองสัปดาห์
+      </div>
+    </section>
+
+    <section class="glass-card highlight-geopolitics p-6 relative">
+      <i class="fa-solid fa-globe bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#631317;">GEOPOLITICS · ภูมิรัฐศาสตร์และการค้า</span>
+      <h2 class="text-lg font-bold mb-2 mt-1">น้ำมันสองหน้าในวันเดียว · ภาษีชุดใหม่ครอบคลุม 60 ประเทศ</h2>
+      <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+        <li><b>ช่วงกลางวัน ราคาน้ำมันดิ่ง</b> · Brent -3.9% ที่ $84.91 · WTI -3.3% ที่ $79.87 หลังมีการหารือระหว่างอิหร่าน ซาอุดีอาระเบีย และโอมาน เรื่องการเปิดช่องแคบฮอร์มุซ โดยรัฐมนตรีต่างประเทศอิหร่าน Araqchi</li>
+        <li><b>ช่วงท้ายวันกลับด้าน</b> · มีการยิงขีปนาวุธของกองกำลัง IRGC ใส่ฐานกำลังสหรัฐ ซึ่ง CENTCOM ระบุว่า<b>สกัดได้ทั้งหมด</b> · WTI เด้งกลับ <b>+4.4% ไปที่ $82.73</b> ภายในไม่กี่ชั่วโมง · ตัวเลขน้ำมันทั้งหมดในหน้านี้อ้างอิงรายงานของ CNBC เนื่องจากแหล่งราคาน้ำมันประจำของเราเข้าไม่ได้ในวันนี้</li>
+        <li>Goldman Sachs ประเมินว่าถ้าช่องแคบฮอร์มุซเปิดได้เต็มที่ Brent มีโอกาสกลับไปที่ราว $80 ภายในสิ้นปี</li>
+        <li><b>ด้านการค้า: อัตราภาษีชุดใหม่กับคู่ค้า 60 ประเทศ มีผลตั้งแต่ 24 ก.ค.</b> แทนอัตราฐาน 10% เดิม · ประเทศที่ให้คำมั่นเรื่องห้ามใช้แรงงานบังคับเสีย <b>10%</b> · ที่เหลือเสีย <b>12.5%</b> · ใช้อำนาจตามมาตรา 301 และครอบคลุมสินค้านำเข้า <b>99.4% ของทั้งหมด</b></li>
+        <li><b>สินค้าอิเล็กทรอนิกส์และชิปจากเอเชียยังได้รับการยกเว้น</b> และภาษีชิปจีนถูกเลื่อนไปปี 2570 · ขณะที่มีรายงาน (Yahoo อ้าง FT เมื่อ 21 ก.ค.) ว่าจีนกำลังพิจารณาคุมการส่งออกโมเดล AI และชิปของตัวเองบ้าง</li>
+      </ul>
+      <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+        <i class="fa-solid fa-book mr-1" style="color:#631317;"></i><b>กรอบคิด · Howard Marks, <i>The Most Important Thing</i>, บทที่ 14 "Knowing What You Don't Know":</b> ราคาน้ำมันวันเดียวลง 3.3% แล้วขึ้น 4.4% จากข่าวคนละชิ้น · Marks บอกว่าคนที่คิดว่าตัวเองพยากรณ์เหตุการณ์แบบนี้ได้ คือคนที่กำลังสับสนระหว่าง<b>ความมั่นใจ</b>กับ<b>ความรู้</b>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════ ROW 3: FOREX + MARKET ═══════════ -->
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <section class="glass-card highlight-forex p-6 relative">
+      <i class="fa-solid fa-money-bill-transfer bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#5b5378;">FOREX · ค่าเงิน</span>
+      <h2 class="text-lg font-bold mb-2 mt-1">เยนยังอ่อน 163.860 · โซนที่ตลาดเฝ้าคือ 163 ถึง 164</h2>
+      <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+        <li><b>ดอลลาร์ต่อเยนปิดที่ 163.860</b> ขยับขึ้น 0.142 จากวันก่อน · ห้าวันที่ผ่านมาเดินอยู่ในกรอบแคบ 163.138 · 163.831 · 163.824 · 163.584 · 163.718 · 163.860</li>
+        <li>CNBC รายงานเมื่อ 23 ก.ค. ว่า <b>ดอลลาร์แข็งค่าเทียบเยนสูงสุดในรอบ 40 ปี</b> โดยเยนเคยแตะจุดอ่อนสุดในรอบ 40 ปีที่ 162.84 เมื่อต้นเดือน</li>
+        <li><b>หมายเหตุความโปร่งใส:</b> ฉบับนี้<b>ไม่ระบุตัวเลขดัชนีดอลลาร์ (DXY) ของวันที่ 28 ก.ค.</b> เพราะไม่มีแหล่งที่อ้างอิงได้ในวันนี้ · ตัวเลขที่เคยเห็นตามสื่อเป็นของวันที่ 21 ก.ค. ซึ่งไม่ควรนำมาใช้แทนกัน · เราเลือกไม่ใส่ดีกว่าใส่ตัวเลขเก่าโดยไม่บอก</li>
+      </ul>
+      <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+        <b>เส้นที่ตลาดจับตา (ไม่ใช่คำแนะนำ):</b> โซน <b>163 ถึง 164</b> เป็นระดับที่ตลาดพูดถึงเรื่องความเป็นไปได้ของการเข้าแทรกแซงค่าเงินจากทางการญี่ปุ่น · เป็นเพียงระดับที่ถูกจับตา ไม่ใช่การคาดการณ์
+      </div>
+      <div class="bg-white/70 rounded-lg p-3 mt-2 text-xs text-stone-600">
+        <i class="fa-solid fa-book mr-1" style="color:#5b5378;"></i><b>กรอบคิด · Daniel Kahneman, <i>Thinking, Fast and Slow</i>, หลัก WYSIATI:</b> "สิ่งที่คุณเห็นคือทั้งหมดที่มี" · สมองเราสร้างข้อสรุปจากข้อมูลที่<b>บังเอิญมีอยู่ตรงหน้า</b> โดยไม่ถามว่าข้อมูลที่ขาดไปคืออะไร · การที่วันนี้ไม่มีตัวเลข DXY จึงเป็นตัวอย่างที่ดีว่าเมื่อข้อมูลหาย ทางที่ปลอดภัยคือ<b>บอกว่าไม่มี</b> ไม่ใช่เดาแทน
+      </div>
+    </section>
+
+    <section class="glass-card highlight-market p-6 relative">
+      <i class="fa-solid fa-arrow-trend-up bg-icon-watermark"></i>
+      <span class="badge-static text-white mb-2" style="background:#376562;">S&amp;P 500 · ดัชนีใหญ่</span>
+      <h2 class="text-lg font-bold mb-2 mt-1">สามดัชนีเดินคนละทางในวันเดียวกัน</h2>
+      <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+        <li><b>Dow +1.03% (บวก 537.24 จุด ปิด 52,747.32)</b> · <b>S&amp;P 500 +0.21% ปิด 7,428.78</b> · <b>Nasdaq -0.22% ปิด 24,876.91</b></li>
+        <li>CNBC อธิบายว่าที่ Dow ขึ้นได้มาจากสามอย่างประกอบกัน คือ<b>งบที่ออกมาดี</b> <b>ราคาน้ำมันที่อ่อนลงระหว่างวัน</b> และ<b>เงินที่หมุนออกจากกลุ่มชิป</b> · ผู้นำวันนี้คือ <b>Sherwin-Williams +8%</b> และ <b>Coca-Cola +5%</b></li>
+        <li>ภาพหมวดยืนยันเรื่องเดียวกัน: อุตสาหกรรม +1.85 · การเงิน +1.81 · สื่อสาร +0.92 · สุขภาพ +0.72 · สินค้าฟุ่มเฟือย +0.18 · วัตถุดิบ +0.04 · เทคโนโลยี -0.33 · สินค้าจำเป็น -0.39 · อสังหาฯ -0.53 · สาธารณูปโภค -1.45 · <b>พลังงาน -2.99</b></li>
+        <li><b>จุดที่ควรเทียบกับเมื่อวาน:</b> วันจันทร์มีเพียงหมวดสินค้าจำเป็นที่บวก ซึ่งเป็นท่าตั้งรับ · วันอังคารกลับกลายเป็นอุตสาหกรรมและการเงินนำ ขณะที่สินค้าจำเป็นติดลบ ซึ่งเป็นท่าเชิงรุก · <b>สองวันติดกันให้ภาพตรงข้ามกัน</b> เป็นข้อมูลดิบที่ควรบันทึกไว้ ไม่ใช่ข้อสรุปว่าตลาดเปลี่ยนใจ</li>
+      </ul>
+      <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+        <b>เส้นที่ตลาดจับตา (ไม่ใช่คำแนะนำ):</b> S&amp;P ที่โซน <b>7,400</b> ซึ่งยืนเหนือมา 4 วัน และ Nasdaq ที่เส้นกลม <b>25,000</b> ซึ่งปิดใต้มา 3 วัน
+      </div>
+      <div class="bg-white/70 rounded-lg p-3 mt-2 text-xs text-stone-600">
+        <i class="fa-solid fa-book mr-1" style="color:#376562;"></i><b>กรอบคิด · Peter Lynch, <i>One Up on Wall Street</i>, บทที่ 7 เรื่องหุ้น 6 ประเภท:</b> Lynch แบ่งหุ้นเป็น 6 กลุ่มเพราะ<b>หุ้นแต่ละกลุ่มตอบสนองต่อข่าวเดียวกันไม่เหมือนกัน</b> · วันที่ดัชนีสามตัวเดินคนละทาง คือวันที่การแบ่งกลุ่มแบบ Lynch อธิบายตลาดได้ดีกว่าการดูดัชนีตัวเดียว
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════ STOCK MARKET ═══════════ -->
+  <section class="glass-card highlight-ai p-6 mb-6 relative">
+    <i class="fa-solid fa-microchip bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-layer-group mr-2" style="color:#48487a;"></i>ตลาดหุ้น · ชิปถล่มวันที่ 4 กับเกาหลีใต้ที่ชนเบรกอัตโนมัติ</h2>
+      <span class="badge-static text-white" style="background:#48487a;">STOCK MARKET</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-sm font-semibold mb-2" style="color:#48487a;"><i class="fa-solid fa-memory mr-1"></i>กลุ่มหน่วยความจำหนักที่สุด</p>
+        <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+          <li><b>SMH ลงเกิน 3% เป็นวันที่ 4 ติดต่อกัน</b></li>
+          <li>Micron และ AMD ลงเกิน <b>8%</b> · Intel <b>-6%</b></li>
+          <li>หน่วยความจำโดยเฉพาะ: <b>Sandisk -14%</b> · Seagate ลงเกิน <b>8%</b> · Western Digital <b>-7%</b></li>
+          <li>ราคาปิดที่บันทึกไว้: MU $820.53 (-8.85%) · INTC $86.30 (-5.86%) · SKHY $130.17 (-8.98%) · PLTR $123.53 (-6.08%)</li>
+          <li><b>แต่ NVDA ปิดบวก $197.01 (+0.25%)</b> · ทั้งที่ตัวจุดชนวนที่ถูกอ้างถึงคือข่าวยืนยันการเจรจากับ OpenAI เรื่องการค้ำโครงสร้างพื้นฐาน AI มูลค่าราว 250,000 ล้านดอลลาร์</li>
+        </ul>
+      </div>
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-sm font-semibold mb-2" style="color:#48487a;"><i class="fa-solid fa-flag mr-1"></i>เกาหลีใต้ชน circuit breaker</p>
+        <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+          <li><b>SK Hynix -14.65%</b> · <b>Samsung ลงเกิน 13%</b> · <b>Kospi -10% จนต้องหยุดซื้อขาย</b> และห่างจากจุดสูงสุดเดือน มิ.ย. ราว <b>45%</b> · แรงลามไปถึง Nikkei</li>
+          <li>CNBC พาดหัวว่าตลาดวอลล์สตรีทกับตลาดเกาหลี<b>เกี่ยวพันกันแน่นขึ้น</b> เพราะ Samsung และ SK Hynix เป็นผู้ผลิตหน่วยความจำ HBM รายใหญ่ที่สุดของโลก ราคาหุ้นจึงเคลื่อนตามความคาดหวังเรื่องงบลงทุนของผู้ให้บริการคลาวด์ในสหรัฐ</li>
+          <li>นักวิเคราะห์ตั้งข้อสังเกตว่าความเกี่ยวพันนี้<b>ลดประโยชน์ของการกระจายความเสี่ยงข้ามภูมิภาค</b> · เป็นข้อสังเกตเชิงโครงสร้าง ไม่ใช่การพูดถึงราคา</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-white/70 rounded-lg p-4 mt-4">
+      <p class="text-sm font-semibold mb-2" style="color:#48487a;"><i class="fa-solid fa-euro-sign mr-1"></i>ยุโรปเงียบผิดกับเอเชีย</p>
+      <p class="text-xs text-stone-700">Stoxx 600 +0.2 · FTSE +0.1 · CAC +0.4 · DAX +0.5 · ทุกหมวดปิดบวกยกเว้นน้ำมันและก๊าซ · หุ้นเด่นคือ <b>Man Group +8.5%</b> หลังรายงานสินทรัพย์ภายใต้การบริหารครึ่งปีแรกโต 11% ขึ้นสู่ระดับสูงสุดเป็นประวัติการณ์ที่ <b>253,600 ล้านดอลลาร์</b> พร้อมเงินไหลเข้าสุทธิ 7,100 ล้านดอลลาร์ · Hermes และ Kering บวกราว 2%</p>
+    </div>
+    <div class="bg-white/70 rounded-lg p-4 mt-3">
+      <p class="text-sm font-semibold mb-2" style="color:#48487a;"><i class="fa-solid fa-file-invoice-dollar mr-1"></i>งบที่ประกาศไปแล้วเมื่อคืน (ตัวเลขจริง เทียบกับที่ตลาดคาด)</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead><tr class="text-white" style="background:#48487a;">
+            <th class="p-2 text-left rounded-tl-lg">บริษัท</th><th class="p-2 text-right">EPS จริง</th><th class="p-2 text-right">EPS ที่คาด</th><th class="p-2 text-left rounded-tr-lg">หมายเหตุ</th>
+          </tr></thead>
+          <tbody>
+            <tr class="recap-row"><td class="font-semibold">Boeing (BA)</td><td class="text-right spark-down">-0.76</td><td class="text-right">-0.34</td><td>ขาดทุนมากกว่าที่คาด แต่รายได้ 24.560 พันล้าน สูงกว่าคาดที่ 24.264 พันล้าน</td></tr>
+            <tr class="recap-row"><td class="font-semibold">Coca-Cola (KO)</td><td class="text-right spark-up">0.97</td><td class="text-right">0.932</td><td>ดีกว่าคาด · หุ้นปิด +5% เป็นหนึ่งในผู้นำของ Dow</td></tr>
+            <tr class="recap-row"><td class="font-semibold">Visa (V)</td><td class="text-right spark-up">3.32</td><td class="text-right">3.23</td><td>ดีกว่าคาด</td></tr>
+            <tr class="recap-row"><td class="font-semibold">PayPal (PYPL)</td><td class="text-right spark-up">1.38</td><td class="text-right">1.28</td><td>ดีกว่าคาด</td></tr>
+            <tr class="recap-row"><td class="font-semibold">Ford (F)</td><td class="text-right spark-up">0.42</td><td class="text-right">0.33</td><td>ดีกว่าคาด · ราคาปิด $14.955 (+1.87%)</td></tr>
+            <tr class="recap-row"><td class="font-semibold">Carrier (CARR)</td><td class="text-right spark-up">0.86</td><td class="text-right">0.817</td><td>ดีกว่าคาด</td></tr>
+            <tr class="recap-row"><td class="font-semibold">Tilray (TLRY)</td><td class="text-right spark-down">-0.43</td><td class="text-right">-0.012</td><td>แย่กว่าคาดมาก · รายได้ 0.042 พันล้าน ต่ำกว่าคาดที่ 0.246 พันล้าน</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-[11px] text-stone-500 mt-2">Sherwin-Williams (SHW) ปิด +8% เป็นผู้นำของวัน · ตัวเลขงบทั้งหมดมาจากตารางของผู้ให้บริการข้อมูลที่ระบุไว้ท้ายหน้า</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-4 mt-3">
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-sm font-semibold mb-2" style="color:#48487a;"><i class="fa-regular fa-moon mr-1"></i>คืนนี้ประกาศงบ (ตัวเลขที่ตลาดคาด)</p>
+        <p class="text-xs text-stone-700"><b>MSFT</b> EPS 4.21 · รายได้ 87.620 พันล้าน · <b>META</b> EPS 7.13 · รายได้ 60.224 พันล้าน · <b>HOOD</b> 0.41 · 1.287 พันล้าน · <b>SBUX</b> 0.65 · 9.174 พันล้าน · <b>SOFI</b> 0.12 · 1.115 พันล้าน · <b>MGM</b> 0.559 · 4.416 พันล้าน</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-4">
+        <p class="text-sm font-semibold mb-2" style="color:#48487a;"><i class="fa-regular fa-calendar mr-1"></i>พรุ่งนี้ประกาศงบ</p>
+        <p class="text-xs text-stone-700"><b>AAPL</b> EPS ที่คาด 1.88 · รายได้ 109.039 พันล้าน · <b>AMZN</b> 1.82 · 196.778 พันล้าน · พร้อมด้วย <b>COIN · RBLX · RIVN · SIRI · RIOT</b> · AAPL ปิดบวกสองวันติด ล่าสุด $340.08 (+0.94%)</p>
+      </div>
+    </div>
+    <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+      <i class="fa-solid fa-book mr-1" style="color:#48487a;"></i><b>กรอบคิด · Charlie Munger, <i>Poor Charlie's Almanack</i>, อคติ Deprival Super-Reaction:</b> Munger อธิบายว่าคนรู้สึกเจ็บจากการ<b>เสียของที่เคยมี</b> แรงกว่าความสุขจากการได้ของใหม่ในขนาดเท่ากันหลายเท่า · หุ้นชิปชุดเดียวกันในวันเดียวกัน ถ้าวัดจากจุดสูงสุดจะเห็นแต่สีแดง แต่ถ้าวัดจากต้นปีจะเห็นแต่สีเขียว · <b>ตัวเลขไม่ได้เปลี่ยน มีแค่จุดตั้งต้นที่เปลี่ยน</b>
+    </div>
+  </section>
+
+  <!-- ═══════════ X HEAT ═══════════ -->
+  <section class="glass-card highlight-x p-6 mb-6 relative">
+    <i class="fa-brands fa-x-twitter bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-fire mr-2" style="color:#3b5b6b;"></i>ชั้นกระแส · สิ่งที่บัญชี X พูดถึงเมื่อคืน</h2>
+      <span class="badge-static text-white" style="background:#3b5b6b;">X LAYER</span>
+    </div>
+    <div class="rounded-lg p-3 mb-4 text-xs" style="background:#fdf0ef; border:1px solid #e2b9b6; color:#631317;">
+      <i class="fa-solid fa-triangle-exclamation mr-1"></i><b>อ่านส่วนนี้อย่างไร?</b> ส่วนนี้คือ<b>สิ่งที่คนอื่นพูด</b> ไม่ใช่ข้อสรุปของเรา และไม่ใช่คำแนะนำ · เรายกข้อความมาแบบดิบ ๆ พร้อมลิงก์ต้นทางทุกโพส เพื่อให้ท่านกดไปอ่านและ<b>ตัดสินเอง</b>ว่าน่าเชื่อแค่ไหน · ตัวเลขงบการเงินที่โผลในชั้นนี้ เราจะเอาไปตรวจกับแหล่งข้อมูลทางการก่อนเสมอ ตัวไหนตรวจไม่ได้เราจะตัดตัวเลขทิ้งและเหลือไว้แค่หัวข้อ
+    </div>
+
+    <div class="bg-white/70 rounded-lg p-4 mb-3">
+      <p class="text-sm font-semibold mb-2" style="color:#274451;"><i class="fa-brands fa-x-twitter mr-1"></i>@StockSavvyShay · 37 โพสเมื่อวาน</p>
+      <ol class="list-decimal pl-5 text-xs space-y-2 text-stone-700">
+        <li>[28/07 08:18] ตลาดหุ้นเกาหลีใต้หยุดซื้อขายหลัง Kospi ร่วงเกิน 8% ระบบ circuit breaker ทำงาน <a class="xlink" href="https://x.com/StockSavvyShay/status/2081912262651179304" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 21:24] <span class="xchip">$MU</span> หลุดระดับ $800 <a class="xlink" href="https://x.com/StockSavvyShay/status/2082109847663972703" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 21:10] <span class="xchip">$SNDK</span> ลง 50% ภายในหนึ่งเดือน <a class="xlink" href="https://x.com/StockSavvyShay/status/2082106464462872847" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 09:47] Jim Cramer พลิกมุมมองเป็นลบกับธีมศูนย์ข้อมูล และบอกว่าใครที่ใช้เงินกู้อยู่ควรขายในรอบเปิดถัดไป โดยเอ่ยถึง <span class="xchip">$NBIS</span><span class="xchip">$IREN</span><span class="xchip">$CRWV</span><span class="xchip">$HUT</span><span class="xchip">$WULF</span><span class="xchip">$CIFR</span><span class="xchip">$WYFI</span><span class="xchip">$APLD</span><span class="xchip">$SHAZ</span> <a class="xlink" href="https://x.com/StockSavvyShay/status/2081934519993807093" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 07:31] Cathie Wood เข้าซื้อ <span class="xchip">$SPCX</span> ราว 14 ล้านดอลลาร์ <a class="xlink" href="https://x.com/StockSavvyShay/status/2081900361351410072" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 18:44] <span class="xchip">$TSLA</span> ทำสัญญาระยะยาวรับซื้อ 90% ของโครงการโซลาร์ 509 เมกะวัตต์ พร้อมแบตเตอรี่ 360 เมกะวัตต์ ในรัฐแอริโซนา ซึ่งมี KKR หนุนหลัง กำหนดเดินเครื่องปี 2571 <a class="xlink" href="https://x.com/StockSavvyShay/status/2082069668530164069" target="_blank">ต้นทาง</a></li>
+      </ol>
+      <p class="text-[11px] text-stone-500 mt-2"><b>ธีมที่บัญชีนี้พูดถึงมากสุด:</b> AI และเทค 28 โพส · งบการเงิน 22 · เงินเฟ้อ 2 · น้ำมัน 2 · เฟด 1 · การค้า 1</p>
+      <p class="text-[11px] text-stone-500 mt-1"><b>$TICKER ที่ปรากฏในบัญชีนี้:</b> AAOI, AAPL, AEHR, ALAB, AMAT, AMD, AMKR, AMZN, APLD, ARM, ASTS, BE, BLK, BTQ, CIFR, COHR, CORZ, CRWV, CXMT, GLW, GOOGL, HUT, INTC, IONQ, IREN, KLAC, META, MRVL, MU, NBIS, NVDA, ORCL, QQQ, RKLB, SHAZ, SKHY, SKYT, SNDK, SPCX, TE, TSLA, TSM, WULF, WYFI</p>
+    </div>
+
+    <div class="bg-white/70 rounded-lg p-4 mb-3">
+      <p class="text-sm font-semibold mb-2" style="color:#274451;"><i class="fa-brands fa-x-twitter mr-1"></i>@InvestingVisual · 11 โพสเมื่อวาน</p>
+      <ol class="list-decimal pl-5 text-xs space-y-2 text-stone-700">
+        <li>[28/07 20:30] "การละลายของกลุ่มเซมิคอนดักเตอร์ยังไม่จบ" พร้อมตารางระยะห่างจากจุดสูงสุด: <span class="xchip">$ARM</span> -41 · <span class="xchip">$ALAB</span> -40 · <span class="xchip">$MRVL</span> -39 · <span class="xchip">$SNDK</span> -39 · <span class="xchip">$SKHY</span> -38 · <span class="xchip">$INTC</span> -35 · <span class="xchip">$COHR</span> -34 · <span class="xchip">$LITE</span> -27 · <span class="xchip">$MU</span> -24 · <span class="xchip">$AMD</span> -10 <a class="xlink" href="https://x.com/InvestingVisual/status/2082096236363137535" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 22:54] อีกด้านของเหรียญ ผลตอบแทนตั้งแต่ต้นปีของหุ้นชุดเดียวกัน<b>บวกทุกตัว</b>: <span class="xchip">$SNDK</span> +328 · <span class="xchip">$SKHY</span> +168 · <span class="xchip">$MU</span> +165 · <span class="xchip">$ARM</span> +121 · <span class="xchip">$INTC</span> +120 · <span class="xchip">$AMD</span> +110 · <span class="xchip">$MRVL</span> +100 · <span class="xchip">$LITE</span> +74 · <span class="xchip">$ALAB</span> +47 · <span class="xchip">$COHR</span> +32 <a class="xlink" href="https://x.com/InvestingVisual/status/2082132686433366078" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 20:46] ความเห็นส่วนตัวของเจ้าของบัญชีว่า "รู้สึกใกล้จุดที่คนยอมแพ้แล้ว และช่วงที่อารมณ์ตลาดแย่ที่สุดมักเป็นเวลาที่ควรอยู่เฉย ๆ และค่อย ๆ สะสม" · <b>เป็นความเห็นของบุคคลที่สาม ไม่ใช่คำแนะนำ และไม่ใช่ความเห็นของเรา</b></li>
+        <li>[28/07 23:38] <span class="xchip">$MSFT</span> ประมาณการรายได้ 87.6 พันล้าน (+15%) และ EPS 4.24 (+16%)</li>
+        <li>[29/07 01:40] <span class="xchip">$META</span> ประมาณการรายได้ 60.3 พันล้าน (+26%) และ EPS 7.40 (+4%)</li>
+      </ol>
+      <p class="text-[11px] text-stone-500 mt-2"><b>หมายเหตุการตรวจสอบ:</b> ตัวเลขประมาณการ MSFT และ META ที่บัญชีนี้โพส ใกล้เคียงกับตารางของผู้ให้บริการข้อมูลที่เราใช้ · เราจึงเลือกใช้<b>ตัวเลขจากตารางทางการ</b> (MSFT 4.21 · META 7.13) ในส่วนงบด้านบน · ส่วนตัวเลขงบของ <span class="xchip">$BE</span> ที่ปรากฏในชั้น X วันนี้ <b>เราตรวจกับตารางประกาศงบแล้วไม่พบ จึงตัดตัวเลขออกทั้งหมด</b> เหลือไว้เพียงชื่อบริษัทในรายการ ticker</p>
+      <p class="text-[11px] text-stone-500 mt-1"><b>$TICKER ที่ปรากฏในบัญชีนี้:</b> ALAB, AMD, ARM, BE, COHR, INTC, LITE, META, MRVL, MSFT, MU, SKHY, SNDK, STX, V</p>
+    </div>
+
+    <div class="bg-white/70 rounded-lg p-4 mb-3">
+      <p class="text-sm font-semibold mb-2" style="color:#274451;"><i class="fa-brands fa-x-twitter mr-1"></i>@TechCharts · 10 โพสเมื่อวาน</p>
+      <ol class="list-decimal pl-5 text-xs space-y-2 text-stone-700">
+        <li>[28/07 15:12] กราฟ TOTAL3 ซึ่งคือมูลค่าตลาดคริปโตรวมที่ไม่นับ Bitcoin และ Ethereum <a class="xlink" href="https://x.com/TechCharts/status/2082016387585692014" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 12:19] <span class="xchip">$DXY</span> มีโอกาสเร่งขึ้นต่อหลังยืนเหนือแนวรับได้ <a class="xlink" href="https://x.com/TechCharts/status/2081972885166371191" target="_blank">ต้นทาง</a></li>
+        <li>[28/07 23:19] <span class="xchip">$IXG</span> ซึ่งเป็นดัชนีกลุ่มการเงินโลก กลับมาเดินขึ้นต่อ <a class="xlink" href="https://x.com/TechCharts/status/2082138768509702583" target="_blank">ต้นทาง</a></li>
+      </ol>
+      <p class="text-[11px] text-stone-500 mt-2"><b>ธีมที่บัญชีนี้พูดถึงมากสุด:</b> คริปโต 5 โพส · AI และเทค 1 · <b>$TICKER ที่ปรากฏ:</b> DXY, IXG</p>
+    </div>
+
+    <div class="bg-white/70 rounded-lg p-4 mb-3">
+      <p class="text-sm font-semibold mb-2" style="color:#274451;"><i class="fa-brands fa-x-twitter mr-1"></i>@Speculator_io · ไม่มีโพสเมื่อวาน</p>
+      <p class="text-xs text-stone-600">บัญชีนี้ไม่มีโพสในรอบเก็บข้อมูลของวันนี้ · บันทึกไว้เพื่อความครบถ้วน ไม่ใช่การละเว้น</p>
+    </div>
+
+    <div class="rounded-lg p-3 mb-3 text-xs" style="background:#eef4f7; border:1px solid #cdd9e0;">
+      <p class="font-semibold mb-2" style="color:#274451;"><i class="fa-solid fa-tags mr-1"></i>กวาด $TICKER ครบทุกตัวที่ปรากฏในชั้น X วันนี้ (50 ตัว)</p>
+      <p class="text-stone-700 leading-loose"><span class="xchip">$AAOI</span><span class="xchip">$AAPL</span><span class="xchip">$AEHR</span><span class="xchip">$ALAB</span><span class="xchip">$AMAT</span><span class="xchip">$AMD</span><span class="xchip">$AMKR</span><span class="xchip">$AMZN</span><span class="xchip">$APLD</span><span class="xchip">$ARM</span><span class="xchip">$ASTS</span><span class="xchip">$BE</span><span class="xchip">$BLK</span><span class="xchip">$BTQ</span><span class="xchip">$CIFR</span><span class="xchip">$COHR</span><span class="xchip">$CORZ</span><span class="xchip">$CRWV</span><span class="xchip">$CXMT</span><span class="xchip">$DXY</span><span class="xchip">$GLW</span><span class="xchip">$GOOGL</span><span class="xchip">$HUT</span><span class="xchip">$INTC</span><span class="xchip">$IONQ</span><span class="xchip">$IREN</span><span class="xchip">$IXG</span><span class="xchip">$KLAC</span><span class="xchip">$LITE</span><span class="xchip">$META</span><span class="xchip">$MRVL</span><span class="xchip">$MSFT</span><span class="xchip">$MU</span><span class="xchip">$NBIS</span><span class="xchip">$NVDA</span><span class="xchip">$ORCL</span><span class="xchip">$QQQ</span><span class="xchip">$RKLB</span><span class="xchip">$SHAZ</span><span class="xchip">$SKHY</span><span class="xchip">$SKYT</span><span class="xchip">$SNDK</span><span class="xchip">$SPCX</span><span class="xchip">$STX</span><span class="xchip">$TE</span><span class="xchip">$TSLA</span><span class="xchip">$TSM</span><span class="xchip">$V</span><span class="xchip">$WULF</span><span class="xchip">$WYFI</span></p>
+      <p class="text-[11px] text-stone-500 mt-2">การกวาดรายชื่อนี้คือ<b>การบันทึกว่าใครถูกพูดถึง</b> ไม่ใช่รายการหุ้นแนะนำ และไม่ได้เรียงตามความน่าสนใจ · DXY และ IXG เป็นดัชนี ไม่ใช่หุ้นรายตัว</p>
+    </div>
+
+    <div class="bg-white/70 rounded-lg p-3 text-xs text-stone-600">
+      <i class="fa-solid fa-book mr-1" style="color:#3b5b6b;"></i><b>กรอบคิด · Benjamin Graham, <i>The Intelligent Investor</i>, บทที่ 8 เรื่อง Mr. Market:</b> Graham ให้จินตนาการว่าตลาดคือหุ้นส่วนที่มาเคาะประตูทุกวันพร้อมราคาใหม่และอารมณ์ใหม่ · หน้าที่ของเราไม่ใช่เถียงกับเขา และไม่ใช่เชื่อเขา แต่คือ<b>ฟังไว้แล้วตัดสินใจด้วยเกณฑ์ของตัวเอง</b> · ชั้นกระแสในหน้านี้คือเสียงของ Mr. Market ที่เราบันทึกไว้ให้ท่านฟัง เท่านั้น
+    </div>
+  </section>
+
+  <!-- ═══════════ CRYPTO ═══════════ -->
+  <section class="glass-card highlight-crypto p-6 mb-6 relative">
+    <i class="fa-brands fa-bitcoin bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-brands fa-bitcoin mr-2" style="color:#a06b2a;"></i>คริปโต · Bitcoin เดินคู่กับหุ้นเทค ไม่ได้เดินสวน</h2>
+      <span class="badge-static text-white" style="background:#a06b2a;">CRYPTO</span>
+    </div>
+    <ul class="text-xs space-y-1.5 text-stone-700 list-disc pl-5">
+      <li><b>BTC 63,554.50 (-0.22%)</b> · จากยอด 66,086.61 เมื่อ 22 ก.ค. คิดเป็น <b>-3.8% ใน 4 รอบซื้อขาย</b> ขณะที่ Nasdaq ลง -3.4% จากยอดวันเดียวกัน</li>
+      <li>ตัวเลขสองตัวนี้แทบเท่ากัน ซึ่งเป็นข้อสังเกตที่ตรงข้ามกับความเชื่อที่ว่า Bitcoin เป็น<b>สินทรัพย์ทางเลือก</b>ที่เดินคนละทางกับหุ้น · อย่างน้อยในสัปดาห์นี้ <b>มันเดินไปทางเดียวกับหุ้นเทคเกือบพอดี</b></li>
+      <li>Cointelegraph รายงานตัวชี้วัดฝั่งอุปสงค์ว่า ความต้องการซื้อที่ประเมินได้อยู่ในระดับต่ำสุดของปี 2569 · เงินไหลออกจากกองทุน spot ETF เร่งตัวขึ้น · และสัญญาออปชันที่จะหมดอายุเอียงไปทางฝั่งพัต</li>
+      <li><b>หมายเหตุความโปร่งใส:</b> เราใช้เฉพาะ<b>ตัวชี้วัดอุปสงค์</b>จากรายงานชิ้นนั้น และ<b>ไม่ใช้ระดับราคา</b>ที่ระบุไว้ในบทความ เพราะขัดกับราคาปิดจริงที่ 63,554.50 · นอกจากนี้ยังมีบทความอีกชิ้นที่อ้างว่า Bitcoin หลุดต่ำกว่า 58,000 ซึ่ง<b>เราตัดออกทั้งชิ้น</b> เพราะไม่สอดคล้องกับข้อมูลราคาที่เรามี</li>
+      <li>หุ้นที่เกี่ยวข้องกับคริปโต: MARA -3.31% · IREN -6.50% · BITO -1.59% · <b>COIN และ RIOT ประกาศงบ 30 ก.ค.</b></li>
+    </ul>
+    <div class="bg-white/70 rounded-lg p-3 mt-3 text-xs text-stone-600">
+      <b>เส้นที่ตลาดจับตา (ไม่ใช่คำแนะนำ):</b> ระดับ <b>65,000</b> ที่หลุดลงมาแล้ว และโซน <b>63,000</b> ที่ยืนได้สองวัน
+    </div>
+    <div class="bg-white/70 rounded-lg p-3 mt-2 text-xs text-stone-600">
+      <i class="fa-solid fa-book mr-1" style="color:#a06b2a;"></i><b>กรอบคิด · Benjamin Graham, <i>The Intelligent Investor</i>, บทที่ 8:</b> Graham บอกว่าสิ่งที่ต้องตรวจสอบไม่ใช่ราคา แต่คือ<b>เหตุผลที่เราถือสิ่งนั้นอยู่</b> · ถ้าเหตุผลเดิมคือ "มันไม่เดินตามหุ้น" แล้ววันนี้ข้อมูลบอกว่ามันเดินตาม เหตุผลนั้นควรถูกทบทวน ไม่ใช่ราคา
+    </div>
+  </section>
+
+  <!-- ═══════════ VOCAB ═══════════ -->
+  <section class="glass-card highlight-vocab p-6 mb-6 relative">
+    <i class="fa-solid fa-spell-check bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-language mr-2" style="color:#4a9d8e;"></i>ศัพท์วันนี้ · แปลภาษาชาวบ้าน</h2>
+      <span class="badge-static text-white" style="background:#4a9d8e;">VOCAB</span>
+    </div>
+    <p class="text-xs text-stone-600 mb-3">เลือกเฉพาะคำที่โผล่ในข่าววันนี้จริง ๆ ไม่ยัดศัพท์จากตำรา</p>
+    <div class="grid md:grid-cols-3 gap-3">
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Drawdown เทียบกับ YTD</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> drawdown คือระยะที่ราคาห่างจาก<b>จุดสูงสุด</b> ส่วน YTD คือผลตอบแทนนับจาก<b>ต้นปี</b> · <b>วันนี้:</b> หุ้นชิปชุดเดียวกันวัดแบบแรกติดลบ 24 ถึง 41% แต่วัดแบบหลังบวก 32 ถึง 328% · ตัวเลขไม่ขัดกัน แค่ตั้งต้นคนละจุด</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Backstop</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> การรับประกันความเสียหายให้อีกฝ่าย เหมือนคนค้ำประกัน · <b>วันนี้:</b> ข่าวที่ถูกอ้างว่าเป็นตัวจุดชนวนแรงขาย คือการยืนยันว่ามีการเจรจาเรื่องการค้ำโครงสร้างพื้นฐาน AI มูลค่าราว 250,000 ล้านดอลลาร์</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Section 301</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> มาตรากฎหมายการค้าสหรัฐที่ให้อำนาจตั้งภาษีตอบโต้ประเทศที่ถูกมองว่าค้าขายไม่เป็นธรรม · <b>วันนี้:</b> เป็นฐานอำนาจของอัตราภาษีชุดใหม่กับคู่ค้า 60 ประเทศ ที่ครอบคลุมสินค้านำเข้า 99.4%</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Carve-out</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> การเจาะช่องยกเว้นให้บางรายการ ไม่ต้องอยู่ใต้กฎเดียวกับที่เหลือ · <b>วันนี้:</b> สินค้าอิเล็กทรอนิกส์และชิปจากเอเชียยังได้รับการยกเว้นจากภาษีชุดใหม่ และภาษีชิปจีนถูกเลื่อนไปปี 2570</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Labor differential</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> ช่องว่างระหว่างสัดส่วนคนที่บอกว่า "หางานง่าย" กับ "หางานยาก" · <b>วันนี้:</b> 24.6% เทียบกับ 21.5% · ช่องว่างแคบลง ซึ่งมักมาก่อนตัวเลขจ้างงานจริง</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">ECI</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> ดัชนีต้นทุนการจ้างงาน วัดว่าค่าจ้างและสวัสดิการรวมกันแพงขึ้นเท่าไร · <b>วันนี้:</b> จะออกคืนพฤหัส 19:30 ไทย พร้อมกับ GDP และ Core PCE · เป็นตัวที่เฟดใช้ดูเงินเฟ้อฝั่งค่าจ้าง</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Leveraged ETF 3 เท่า</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> กองทุนที่ออกแบบให้ขึ้นลง<b>สามเท่า</b>ของดัชนีอ้างอิงในแต่ละวัน · <b>วันนี้:</b> SOXL -14.52% ขณะที่ SOXS +14.45% ในวันเดียวกัน เพราะตัวหนึ่งเดิมพันขึ้น อีกตัวเดิมพันลง · <b>ความผันผวนระดับนี้คือเหตุผลที่มันไม่เหมาะกับการถือยาว</b></p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Beat top and bottom line</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> ทำได้ดีกว่าคาดทั้ง<b>รายได้</b> (บรรทัดบนสุดของงบ) และ<b>กำไร</b> (บรรทัดล่างสุด) · <b>วันนี้:</b> KO, V, PYPL, F, CARR เข้าข่ายฝั่งกำไร ส่วน BA กำไรพลาดแต่รายได้ดีกว่าคาด จึงไม่นับว่า beat ทั้งสองบรรทัด</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1" style="color:#4a9d8e;">Circuit breaker</p>
+        <p class="text-xs text-stone-700"><b>แปล:</b> กลไกหยุดซื้อขายอัตโนมัติเมื่อดัชนีร่วงถึงระดับที่กำหนด เพื่อให้ตลาดได้ตั้งสติ · <b>วันนี้:</b> ตลาดเกาหลีใต้ใช้กลไกนี้เมื่อ Kospi ร่วงถึง -10%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LEVELS ═══════════ -->
+  <section class="glass-card highlight-levels p-6 mb-6 relative">
+    <i class="fa-solid fa-ruler-horizontal bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-eye mr-2" style="color:#4a9d8e;"></i>เส้นที่ตลาดจับตาวันนี้</h2>
+      <span class="badge-static text-white" style="background:#4a9d8e;">LEVELS</span>
+    </div>
+    <div class="bg-white/70 rounded-lg p-3 mb-4 text-xs text-stone-600">
+      <i class="fa-solid fa-circle-info mr-1" style="color:#4a9d8e;"></i>ตารางนี้รวบรวม<b>ระดับราคาที่ถูกพูดถึงบ่อยในข่าววันนี้</b> พร้อมบอกว่าเส้นแต่ละเส้นมาจากไหน · <b>ไม่ใช่จุดซื้อขาย ไม่ใช่เป้าราคา และไม่ใช่คำแนะนำ</b>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs">
+        <thead><tr class="text-white" style="background:#4a9d8e;">
+          <th class="p-2 text-left rounded-tl-lg">สินทรัพย์</th><th class="p-2 text-right">ล่าสุด (ปิด 28 ก.ค.)</th><th class="p-2 text-right">เส้นด้านล่าง</th><th class="p-2 text-right">เส้นด้านบน</th><th class="p-2 text-left rounded-tr-lg">ที่มาของเส้น</th>
+        </tr></thead>
+        <tbody>
+          <tr class="lvl-row"><td class="font-semibold">ทองคำ</td><td class="text-right">4,038.70</td><td class="text-right">4,000</td><td class="text-right">4,100</td><td>กรอบที่ราคาแกว่งอยู่ภายในมา 6 รอบซื้อขาย · ยังไม่หลุดพื้นและยังไม่ปิดเหนือเพดาน</td></tr>
+          <tr class="lvl-row"><td class="font-semibold">S&amp;P 500</td><td class="text-right">7,428.78</td><td class="text-right">7,400</td><td class="text-right">-</td><td>เส้นกลมที่ปิดเหนือมา 4 วันติด</td></tr>
+          <tr class="lvl-row"><td class="font-semibold">Nasdaq</td><td class="text-right">24,876.91</td><td class="text-right">-</td><td class="text-right">25,000</td><td>เส้นกลมที่หลุดลงมาและปิดใต้มา 3 วันติด</td></tr>
+          <tr class="lvl-row"><td class="font-semibold">ยีลด์ 10 ปี</td><td class="text-right">4.61%</td><td class="text-right">-</td><td class="text-right">4.71%</td><td>จุดสูงสุดเมื่อ 23 ก.ค. ซึ่งเป็นระดับสูงสุดตั้งแต่ ม.ค. 2568</td></tr>
+          <tr class="lvl-row"><td class="font-semibold">Bitcoin</td><td class="text-right">63,554.50</td><td class="text-right">63,000</td><td class="text-right">65,000</td><td>โซนที่ยืนได้สองวัน และระดับที่หลุดลงมาแล้ว</td></tr>
+          <tr class="lvl-row"><td class="font-semibold">ดอลลาร์ต่อเยน</td><td class="text-right">163.860</td><td class="text-right">163</td><td class="text-right">164</td><td>โซนที่ตลาดพูดถึงเรื่องความเป็นไปได้ของการเข้าแทรกแซงค่าเงิน</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════ WATCH ═══════════ -->
+  <section class="glass-card highlight-watch p-6 mb-6 relative">
+    <i class="fa-regular fa-clock bg-icon-watermark"></i>
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-bold"><i class="fa-solid fa-binoculars mr-2" style="color:#b0a68a;"></i>จับตา 24 ถึง 72 ชั่วโมงข้างหน้า</h2>
+      <span class="badge-static text-white" style="background:#b0a68a;">WATCH</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-solid fa-landmark mr-1" style="color:#2b3a44;"></i>คืนนี้ราวตี 1 ไทย · FOMC และการแถลงครั้งแรกของ Warsh</p>
+        <p class="text-xs text-stone-600">น้ำหนักอยู่ที่<b>ถ้อยคำ</b>มากกว่าตัวเลข · และอย่าลืมว่าตัวเลขความน่าจะเป็น 38% ที่สื่ออ้างกัน<b>ถูกคำนวณเมื่อ 23 ก.ค.</b> ซึ่งเป็นวันที่น้ำมันพุ่ง หลังจากนั้นน้ำมันย่อลงมาแล้ว</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-solid fa-file-invoice-dollar mr-1" style="color:#48487a;"></i>คืนนี้หลังตลาดปิด · MSFT และ META</p>
+        <p class="text-xs text-stone-600">ในบริบทที่กลุ่มชิปถูกขาย 4 วันติด บรรทัดที่ตลาดจะอ่านก่อนคือ<b>งบลงทุน (CapEx) ไม่ใช่กำไรต่อหุ้น</b> เพราะงบลงทุนของสองบริษัทนี้คือรายได้ของผู้ผลิตชิป</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-solid fa-flag mr-1" style="color:#631317;"></i>วันนี้ระหว่างวัน · ตลาดเกาหลีหลังชนเบรก</p>
+        <p class="text-xs text-stone-600">Kospi ห่างจากจุดสูงสุดเดือน มิ.ย. ราว 45% แล้ว · การเปิดตลาดวันนี้จะบอกว่าแรงขายเมื่อวานเป็น<b>ความตื่นตระหนกชั่วคราว</b>หรือ<b>การปรับฐานที่ยังไม่จบ</b></p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-solid fa-moon mr-1" style="color:#5a7a4e;"></i>คืนพฤหัส 19:30 ไทย · ชุดข้อมูลใหญ่สุดของสัปดาห์</p>
+        <p class="text-xs text-stone-600"><b>GDP ไตรมาส 2 ประมาณการครั้งแรก + Core PCE + ผู้ขอรับสวัสดิการว่างงาน + ECI ออกพร้อมกันในนาทีเดียว</b> · เป็นระดับที่จะทำให้เราออกฉบับเย็นเพิ่ม</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-brands fa-apple mr-1" style="color:#3a362f;"></i>พรุ่งนี้ · AAPL และ AMZN</p>
+        <p class="text-xs text-stone-600">AAPL ปิดบวกสองวันติดสวนกระแสกลุ่มเทค ล่าสุด $340.08 (+0.94%) และ CNBC รายงานว่าแตะหลักไมล์มูลค่าตลาดใหม่ · งบสองตัวนี้จะออกวันเดียวกับชุดข้อมูลเศรษฐกิจข้างต้น</p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-solid fa-oil-well mr-1" style="color:#631317;"></i>ตลอดสัปดาห์ · สถานะสหรัฐกับอิหร่าน</p>
+        <p class="text-xs text-stone-600">เมื่อวานมีการยิงที่ถูกสกัดได้ทั้งหมด แต่ราคาน้ำมันขยับ 4.4% ภายในไม่กี่ชั่วโมง · <b>ราคาน้ำมันตอบสนองต่อถ้อยคำก่อนตอบสนองต่อปริมาณน้ำมันจริง</b></p>
+      </div>
+      <div class="bg-white/70 rounded-lg p-3">
+        <p class="text-sm font-semibold mb-1"><i class="fa-solid fa-thumbtack mr-1" style="color:#b0a68a;"></i>สัปดาห์หน้า · 7 ส.ค.</p>
+        <p class="text-xs text-stone-600">ตัวเลขการจ้างงานนอกภาคเกษตร · ต่อจากสัญญาณ "หางานยาก" ที่ขยับขึ้นในดัชนีความเชื่อมั่นผู้บริโภคเมื่อวาน</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DASHBOARD ═══════════ -->
+  <section class="glass-card p-6 mb-6">
+    <div class="section-title" style="color:#2B3A44;"><i class="fa-solid fa-gauge-high"></i> สรุปตัวเลขวันนี้</div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">ทองคำ</p><p class="text-base font-bold" style="color:#c9a227;">4,038.70</p><p class="text-[10px] spark-down">-0.94%</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">S&amp;P 500</p><p class="text-base font-bold" style="color:#376562;">7,428.78</p><p class="text-[10px] spark-up">+0.21%</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">Nasdaq</p><p class="text-base font-bold" style="color:#48487a;">24,876.91</p><p class="text-[10px] spark-down">-0.22%</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">Dow Jones</p><p class="text-base font-bold" style="color:#5a7a4e;">52,747.32</p><p class="text-[10px] spark-up">+1.03%</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">ยีลด์ 10 ปี</p><p class="text-base font-bold" style="color:#631317;">4.61%</p><p class="text-[10px] spark-down">จากยอด 4.71</p></div>
+      <div class="glass-card p-3 text-center"><p class="text-[10px] text-stone-500">Bitcoin</p><p class="text-base font-bold" style="color:#a06b2a;">63,554.50</p><p class="text-[10px] spark-down">-0.22%</p></div>
+    </div>
+    <p class="text-[10px] text-stone-500 mt-3">ราคาหุ้น/ทอง/ยีลด์คือราคาปิดวันอังคาร 28 ก.ค. · Bitcoin เป็นราคาล่าสุดเนื่องจากซื้อขาย 24 ชั่วโมง · ฉบับนี้<b>ไม่มีตัวเลขราคาน้ำมันจากผู้ให้บริการข้อมูลประจำ</b> เพราะเข้าไม่ได้ ตัวเลขน้ำมันในหน้านี้จึงอ้างอิงรายงานของ CNBC และระบุที่มาไว้ในเนื้อหา · และ<b>ไม่มีตัวเลขดัชนีดอลลาร์ของวันที่ 28 ก.ค.</b> เพราะไม่มีแหล่งที่อ้างอิงได้ · ตัวเลขทั้งหมดมาจากแหล่งที่ระบุไว้ท้ายหน้า ไม่ใช่ราคาสดแบบเรียลไทม์</p>
+  </section>
+
+  <!-- ═══════════ SOURCES ═══════════ -->
+  <section class="glass-card p-6 mb-6">
+    <div class="section-title" style="color:#2B3A44;"><i class="fa-solid fa-link"></i> แหล่งข้อมูลที่ใช้ในฉบับนี้</div>
+    <p class="text-xs text-stone-600 leading-relaxed">ราคาปิดและข้อมูลตลาดจากผู้ให้บริการข้อมูลการเงินที่ใช้ประจำ · ข่าวตลาด เฟด ภูมิรัฐศาสตร์ และเศรษฐกิจจาก <a class="xlink" href="https://www.cnbc.com/markets/" target="_blank">CNBC Markets</a> · ข่าวทองคำและโลหะเงินจาก <a class="xlink" href="https://www.kitco.com/news" target="_blank">Kitco News</a> · ข่าวคริปโตจาก <a class="xlink" href="https://cointelegraph.com/" target="_blank">Cointelegraph</a> · ข่าวการค้าและการส่งออกเทคโนโลยีจาก <a class="xlink" href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a> · บทสรุปข่าวประจำวันจาก The Wall Street Journal (Markets A.M. · The 10-Point · The Intelligent Investor ทางอีเมล) · ชั้นกระแสจากบัญชี X ที่ระบุลิงก์ไว้ในแต่ละโพส · ปฏิทินเศรษฐกิจและกำหนดการประกาศงบจากตารางของผู้ให้บริการข้อมูล</p>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="glass-card p-5 text-center" style="background:#fdf8ec; border:1px solid #efdfb4;">
+    <p class="text-xs text-stone-600 mb-1"><i class="fa-solid fa-circle-info mr-1"></i>ข้อมูลประกอบการตัดสินใจ ไม่ใช่คำแนะนำการลงทุน · แนวรับ/แนวต้าน/เส้นต่าง ๆ ในหน้านี้คือ "เส้นที่ตลาดจับตา" ไม่ใช่จุดซื้อขาย · เนื้อหาจัดทำเพื่อการศึกษา ผู้ลงทุนควรศึกษาข้อมูลและตัดสินใจด้วยตนเอง · ผลตอบแทนในอดีตไม่ได้รับประกันผลตอบแทนในอนาคต</p>
+    <p class="text-[11px] text-stone-500">© You Need Wealth · เรียบเรียงโดย เดชากร [กลต.043827] · ใบอนุญาต ก.ล.ต. + คปภ.</p>
+  </footer>
+
+</div>
+</body>
+</html>
