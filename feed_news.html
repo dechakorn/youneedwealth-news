@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ฟีดข่าวตลาด · 23 พ.ย. 2569</title>
+<title>ฟีดข่าวตลาด · 24 พ.ย. 2569</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,8 +48,8 @@
   <!-- HEADER -->
   <div class="header-grad card p-6 text-white mb-5">
     <span class="badge" style="background:rgba(255,255,255,.16);color:#e4e1d5;border:1px solid rgba(255,255,255,.32);"><i class="fa-regular fa-newspaper"></i> ฟีดข่าวตลาด</span>
-    <h1 class="text-2xl font-bold mt-2" style="color:#f4f2ea;">ข่าวการเงิน <span data-session></span> · 23 พ.ย. 2569</h1>
-    <p class="text-white/90 text-sm mt-1">ฉบับวันจันทร์ (ตลาดสหรัฐยังไม่เปิดเช้านี้) · <b>ราคาหุ้น ดัชนี และทองคำล่าสุดเป็นราคาปิดเซสชันวันศุกร์ที่ 20 พ.ย. ส่วนตัวเลขฟิวเจอร์สเป็นราคาก่อนตลาดเปิด</b> · <b>ชั้นกระแส X เป็นโพสต์คัดสรรจากบ่ายวันอาทิตย์ที่ 22 ถึงเช้าวันจันทร์ที่ 23 พ.ย. เวลาไทย</b> · เราเป็นช่องทางสื่อข่าว ไม่ฟันธง ไม่แนะนำซื้อขาย</p>
+    <h1 class="text-2xl font-bold mt-2" style="color:#f4f2ea;">ข่าวการเงิน <span data-session></span> · 24 พ.ย. 2569</h1>
+    <p class="text-white/90 text-sm mt-1">ฉบับวันอังคาร · <b>ราคาหุ้น ดัชนี ทองคำ และยีลด์ล่าสุดเป็นราคาปิดเซสชันวันจันทร์ที่ 23 พ.ย.</b> · <b>ชั้นกระแส X เป็นโพสต์คัดสรรจากเย็นวันจันทร์ที่ 23 ถึงเช้าวันอังคารที่ 24 พ.ย. เวลาไทย</b> · เราเป็นช่องทางสื่อข่าว ไม่ฟันธง ไม่แนะนำซื้อขาย</p>
   </div>
 
   <!-- TABS -->
@@ -79,8 +79,28 @@
   const SESSION=SESSION_STAMP||sh(new Date().getHours());
   document.querySelectorAll('[data-session]').forEach(e=>e.textContent=SESSION);
 
-  // ข้อมูลข่าว (อัปเดตล่าสุด 23 พ.ย. ฉบับวันจันทร์ · ราคาหุ้น ดัชนี ทองคำ = ปิดเซสชันวันศุกร์ที่ 20 พ.ย. · ชั้นกระแส X = บ่ายวันอาทิตย์ที่ 22 ถึงเช้าวันจันทร์ที่ 23 พ.ย. เวลาไทย)
+  // ข้อมูลข่าว (อัปเดตล่าสุด 24 พ.ย. ฉบับวันอังคาร · ราคาหุ้น ดัชนี ทองคำ = ปิดเซสชันวันจันทร์ที่ 23 พ.ย. · ชั้นกระแส X = เย็นวันจันทร์ที่ 23 ถึงเช้าวันอังคารที่ 24 พ.ย. เวลาไทย)
   const NEWS=[
+    {cat:'gold',t:'23 พ.ย.',pub:'ทองคำ · Kitco',th:'ทองขึ้นเหนือ 3,600 ดอลลาร์ ขณะการขายหุ้น AI ปรับมุมมองเรื่องเฟด ตามพาดหัวรายงานภาคเช้า',s:'ทองปิดวันจันทร์ 3,651.40 ดอลลาร์ บวก 3.87% ตามราคาปิดที่เรามี',u:'https://www.kitco.com/news/article/2026-11-23/gold-price-rallies-above-3600-ai-selloff-reshapes-fed-outlook-kitco-am'},
+    {cat:'gold',t:'23 พ.ย.',pub:'ทองคำ · Kitco',th:'ทองกับเงินเด้งแรงพร้อมหุ้น AI และความไม่แน่นอนเรื่องเฟดที่กลับมา ตามพาดหัวรายงานภาคบ่าย',s:'เป็นถ้อยคำของสื่อต้นทาง',u:'https://www.kitco.com/news/article/2026-11-23/gold-silver-prices-see-sharp-rebounds-ai-shares-rally-renewed-fed'},
+    {cat:'gold',t:'23 พ.ย.',pub:'ทองคำ · Kitco',th:'ทองขึ้น 3% เมื่อแรงซื้อรับของถูกกลบข่าวภาคการผลิตและบริการสหรัฐชะลอ ตามพาดหัว',s:'เป็นถ้อยคำของสื่อต้นทาง ไม่มีตัวเลขดัชนีในพาดหัว',u:'https://www.kitco.com/news/article/2026-11-23/gold-prices-jump-3-bargain-hunting-overshadows-slowing-us-manufacturing-and'},
+    {cat:'gold',t:'23 พ.ย.',pub:'ทองคำ · Kitco',th:'Natixis เตือนการฟื้นของทองอาจสั้นและทองอาจลงถึง 3,340 ดอลลาร์ ตามพาดหัว',s:'เป็นมุมมองของธนาคารตามที่ Kitco รายงาน ไม่ใช่ของเรา',u:'https://www.kitco.com/news/article/2026-11-23/golds-recovery-may-be-short-lived-natixis-warns-drop-3340'},
+    {cat:'stock',t:'23 พ.ย.',pub:'ตลาดหุ้นสหรัฐ · Yahoo Finance',th:'Dow, S&P 500 และ Nasdaq ปิดวันที่ดีที่สุดตั้งแต่เมษายน 2025 หลัง Nvidia พุ่ง 31% เมื่อ Jensen Huang กลับมา ตามพาดหัวไลฟ์',s:'S&P 500 ปิด 7,237.17 บวก 4.73% และ Nasdaq ปิด 24,089.56 บวก 6.51% ตามราคาปิดที่เรามี',u:'https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-surge-after-nvidia-reinstates-jensen-huang-182039397.html'},
+    {cat:'stock',t:'23 พ.ย.',pub:'ตลาดหุ้นสหรัฐ · CNBC',th:'Dow พุ่งราว 1,400 จุด Nasdaq ขึ้นราว 6% วันที่ดีที่สุดตั้งแต่เมษายน 2025 เมื่อ Jensen Huang กลับ Nvidia ตามพาดหัว',s:'เลขจุดในพาดหัวเป็นถ้อยคำของสื่อต้นทาง',u:'https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html'},
+    {cat:'stock',t:'23 พ.ย.',pub:'หุ้นรายตัว · CNBC',th:'Jensen Huang กลับเป็น CEO Nvidia หุ้นพุ่ง 31% ตามพาดหัว',s:'NVDA ปิด 165.05 ดอลลาร์ บวก 31.48% ตามราคาปิดที่เรามี',u:'https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html'},
+    {cat:'stock',t:'23 พ.ย.',pub:'หุ้นรายตัว · Yahoo Finance',th:'มูลค่า Nvidia เพิ่มเกือบ 1 ล้านล้านดอลลาร์และหุ้นเทคเด้งหลัง Jensen Huang กลับมา ตามพาดหัว',s:'เลขในพาดหัวเป็นถ้อยคำของสื่อต้นทาง',u:'https://ca.finance.yahoo.com/news/nvidia-shares-30-tech-stocks-153946244.html'},
+    {cat:'stock',t:'24 พ.ย.',pub:'ตลาดหุ้นเอเชีย · Yahoo Finance',th:'ตลาดหุ้นเอเชียเด้งตามวอลล์สตรีท เมื่อ Jensen Huang กลับเป็น CEO Nvidia ตามพาดหัว',s:'เป็นถ้อยคำของสื่อต้นทาง',u:'https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-rally-wall-street-033125464.html'},
+    {cat:'crypto',t:'23 พ.ย.',pub:'คริปโต · Cointelegraph',th:'กองทุน Bitcoin ETF มีเงินไหลออกเดือน พ.ย. สะสมเป็นสถิติ 4.71 พันล้านดอลลาร์ ตามพาดหัว',s:'Bitcoin ปิดวันจันทร์ 61,183.76 ดอลลาร์ บวก 3.91% ตามราคาปิดที่เรามี',u:'https://cointelegraph.com/markets/bitcoin-etfs-bleed-ibit-shares-gain'},
+    {cat:'crypto',t:'23 พ.ย.',pub:'คริปโต · Cointelegraph',th:'กองทุน Bitcoin ETF มีเงินไหลออก 1.8 พันล้านดอลลาร์ เป็นอันดับสามของสัปดาห์ที่ไหลออกสูงสุด ตามพาดหัว',s:'เลขในพาดหัวเป็นถ้อยคำของสื่อต้นทาง',u:'https://cointelegraph.com/markets/bitcoin-etfs-third-largest-weekly-outflows-1-8-billion'},
+    {cat:'analysis',t:'23 พ.ย.',pub:'เฟดและยีลด์ · CNBC',th:'John Williams ชี้ดอกเบี้ยสูงขึ้นมีแนวโน้มเมื่อเวลาผ่านไป เพื่อแก้เงินเฟ้อ ตามพาดหัว',s:'ยีลด์ 10 ปีปิด 4.92% เท่าเดิมตามตัวเลขที่เรามี',u:'https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html'},
+    {cat:'analysis',t:'24 พ.ย.',pub:'ภูมิรัฐศาสตร์ · CNBC',th:'อิหร่านแจ้งเรือบรรทุกน้ำมัน 3 ลำชนทุ่นระเบิดใน Hormuz แม้มีกองทัพสหรัฐคุ้มกัน ขณะสหรัฐขยายมาตรการคว่ำบาตร ตามพาดหัว',s:'เป็นถ้อยคำของสื่อต้นทาง',u:'https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html'},
+    {cat:'analysis',t:'24 พ.ย.',pub:'ดอลลาร์ · CNBC',th:'ดอลลาร์ขึ้นเมื่อความตื่นเต้นเรื่อง AI กลับมาหนุนการคาดการณ์ขึ้นดอกเบี้ยเฟด ตามพาดหัว',s:'USDJPY ปิดวันจันทร์ 158.999 ตามราคาปิดที่เรามี',u:'https://www.cnbc.com/2026/11/24/dollar-renewed-ai-euphoria-fuels-fed-hike-bets.html'},
+    {cat:'x',t:'23 พ.ย.',pub:'ชั้นกระแส X · @StockSavvyShay',th:'StockSavvyShay เขียนว่า Nvidia ตั้ง Jensen Huang กลับเป็นประธานและ CEO หลังบอร์ดลงมติเอกฉันท์',s:'เป็นถ้อยคำและตัวเลขของผู้โพสต์ ไม่ใช่ของเรา ดูครบในหน้าวันนี้',u:'https://x.com/StockSavvyShay/status/2124867031191486612'},
+    {cat:'x',t:'24 พ.ย.',pub:'ชั้นกระแส X · @StockSavvyShay',th:'StockSavvyShay เขียนว่ามูลค่า NVDA เพิ่ม 952 พันล้านดอลลาร์ในวันเดียว มากกว่าสถิติเดิมเกินเท่าตัว',s:'เป็นถ้อยคำและตัวเลขของผู้โพสต์ ไม่ใช่ของเรา ดูครบในหน้าวันนี้',u:'https://x.com/StockSavvyShay/status/2125035896991035605'},
+    {cat:'x',t:'23 พ.ย.',pub:'ชั้นกระแส X · @InvestingVisual',th:'InvestingVisual สรุปดีล CrowdStrike ซื้อ Zscaler ด้วยหุ้นทั้งหมด 43.9 พันล้านดอลลาร์ พรีเมียม 35%',s:'เป็นถ้อยคำและตัวเลขของผู้โพสต์ ไม่ใช่ของเรา ดูครบในหน้าวันนี้',u:'https://x.com/InvestingVisual/status/2124823184012890368'},
+    {cat:'x',t:'23 พ.ย.',pub:'ชั้นกระแส X · @StockSavvyShay',th:'StockSavvyShay ยกผลงบ CRWD ไตรมาส 3 รายได้ 1.58 พันล้านดอลลาร์ เทียบที่คาด 1.53 พันล้านดอลลาร์',s:'เป็นถ้อยคำและตัวเลขของผู้โพสต์ ไม่ใช่ของเรา ดูครบในหน้าวันนี้',u:'https://x.com/StockSavvyShay/status/2124841842646855787'},
+    {cat:'x',t:'23 พ.ย.',pub:'ชั้นกระแส X · @StockSavvyShay',th:'StockSavvyShay เขียนว่ากองทุน ANTT และ ANTZ ซึ่งผันผวน 2 เท่าของ Anthropic เริ่มซื้อขายแล้ว',s:'เป็นถ้อยคำและตัวเลขของผู้โพสต์ ไม่ใช่ของเรา ดูครบในหน้าวันนี้',u:'https://x.com/StockSavvyShay/status/2124871744070861093'},
+    {cat:'x',t:'23 พ.ย.',pub:'ชั้นกระแส X · @TechCharts',th:'TechCharts เขียนว่า BTC ยังอยู่ในกรอบ 60K ถึง 82.8K',s:'เป็นถ้อยคำและตัวเลขของผู้โพสต์ ไม่ใช่ของเรา ดูครบในหน้าวันนี้',u:'https://x.com/TechCharts/status/2124880097597644942'},
     {cat:'gold',t:'20 พ.ย.',pub:'ทองคำ · Kitco',th:'ทองลงสู่แถว 3,500 ดอลลาร์ เงินร่วง ขณะตลาดหุ้นเข้าเขตปรับฐาน ตามพาดหัวรายงานภาคบ่าย',s:'ทองปิดวันศุกร์ที่ 3,515.40 ดอลลาร์ ลบ 4.62% ตามราคาปิดที่เรามี',u:'https://www.kitco.com/news/article/2026-11-20/gold-falls-toward-3500-silver-slides-stock-markets-enter-correction'},
     {cat:'gold',t:'20 พ.ย.',pub:'ทองคำ · Kitco',th:'ทองกำลังจะจบสัปดาห์ที่แย่ที่สุดในรอบแปดเดือน เงินลงต่ำกว่า 42 ดอลลาร์ ตามพาดหัวรายงานภาคเช้า',s:'เป็นถ้อยคำของสื่อต้นทาง',u:'https://www.kitco.com/news/article/2026-11-20/gold-heads-worst-week-eight-months-silver-slides-below-42-kitco-am-report'},
     {cat:'gold',t:'20 พ.ย.',pub:'ทองคำ · Kitco',th:'ทองใกล้ 3,568 ดอลลาร์ หลังความเชื่อมั่นผู้บริโภคฉบับสุดท้ายขึ้นเป็น 51.5 และคาดการณ์เงินเฟ้อลดลง ตามพาดหัว',s:'เลขในพาดหัวเป็นถ้อยคำของสื่อต้นทาง',u:'https://www.kitco.com/news/article/2026-11-20/gold-price-trades-near-3568oz-after-final-consumer-sentiment-rises-515'},
